@@ -19,18 +19,33 @@ namespace УП_МДК_01_01
 
         private void Form9_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "уП01_ИСПП5_Работягова_ААDataSet1.Пользователи". При необходимости она может быть перемещена или удалена.
-            this.пользователиTableAdapter.Fill(this.уП01_ИСПП5_Работягова_ААDataSet1.Пользователи);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "уП01_ИСПП5_Работягова_ААDataSet3.Пользователи". При необходимости она может быть перемещена или удалена.
+            this.пользователиTableAdapter1.Fill(this.уП01_ИСПП5_Работягова_ААDataSet3.Пользователи);
 
         }
-        string a;
-        public void st(string s)
-        {
-            a = s;
-        }
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            пользователиTableAdapter.Update(уП01_ИСПП5_Работягова_ААDataSet1.Пользователи);
+            пользователиTableAdapter1.Update(уП01_ИСПП5_Работягова_ААDataSet3.Пользователи);
+        }
+        public string dost;
+        public void i(string b)
+        {
+            dost = b;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dost == "Администратор")
+            {
+                Hide();
+                Form5 form5 = new Form5();
+                form5.Show();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

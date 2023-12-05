@@ -19,38 +19,55 @@ namespace УП_МДК_01_01
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "уП01_ИСПП5_Работягова_ААDataSet.Договоры". При необходимости она может быть перемещена или удалена.
-            this.договорыTableAdapter.Fill(this.уП01_ИСПП5_Работягова_ААDataSet.Договоры);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "уП01_ИСПП5_Работягова_ААDataSet.Клиенты". При необходимости она может быть перемещена или удалена.
-            this.клиентыTableAdapter.Fill(this.уП01_ИСПП5_Работягова_ААDataSet.Клиенты);
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "уП01_ИСПП5_Работягова_ААDataSet3.Клиенты". При необходимости она может быть перемещена или удалена.
+            this.клиентыTableAdapter1.Fill(this.уП01_ИСПП5_Работягова_ААDataSet3.Клиенты);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            клиентыTableAdapter.Update(уП01_ИСПП5_Работягова_ААDataSet.Клиенты);
+            клиентыTableAdapter1.Update(уП01_ИСПП5_Работягова_ААDataSet3.Клиенты);
         }
-        string a;
-        public void st(string s)
+        public string dost;
+        public void i(string b)
         {
-            a = s;
+            dost = b;
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Hide();
-            Form5 form5 = new Form5();
-            form5.Show();
-            form5.ii(a);
+            if (dost == "Администратор")
+            {
+                Hide();
+                Form5 form5 = new Form5();
+                form5.Show();
+            }
+            else
+            {
+                Hide();
+                Form11 form11 = new Form11();
+                form11.Show();
+            }
         }
-
+        public void d(string b)
+        {
+            if (b == "Администратор")
+            {
+                bindingNavigatorAddNewItem.Visible = true;
+                bindingNavigatorDeleteItem.Visible = true;
+            }
+            else
+            {
+                bindingNavigatorAddNewItem.Visible = false;
+                bindingNavigatorDeleteItem.Visible = false;
+            }
+        }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            клиентыTableAdapter.Update(уП01_ИСПП5_Работягова_ААDataSet.Клиенты);
+            клиентыTableAdapter1.Update(уП01_ИСПП5_Работягова_ААDataSet3.Клиенты);
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            клиентыBindingSource.CancelEdit();
+            клиентыBindingSource1.CancelEdit();
         }
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)

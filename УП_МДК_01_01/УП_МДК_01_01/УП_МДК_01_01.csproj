@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authorization.cs" />
-    <Compile Include="DBConnection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,12 +63,6 @@
     </Compile>
     <Compile Include="Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form12.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form12.Designer.cs">
-      <DependentUpon>Form12.cs</DependentUpon>
     </Compile>
     <Compile Include="Form13.cs">
       <SubType>Form</SubType>
@@ -143,8 +135,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>УП01_ИСПП5_Работягова_ААDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="УП01_ИСПП5_Работягова_ААDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>УП01_ИСПП5_Работягова_ААDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11.resx">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13.resx">
+      <DependentUpon>Form13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -188,7 +194,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="resources\Панельки\Thumbs.db" />
     <None Include="УП01_ИСПП5_Работягова_ААDataSet.xsc">
       <DependentUpon>УП01_ИСПП5_Работягова_ААDataSet.xsd</DependentUpon>
     </None>
@@ -222,25 +227,21 @@
     <None Include="УП01_ИСПП5_Работягова_ААDataSet2.xss">
       <DependentUpon>УП01_ИСПП5_Работягова_ААDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="УП01_ИСПП5_Работягова_ААDataSet3.xsc">
+      <DependentUpon>УП01_ИСПП5_Работягова_ААDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="УП01_ИСПП5_Работягова_ААDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>УП01_ИСПП5_Работягова_ААDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="УП01_ИСПП5_Работягова_ААDataSet3.xss">
+      <DependentUpon>УП01_ИСПП5_Работягова_ААDataSet3.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="resources\Новая\" />
-    <Folder Include="resources\Хрущевка\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="resources\Кирпич\3н.jpg" />
-    <Content Include="resources\Кирпич\5 х.jpg" />
-    <Content Include="resources\Кирпич\5 хр.jpg" />
-    <Content Include="resources\Кирпич\5.jfif" />
-    <Content Include="resources\Кирпич\5_.jpg" />
-    <Content Include="resources\Панельки\14.png" />
-    <Content Include="resources\Панельки\5 этажей.jpg" />
-    <Content Include="resources\Панельки\5.jpg" />
-    <Content Include="resources\Панельки\9 этажей.jpg" />
-    <Content Include="resources\Панельки\9.jpg" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,17 +41,23 @@
             this.логинDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.парольDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.праваДоступаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.пользователиBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.уП01ИСПП5РаботяговаААDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.уП01_ИСПП5_Работягова_ААDataSet3 = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet3();
             this.пользователиBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.уП01_ИСПП5_Работягова_ААDataSet1 = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet1();
             this.пользователиTableAdapter = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet1TableAdapters.ПользователиTableAdapter();
+            this.пользователиTableAdapter1 = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet3TableAdapters.ПользователиTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уП01ИСПП5РаботяговаААDataSet3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
@@ -60,6 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(12, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
@@ -72,6 +80,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
@@ -79,25 +89,34 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(120, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(191)))), ((int)(((byte)(210)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(55)))), ((int)(((byte)(65)))));
             this.button1.Location = new System.Drawing.Point(15, 109);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Зарегистрироваться";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(191)))), ((int)(((byte)(210)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(55)))), ((int)(((byte)(65)))));
             this.button2.Location = new System.Drawing.Point(15, 148);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(177, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
@@ -109,7 +128,7 @@
             this.логинDataGridViewTextBoxColumn,
             this.парольDataGridViewTextBoxColumn,
             this.праваДоступаDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.пользователиBindingSource;
+            this.dataGridView1.DataSource = this.пользователиBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(217, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(243, 150);
@@ -139,25 +158,35 @@
             this.праваДоступаDataGridViewTextBoxColumn.HeaderText = "Права доступа";
             this.праваДоступаDataGridViewTextBoxColumn.Name = "праваДоступаDataGridViewTextBoxColumn";
             // 
-            // пользователиBindingSource
+            // пользователиBindingSource1
             // 
-            this.пользователиBindingSource.DataMember = "Пользователи";
-            this.пользователиBindingSource.DataSource = this.уП01_ИСПП5_Работягова_ААDataSet1;
+            this.пользователиBindingSource1.DataMember = "Пользователи";
+            this.пользователиBindingSource1.DataSource = this.уП01ИСПП5РаботяговаААDataSet3BindingSource;
             // 
-            // уП01_ИСПП5_Работягова_ААDataSet1
+            // уП01ИСПП5РаботяговаААDataSet3BindingSource
             // 
-            this.уП01_ИСПП5_Работягова_ААDataSet1.DataSetName = "УП01_ИСПП5_Работягова_ААDataSet1";
-            this.уП01_ИСПП5_Работягова_ААDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.уП01ИСПП5РаботяговаААDataSet3BindingSource.DataSource = this.уП01_ИСПП5_Работягова_ААDataSet3;
+            this.уП01ИСПП5РаботяговаААDataSet3BindingSource.Position = 0;
+            // 
+            // уП01_ИСПП5_Работягова_ААDataSet3
+            // 
+            this.уП01_ИСПП5_Работягова_ААDataSet3.DataSetName = "УП01_ИСПП5_Работягова_ААDataSet3";
+            this.уП01_ИСПП5_Работягова_ААDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // пользователиTableAdapter
             // 
             this.пользователиTableAdapter.ClearBeforeFill = true;
             // 
+            // пользователиTableAdapter1
+            // 
+            this.пользователиTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(201, 183);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(55)))), ((int)(((byte)(65)))));
+            this.ClientSize = new System.Drawing.Size(203, 204);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -165,12 +194,16 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уП01ИСПП5РаботяговаААDataSet3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,9 +218,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private УП01_ИСПП5_Работягова_ААDataSet1 уП01_ИСПП5_Работягова_ААDataSet1;
         private System.Windows.Forms.BindingSource пользователиBindingSource;
         private УП01_ИСПП5_Работягова_ААDataSet1TableAdapters.ПользователиTableAdapter пользователиTableAdapter;
+        private System.Windows.Forms.BindingSource уП01ИСПП5РаботяговаААDataSet3BindingSource;
+        private УП01_ИСПП5_Работягова_ААDataSet3 уП01_ИСПП5_Работягова_ААDataSet3;
+        private System.Windows.Forms.BindingSource пользователиBindingSource1;
+        private УП01_ИСПП5_Работягова_ААDataSet3TableAdapters.ПользователиTableAdapter пользователиTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn логинDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn парольDataGridViewTextBoxColumn;

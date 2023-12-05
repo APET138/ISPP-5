@@ -21,7 +21,7 @@ namespace УП_МДК_01_01
         {
             InitializeComponent();
         }
-        int popitki = 6;
+      
         private void label5_Click(object sender, EventArgs e)
         {
             
@@ -45,18 +45,12 @@ namespace УП_МДК_01_01
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ' ')
-            {
-                e.KeyChar -= e.KeyChar;
-            }
+            
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ' ')
-            {
-                e.KeyChar -= e.KeyChar;
-            }
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -87,18 +81,22 @@ namespace УП_МДК_01_01
             Form3 form3 = new Form3();
             form3.load();
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        int j = 0;
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if(textBox1.Text != "" && textBox2.Text != "")
+            SqlConnection sqlConnect = new SqlConnection("Data Source=sql;Initial Catalog =уП01_ИСПП5_Работягова_АА ; Integrated Security = True");
+            sqlConnect.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Пользователи", sqlConnect);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Boolean flag = false;
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+                if ((dt.Rows[i]["Логин"].ToString() == textBox1.Text) && (dt.Rows[i]["Пароль"].ToString() == textBox2.Text)) { j = i; flag = true; }
+            if (flag==true)
             {
-                Authorization.Authorization1(textBox1.Text, textBox2.Text);
-                switch(Authorization.Права_доступа)
+                
+                switch (dt.Rows[j]["Права доступа"].ToString())
                 {
                     case null:
                         {
@@ -107,74 +105,37 @@ namespace УП_МДК_01_01
                         }
                     case "Администратор":
                         {
-                            loginActive = textBox1.Text;
-                            whois = "Администратор";
-                            Authorization.Права_доступа = textBox1.Text;
-
-                                string Права_доступа = Authorization.AuthorizationName(textBox1.Text);
-                            Authorization.Права_доступа = Права_доступа;
-                            MessageBox.Show(Права_доступа + ", вы зашли в меню","Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Hide();
                             Form5 form5 = new Form5();
                             form5.Show();
+                            form5.а("Администратор");
+                          
                             break;
                         }
                     case "Клиент":
                         {
-                            loginActive = textBox1.Text;
-                            whois = "Клиент";
-                            Authorization.Права_доступа = textBox1.Text;
-
-                            string Права_доступа = Authorization.AuthorizationName(textBox1.Text);
-                            Authorization.Права_доступа = Права_доступа;
-                            MessageBox.Show(Права_доступа + ", вы зашли в меню", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Hide();
-                            Form10  form10  = new Form10 ();
+                            Form10 form10 = new Form10();
                             form10.Show();
                             break;
                         }
+
                     case "Агент":
                         {
-                            loginActive = textBox1.Text;
-                            whois = "Агент";
-                            Authorization.Права_доступа = textBox1.Text;
-
-                            string Права_доступа = Authorization.AuthorizationName(textBox1.Text);
-                            Authorization.Права_доступа = Права_доступа;
-                            MessageBox.Show(Права_доступа + ", вы зашли в меню", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Hide();
-                            Form11  form11  = new Form11 ();
+                            Form11 form11 = new Form11();
                             form11.Show();
                             break;
                         }
                     case "Оператор":
                         {
-                            loginActive = textBox1.Text;
-                            whois = "Оператор";
-                            Authorization.Права_доступа = textBox1.Text;
-
-                            string Права_доступа = Authorization.AuthorizationName(textBox1.Text);
-                            Authorization.Права_доступа = Права_доступа;
-                            MessageBox.Show(Права_доступа + ", вы зашли в меню", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Hide();
-                            Form12 form12 = new Form12();
-                            form12.Show();
+                            Form5 form5 = new Form5();
+                            form5.Show();
+                            form5.а("Оператор");
                             break;
                         }
-                    case "Гость":
-                        {
-                            loginActive = textBox1.Text;
-                            whois = "Гость";
-                            Authorization.Права_доступа = textBox1.Text;
-
-                            string Права_доступа = Authorization.AuthorizationName(textBox1.Text);
-                            Authorization.Права_доступа = Права_доступа;
-                            MessageBox.Show(Права_доступа + ", вы зашли в меню", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            Form13 form13 = new Form13();
-                            form13.Show();
-                            break;
-                        }
+                    
                 }
             }
             else
@@ -185,7 +146,43 @@ namespace УП_МДК_01_01
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            DBConnection.ConnectionDB();
+
+        }
+
+        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            textBox1.MaxLength = 30;
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Поле не может содержать цифры!", "Ошибка");
+            }
+
+        }
+
+        private void textBox2_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            textBox2.MaxLength = 15;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form13 form13 = new Form13();
+            form13.Show(); 
+          
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+            }
         }
     }
 }

@@ -30,29 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
-            this.уП01_ИСПП5_Работягова_ААDataSet = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet();
-            this.квартирыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.квартирыTableAdapter = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSetTableAdapters.КвартирыTableAdapter();
-            this.домаBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.домаTableAdapter = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSetTableAdapters.ДомаTableAdapter();
-            this.fKДоговорыКвартирыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.договорыTableAdapter = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSetTableAdapters.ДоговорыTableAdapter();
-            this.fKКвартирыДомаBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.кодКвартирыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодДомаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.документНаПравоСобственностиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.наличиеПриватизацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.общаяПлощадьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.этажКвартирыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.типПланировкиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.типСанузлаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.адресКвартирыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.жилаяПлощадьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.площадьКухниDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fKКвартирыДомаBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureSet = new System.Windows.Forms.PictureBox();
+            this.планКвартирBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.уП01ИСПП5РаботяговаААDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.уП01_ИСПП5_Работягова_ААDataSet3 = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet3();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -67,224 +51,103 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.SaveButton = new System.Windows.Forms.ToolStripButton();
             this.CancelButton = new System.Windows.Forms.ToolStripButton();
-            this.pictureSet = new System.Windows.Forms.PictureBox();
-            this.уП01_ИСПП5_Работягова_ААDataSet2 = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet2();
-            this.квартирыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.квартирыTableAdapter1 = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet2TableAdapters.КвартирыTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.кодКвартирыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодДомаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.документНаПравоСобственностиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.наличиеПриватизацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.общаяПлощадьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.этажКвартирыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.типПланировкиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.типСанузлаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.адресКвартирыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.жилаяПлощадьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.площадьКухниDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодПланаКвартирыDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKКвартирыПланКвартирBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.кодПланаКвартирыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.планКвартирыDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.планКвартирBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.план_квартирTableAdapter = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet2TableAdapters.План_квартирTableAdapter();
+            this.планКвартирыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.план_квартирTableAdapter1 = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet3TableAdapters.План_квартирTableAdapter();
             this.fKКвартирыПланКвартирBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSet = new System.Windows.Forms.Button();
-            this.btnSelect = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
-            this.Labelid = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.pictureView = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.квартирыBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.домаBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKДоговорыКвартирыBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKКвартирыДомаBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKКвартирыДомаBindingSource1)).BeginInit();
+            this.квартирыTableAdapter2 = new УП_МДК_01_01.УП01_ИСПП5_Работягова_ААDataSet3TableAdapters.КвартирыTableAdapter();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.планКвартирBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уП01ИСПП5РаботяговаААDataSet3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.квартирыBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.планКвартирBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKКвартирыПланКвартирBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKКвартирыПланКвартирBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // уП01_ИСПП5_Работягова_ААDataSet
-            // 
-            this.уП01_ИСПП5_Работягова_ААDataSet.DataSetName = "УП01_ИСПП5_Работягова_ААDataSet";
-            this.уП01_ИСПП5_Работягова_ААDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // квартирыBindingSource
-            // 
-            this.квартирыBindingSource.DataMember = "Квартиры";
-            this.квартирыBindingSource.DataSource = this.уП01_ИСПП5_Работягова_ААDataSet;
-            // 
-            // квартирыTableAdapter
-            // 
-            this.квартирыTableAdapter.ClearBeforeFill = true;
-            // 
-            // домаBindingSource
-            // 
-            this.домаBindingSource.DataMember = "Дома";
-            this.домаBindingSource.DataSource = this.уП01_ИСПП5_Работягова_ААDataSet;
-            // 
-            // домаTableAdapter
-            // 
-            this.домаTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKДоговорыКвартирыBindingSource
-            // 
-            this.fKДоговорыКвартирыBindingSource.DataMember = "FK_Договоры_Квартиры";
-            this.fKДоговорыКвартирыBindingSource.DataSource = this.квартирыBindingSource;
-            // 
-            // договорыTableAdapter
-            // 
-            this.договорыTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKКвартирыДомаBindingSource
-            // 
-            this.fKКвартирыДомаBindingSource.DataMember = "FK_Квартиры_Дома";
-            this.fKКвартирыДомаBindingSource.DataSource = this.домаBindingSource;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.кодКвартирыDataGridViewTextBoxColumn,
-            this.кодДомаDataGridViewTextBoxColumn1,
-            this.документНаПравоСобственностиDataGridViewTextBoxColumn,
-            this.наличиеПриватизацииDataGridViewTextBoxColumn,
-            this.общаяПлощадьDataGridViewTextBoxColumn,
-            this.этажКвартирыDataGridViewTextBoxColumn,
-            this.типПланировкиDataGridViewTextBoxColumn,
-            this.типСанузлаDataGridViewTextBoxColumn,
-            this.адресКвартирыDataGridViewTextBoxColumn,
-            this.жилаяПлощадьDataGridViewTextBoxColumn,
-            this.площадьКухниDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.квартирыBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(27, 47);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(981, 185);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // кодКвартирыDataGridViewTextBoxColumn
-            // 
-            this.кодКвартирыDataGridViewTextBoxColumn.DataPropertyName = "Код квартиры";
-            this.кодКвартирыDataGridViewTextBoxColumn.HeaderText = "Код квартиры";
-            this.кодКвартирыDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.кодКвартирыDataGridViewTextBoxColumn.Name = "кодКвартирыDataGridViewTextBoxColumn";
-            this.кодКвартирыDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // кодДомаDataGridViewTextBoxColumn1
-            // 
-            this.кодДомаDataGridViewTextBoxColumn1.DataPropertyName = "Код дома";
-            this.кодДомаDataGridViewTextBoxColumn1.HeaderText = "Код дома";
-            this.кодДомаDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.кодДомаDataGridViewTextBoxColumn1.Name = "кодДомаDataGridViewTextBoxColumn1";
-            this.кодДомаDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // документНаПравоСобственностиDataGridViewTextBoxColumn
-            // 
-            this.документНаПравоСобственностиDataGridViewTextBoxColumn.DataPropertyName = "Документ на право собственности";
-            this.документНаПравоСобственностиDataGridViewTextBoxColumn.HeaderText = "Документ на право собственности";
-            this.документНаПравоСобственностиDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.документНаПравоСобственностиDataGridViewTextBoxColumn.Name = "документНаПравоСобственностиDataGridViewTextBoxColumn";
-            this.документНаПравоСобственностиDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // наличиеПриватизацииDataGridViewTextBoxColumn
-            // 
-            this.наличиеПриватизацииDataGridViewTextBoxColumn.DataPropertyName = "Наличие приватизации";
-            this.наличиеПриватизацииDataGridViewTextBoxColumn.HeaderText = "Наличие приватизации";
-            this.наличиеПриватизацииDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.наличиеПриватизацииDataGridViewTextBoxColumn.Name = "наличиеПриватизацииDataGridViewTextBoxColumn";
-            this.наличиеПриватизацииDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // общаяПлощадьDataGridViewTextBoxColumn
-            // 
-            this.общаяПлощадьDataGridViewTextBoxColumn.DataPropertyName = "Общая площадь";
-            this.общаяПлощадьDataGridViewTextBoxColumn.HeaderText = "Общая площадь";
-            this.общаяПлощадьDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.общаяПлощадьDataGridViewTextBoxColumn.Name = "общаяПлощадьDataGridViewTextBoxColumn";
-            this.общаяПлощадьDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // этажКвартирыDataGridViewTextBoxColumn
-            // 
-            this.этажКвартирыDataGridViewTextBoxColumn.DataPropertyName = "Этаж квартиры";
-            this.этажКвартирыDataGridViewTextBoxColumn.HeaderText = "Этаж квартиры";
-            this.этажКвартирыDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.этажКвартирыDataGridViewTextBoxColumn.Name = "этажКвартирыDataGridViewTextBoxColumn";
-            this.этажКвартирыDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // типПланировкиDataGridViewTextBoxColumn
-            // 
-            this.типПланировкиDataGridViewTextBoxColumn.DataPropertyName = "Тип планировки";
-            this.типПланировкиDataGridViewTextBoxColumn.HeaderText = "Тип планировки";
-            this.типПланировкиDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.типПланировкиDataGridViewTextBoxColumn.Name = "типПланировкиDataGridViewTextBoxColumn";
-            this.типПланировкиDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // типСанузлаDataGridViewTextBoxColumn
-            // 
-            this.типСанузлаDataGridViewTextBoxColumn.DataPropertyName = "Тип санузла";
-            this.типСанузлаDataGridViewTextBoxColumn.HeaderText = "Тип санузла";
-            this.типСанузлаDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.типСанузлаDataGridViewTextBoxColumn.Name = "типСанузлаDataGridViewTextBoxColumn";
-            this.типСанузлаDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // адресКвартирыDataGridViewTextBoxColumn
-            // 
-            this.адресКвартирыDataGridViewTextBoxColumn.DataPropertyName = "Адрес квартиры";
-            this.адресКвартирыDataGridViewTextBoxColumn.HeaderText = "Адрес квартиры";
-            this.адресКвартирыDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.адресКвартирыDataGridViewTextBoxColumn.Name = "адресКвартирыDataGridViewTextBoxColumn";
-            this.адресКвартирыDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // жилаяПлощадьDataGridViewTextBoxColumn
-            // 
-            this.жилаяПлощадьDataGridViewTextBoxColumn.DataPropertyName = "Жилая площадь";
-            this.жилаяПлощадьDataGridViewTextBoxColumn.HeaderText = "Жилая площадь";
-            this.жилаяПлощадьDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.жилаяПлощадьDataGridViewTextBoxColumn.Name = "жилаяПлощадьDataGridViewTextBoxColumn";
-            this.жилаяПлощадьDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // площадьКухниDataGridViewTextBoxColumn
-            // 
-            this.площадьКухниDataGridViewTextBoxColumn.DataPropertyName = "Площадь кухни";
-            this.площадьКухниDataGridViewTextBoxColumn.HeaderText = "Площадь кухни";
-            this.площадьКухниDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.площадьКухниDataGridViewTextBoxColumn.Name = "площадьКухниDataGridViewTextBoxColumn";
-            this.площадьКухниDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fKКвартирыДомаBindingSource1
-            // 
-            this.fKКвартирыДомаBindingSource1.DataMember = "FK_Квартиры_Дома";
-            this.fKКвартирыДомаBindingSource1.DataSource = this.домаBindingSource;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(705, 479);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.button1.Location = new System.Drawing.Point(501, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(263, 38);
+            this.button1.Size = new System.Drawing.Size(197, 31);
             this.button1.TabIndex = 3;
             this.button1.Text = "Обновить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(705, 530);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.button2.Location = new System.Drawing.Point(501, 74);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(263, 38);
+            this.button2.Size = new System.Drawing.Size(197, 31);
             this.button2.TabIndex = 4;
             this.button2.Text = "Вернуться в меню";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureSet
+            // 
+            this.pictureSet.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.планКвартирBindingSource1, "План квартиры", true));
+            this.pictureSet.Location = new System.Drawing.Point(297, 184);
+            this.pictureSet.Name = "pictureSet";
+            this.pictureSet.Size = new System.Drawing.Size(198, 178);
+            this.pictureSet.TabIndex = 13;
+            this.pictureSet.TabStop = false;
+            this.pictureSet.Click += new System.EventHandler(this.pictureSet_Click);
+            // 
+            // планКвартирBindingSource1
+            // 
+            this.планКвартирBindingSource1.DataMember = "План квартир";
+            this.планКвартирBindingSource1.DataSource = this.уП01ИСПП5РаботяговаААDataSet3BindingSource;
+            // 
+            // уП01ИСПП5РаботяговаААDataSet3BindingSource
+            // 
+            this.уП01ИСПП5РаботяговаААDataSet3BindingSource.DataSource = this.уП01_ИСПП5_Работягова_ААDataSet3;
+            this.уП01ИСПП5РаботяговаААDataSet3BindingSource.Position = 0;
+            // 
+            // уП01_ИСПП5_Работягова_ААDataSet3
+            // 
+            this.уП01_ИСПП5_Работягова_ААDataSet3.DataSetName = "УП01_ИСПП5_Работягова_ААDataSet3";
+            this.уП01_ИСПП5_Работягова_ААDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.квартирыBindingSource;
+            this.bindingNavigator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(224)))), ((int)(((byte)(240)))));
+            this.bindingNavigator1.BindingSource = this.планКвартирBindingSource1;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -306,8 +169,8 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1028, 31);
-            this.bindingNavigator1.TabIndex = 5;
+            this.bindingNavigator1.Size = new System.Drawing.Size(712, 25);
+            this.bindingNavigator1.TabIndex = 21;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
@@ -316,13 +179,16 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
+            this.bindingNavigatorCountItem.Font = new System.Drawing.Font("Txt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bindingNavigatorCountItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(62, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -332,7 +198,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -341,7 +207,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -350,13 +216,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -364,14 +230,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -379,8 +245,9 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -388,23 +255,24 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // SaveButton
             // 
             this.SaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SaveButton.Enabled = false;
             this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
             this.SaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(29, 28);
+            this.SaveButton.Size = new System.Drawing.Size(23, 22);
             this.SaveButton.Text = "Save";
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click_1);
             // 
             // CancelButton
             // 
@@ -412,212 +280,203 @@
             this.CancelButton.Image = ((System.Drawing.Image)(resources.GetObject("CancelButton.Image")));
             this.CancelButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(29, 28);
+            this.CancelButton.Size = new System.Drawing.Size(23, 22);
             this.CancelButton.Text = "Cancel";
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // pictureSet
-            // 
-            this.pictureSet.Location = new System.Drawing.Point(27, 250);
-            this.pictureSet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureSet.Name = "pictureSet";
-            this.pictureSet.Size = new System.Drawing.Size(264, 219);
-            this.pictureSet.TabIndex = 13;
-            this.pictureSet.TabStop = false;
-            this.pictureSet.Click += new System.EventHandler(this.pictureSet_Click);
-            // 
-            // уП01_ИСПП5_Работягова_ААDataSet2
-            // 
-            this.уП01_ИСПП5_Работягова_ААDataSet2.DataSetName = "УП01_ИСПП5_Работягова_ААDataSet2";
-            this.уП01_ИСПП5_Работягова_ААDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // квартирыBindingSource1
-            // 
-            this.квартирыBindingSource1.DataMember = "Квартиры";
-            this.квартирыBindingSource1.DataSource = this.уП01_ИСПП5_Работягова_ААDataSet2;
-            // 
-            // квартирыTableAdapter1
-            // 
-            this.квартирыTableAdapter1.ClearBeforeFill = true;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(147)))), ((int)(((byte)(171)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.кодПланаКвартирыDataGridViewTextBoxColumn,
-            this.планКвартирыDataGridViewImageColumn});
-            this.dataGridView1.DataSource = this.планКвартирBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(636, 250);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.кодКвартирыDataGridViewTextBoxColumn,
+            this.кодДомаDataGridViewTextBoxColumn,
+            this.документНаПравоСобственностиDataGridViewTextBoxColumn,
+            this.наличиеПриватизацииDataGridViewTextBoxColumn,
+            this.общаяПлощадьDataGridViewTextBoxColumn,
+            this.этажКвартирыDataGridViewTextBoxColumn,
+            this.типПланировкиDataGridViewTextBoxColumn,
+            this.типСанузлаDataGridViewTextBoxColumn,
+            this.адресКвартирыDataGridViewTextBoxColumn,
+            this.жилаяПлощадьDataGridViewTextBoxColumn,
+            this.площадьКухниDataGridViewTextBoxColumn,
+            this.кодПланаКвартирыDataGridViewTextBoxColumn1});
+            this.dataGridView1.DataSource = this.fKКвартирыПланКвартирBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(372, 185);
-            this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.Size = new System.Drawing.Size(483, 150);
+            this.dataGridView1.TabIndex = 22;
+            // 
+            // кодКвартирыDataGridViewTextBoxColumn
+            // 
+            this.кодКвартирыDataGridViewTextBoxColumn.DataPropertyName = "Код квартиры";
+            this.кодКвартирыDataGridViewTextBoxColumn.HeaderText = "Код квартиры";
+            this.кодКвартирыDataGridViewTextBoxColumn.Name = "кодКвартирыDataGridViewTextBoxColumn";
+            // 
+            // кодДомаDataGridViewTextBoxColumn
+            // 
+            this.кодДомаDataGridViewTextBoxColumn.DataPropertyName = "Код дома";
+            this.кодДомаDataGridViewTextBoxColumn.HeaderText = "Код дома";
+            this.кодДомаDataGridViewTextBoxColumn.Name = "кодДомаDataGridViewTextBoxColumn";
+            // 
+            // документНаПравоСобственностиDataGridViewTextBoxColumn
+            // 
+            this.документНаПравоСобственностиDataGridViewTextBoxColumn.DataPropertyName = "Документ на право собственности";
+            this.документНаПравоСобственностиDataGridViewTextBoxColumn.HeaderText = "Документ на право собственности";
+            this.документНаПравоСобственностиDataGridViewTextBoxColumn.Name = "документНаПравоСобственностиDataGridViewTextBoxColumn";
+            // 
+            // наличиеПриватизацииDataGridViewTextBoxColumn
+            // 
+            this.наличиеПриватизацииDataGridViewTextBoxColumn.DataPropertyName = "Наличие приватизации";
+            this.наличиеПриватизацииDataGridViewTextBoxColumn.HeaderText = "Наличие приватизации";
+            this.наличиеПриватизацииDataGridViewTextBoxColumn.Name = "наличиеПриватизацииDataGridViewTextBoxColumn";
+            // 
+            // общаяПлощадьDataGridViewTextBoxColumn
+            // 
+            this.общаяПлощадьDataGridViewTextBoxColumn.DataPropertyName = "Общая площадь";
+            this.общаяПлощадьDataGridViewTextBoxColumn.HeaderText = "Общая площадь";
+            this.общаяПлощадьDataGridViewTextBoxColumn.Name = "общаяПлощадьDataGridViewTextBoxColumn";
+            // 
+            // этажКвартирыDataGridViewTextBoxColumn
+            // 
+            this.этажКвартирыDataGridViewTextBoxColumn.DataPropertyName = "Этаж квартиры";
+            this.этажКвартирыDataGridViewTextBoxColumn.HeaderText = "Этаж квартиры";
+            this.этажКвартирыDataGridViewTextBoxColumn.Name = "этажКвартирыDataGridViewTextBoxColumn";
+            // 
+            // типПланировкиDataGridViewTextBoxColumn
+            // 
+            this.типПланировкиDataGridViewTextBoxColumn.DataPropertyName = "Тип планировки";
+            this.типПланировкиDataGridViewTextBoxColumn.HeaderText = "Тип планировки";
+            this.типПланировкиDataGridViewTextBoxColumn.Name = "типПланировкиDataGridViewTextBoxColumn";
+            // 
+            // типСанузлаDataGridViewTextBoxColumn
+            // 
+            this.типСанузлаDataGridViewTextBoxColumn.DataPropertyName = "Тип санузла";
+            this.типСанузлаDataGridViewTextBoxColumn.HeaderText = "Тип санузла";
+            this.типСанузлаDataGridViewTextBoxColumn.Name = "типСанузлаDataGridViewTextBoxColumn";
+            // 
+            // адресКвартирыDataGridViewTextBoxColumn
+            // 
+            this.адресКвартирыDataGridViewTextBoxColumn.DataPropertyName = "Адрес квартиры";
+            this.адресКвартирыDataGridViewTextBoxColumn.HeaderText = "Адрес квартиры";
+            this.адресКвартирыDataGridViewTextBoxColumn.Name = "адресКвартирыDataGridViewTextBoxColumn";
+            // 
+            // жилаяПлощадьDataGridViewTextBoxColumn
+            // 
+            this.жилаяПлощадьDataGridViewTextBoxColumn.DataPropertyName = "Жилая площадь";
+            this.жилаяПлощадьDataGridViewTextBoxColumn.HeaderText = "Жилая площадь";
+            this.жилаяПлощадьDataGridViewTextBoxColumn.Name = "жилаяПлощадьDataGridViewTextBoxColumn";
+            // 
+            // площадьКухниDataGridViewTextBoxColumn
+            // 
+            this.площадьКухниDataGridViewTextBoxColumn.DataPropertyName = "Площадь кухни";
+            this.площадьКухниDataGridViewTextBoxColumn.HeaderText = "Площадь кухни";
+            this.площадьКухниDataGridViewTextBoxColumn.Name = "площадьКухниDataGridViewTextBoxColumn";
+            // 
+            // кодПланаКвартирыDataGridViewTextBoxColumn1
+            // 
+            this.кодПланаКвартирыDataGridViewTextBoxColumn1.DataPropertyName = " Код плана квартиры";
+            this.кодПланаКвартирыDataGridViewTextBoxColumn1.HeaderText = " Код плана квартиры";
+            this.кодПланаКвартирыDataGridViewTextBoxColumn1.Name = "кодПланаКвартирыDataGridViewTextBoxColumn1";
+            // 
+            // fKКвартирыПланКвартирBindingSource1
+            // 
+            this.fKКвартирыПланКвартирBindingSource1.DataMember = "FK_Квартиры_План квартир";
+            this.fKКвартирыПланКвартирBindingSource1.DataSource = this.планКвартирBindingSource1;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(147)))), ((int)(((byte)(171)))));
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.кодПланаКвартирыDataGridViewTextBoxColumn,
+            this.планКвартирыDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.планКвартирBindingSource1;
+            this.dataGridView2.Location = new System.Drawing.Point(12, 184);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(264, 178);
+            this.dataGridView2.TabIndex = 23;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_1);
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             // 
             // кодПланаКвартирыDataGridViewTextBoxColumn
             // 
             this.кодПланаКвартирыDataGridViewTextBoxColumn.DataPropertyName = "Код плана квартиры";
             this.кодПланаКвартирыDataGridViewTextBoxColumn.HeaderText = "Код плана квартиры";
-            this.кодПланаКвартирыDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.кодПланаКвартирыDataGridViewTextBoxColumn.Name = "кодПланаКвартирыDataGridViewTextBoxColumn";
-            this.кодПланаКвартирыDataGridViewTextBoxColumn.Width = 125;
+            this.кодПланаКвартирыDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // планКвартирыDataGridViewImageColumn
+            // планКвартирыDataGridViewTextBoxColumn
             // 
-            this.планКвартирыDataGridViewImageColumn.DataPropertyName = "План квартиры";
-            this.планКвартирыDataGridViewImageColumn.HeaderText = "План квартиры";
-            this.планКвартирыDataGridViewImageColumn.MinimumWidth = 6;
-            this.планКвартирыDataGridViewImageColumn.Name = "планКвартирыDataGridViewImageColumn";
-            this.планКвартирыDataGridViewImageColumn.Width = 125;
+            this.планКвартирыDataGridViewTextBoxColumn.DataPropertyName = "План квартиры";
+            this.планКвартирыDataGridViewTextBoxColumn.HeaderText = "План квартиры";
+            this.планКвартирыDataGridViewTextBoxColumn.Name = "планКвартирыDataGridViewTextBoxColumn";
+            this.планКвартирыDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // планКвартирBindingSource
+            // план_квартирTableAdapter1
             // 
-            this.планКвартирBindingSource.DataMember = "План квартир";
-            this.планКвартирBindingSource.DataSource = this.уП01_ИСПП5_Работягова_ААDataSet2;
+            this.план_квартирTableAdapter1.ClearBeforeFill = true;
             // 
-            // план_квартирTableAdapter
+            // квартирыTableAdapter2
             // 
-            this.план_квартирTableAdapter.ClearBeforeFill = true;
+            this.квартирыTableAdapter2.ClearBeforeFill = true;
             // 
-            // fKКвартирыПланКвартирBindingSource
+            // button3
             // 
-            this.fKКвартирыПланКвартирBindingSource.DataMember = "FK_Квартиры_План квартир";
-            this.fKКвартирыПланКвартирBindingSource.DataSource = this.планКвартирBindingSource;
-            // 
-            // btnSet
-            // 
-            this.btnSet.Location = new System.Drawing.Point(27, 535);
-            this.btnSet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(264, 38);
-            this.btnSet.TabIndex = 16;
-            this.btnSet.Text = "Загрузить в БД";
-            this.btnSet.UseVisualStyleBackColor = true;
-            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Location = new System.Drawing.Point(27, 487);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(264, 37);
-            this.btnSelect.TabIndex = 15;
-            this.btnSelect.Text = "Выбрать";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
-            // 
-            // btnView
-            // 
-            this.btnView.Location = new System.Drawing.Point(321, 535);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(263, 38);
-            this.btnView.TabIndex = 17;
-            this.btnView.Text = "Вывод картинки";
-            this.btnView.UseVisualStyleBackColor = true;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // Labelid
-            // 
-            this.Labelid.AutoSize = true;
-            this.Labelid.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Labelid.Location = new System.Drawing.Point(317, 487);
-            this.Labelid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Labelid.Name = "Labelid";
-            this.Labelid.Size = new System.Drawing.Size(26, 21);
-            this.Labelid.TabIndex = 18;
-            this.Labelid.Text = "id:";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(355, 484);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(228, 22);
-            this.txtID.TabIndex = 19;
-            // 
-            // pictureView
-            // 
-            this.pictureView.Location = new System.Drawing.Point(321, 250);
-            this.pictureView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureView.Name = "pictureView";
-            this.pictureView.Size = new System.Drawing.Size(263, 219);
-            this.pictureView.TabIndex = 14;
-            this.pictureView.TabStop = false;
-            this.pictureView.Click += new System.EventHandler(this.pictureView_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.button3.Location = new System.Drawing.Point(501, 332);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(197, 30);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "Найти фото";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form7
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 583);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.ClientSize = new System.Drawing.Size(712, 384);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.Labelid);
-            this.Controls.Add(this.btnView);
-            this.Controls.Add(this.btnSet);
-            this.Controls.Add(this.btnSelect);
-            this.Controls.Add(this.pictureView);
-            this.Controls.Add(this.pictureSet);
             this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(this.pictureSet);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form7";
-            this.Text = "Данные об квартирах";
+            this.Text = "Данные о квартирах";
             this.Load += new System.EventHandler(this.Form7_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.квартирыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.домаBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKДоговорыКвартирыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKКвартирыДомаBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKКвартирыДомаBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.планКвартирBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уП01ИСПП5РаботяговаААDataSet3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.уП01_ИСПП5_Работягова_ААDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.квартирыBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.планКвартирBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKКвартирыПланКвартирBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKКвартирыПланКвартирBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private УП01_ИСПП5_Работягова_ААDataSet уП01_ИСПП5_Работягова_ААDataSet;
-        private System.Windows.Forms.BindingSource квартирыBindingSource;
-        private УП01_ИСПП5_Работягова_ААDataSetTableAdapters.КвартирыTableAdapter квартирыTableAdapter;
-        private System.Windows.Forms.BindingSource домаBindingSource;
-        private УП01_ИСПП5_Работягова_ААDataSetTableAdapters.ДомаTableAdapter домаTableAdapter;
-        private System.Windows.Forms.BindingSource fKДоговорыКвартирыBindingSource;
-        private УП01_ИСПП5_Работягова_ААDataSetTableAdapters.ДоговорыTableAdapter договорыTableAdapter;
-        private System.Windows.Forms.BindingSource fKКвартирыДомаBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодКвартирыDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодДомаDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn документНаПравоСобственностиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn наличиеПриватизацииDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn общаяПлощадьDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn этажКвартирыDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn типПланировкиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn типСанузлаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn адресКвартирыDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn жилаяПлощадьDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn площадьКухниDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource fKКвартирыДомаBindingSource1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureSet;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -632,22 +491,29 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton SaveButton;
         private System.Windows.Forms.ToolStripButton CancelButton;
-        private System.Windows.Forms.PictureBox pictureSet;
-        private УП01_ИСПП5_Работягова_ААDataSet2 уП01_ИСПП5_Работягова_ААDataSet2;
-        private System.Windows.Forms.BindingSource квартирыBindingSource1;
-        private УП01_ИСПП5_Работягова_ААDataSet2TableAdapters.КвартирыTableAdapter квартирыTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource планКвартирBindingSource;
-        private УП01_ИСПП5_Работягова_ААDataSet2TableAdapters.План_квартирTableAdapter план_квартирTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource уП01ИСПП5РаботяговаААDataSet3BindingSource;
+        private УП01_ИСПП5_Работягова_ААDataSet3 уП01_ИСПП5_Работягова_ААDataSet3;
+        private System.Windows.Forms.BindingSource планКвартирBindingSource1;
+        private УП01_ИСПП5_Работягова_ААDataSet3TableAdapters.План_квартирTableAdapter план_квартирTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодПланаКвартирыDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn планКвартирыDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn планКвартирыDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource fKКвартирыПланКвартирBindingSource;
-        private System.Windows.Forms.Button btnSet;
-        private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.Label Labelid;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.PictureBox pictureView;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.BindingSource fKКвартирыПланКвартирBindingSource1;
+        private УП01_ИСПП5_Работягова_ААDataSet3TableAdapters.КвартирыTableAdapter квартирыTableAdapter2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодКвартирыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодДомаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn документНаПравоСобственностиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn наличиеПриватизацииDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn общаяПлощадьDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn этажКвартирыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn типПланировкиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn типСанузлаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn адресКвартирыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn жилаяПлощадьDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn площадьКухниDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодПланаКвартирыDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button button3;
     }
 }

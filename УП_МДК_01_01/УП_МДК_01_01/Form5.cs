@@ -16,36 +16,24 @@ namespace УП_МДК_01_01
         {
             InitializeComponent();
         }
-
+        string a;
+        public void а(string b)
+        {
+            if (b == "Администратор")
+            {
+                button7.Visible = true;
+            }
+            else
+            {
+                button7.Visible = false;
+            }
+        }
         private void Form5_Load(object sender, EventArgs e)
         {
         }
-        string a;
-        public void ii(string b)
-        {
-            a = b;
-            i1();
-        }
-        public void i1()
-        {
-            if (a == "Оператор")
-            {
-                Text = "Панель Оператора";
-                button2.Visible = false;
-                Size = new Size(321, 289);
-                button8.Text = "Выход";
-                button7.Text = "Вернуться к авторизации";
-            }
-            if (a == "Администратор")
-            {
-                Text = "Панель Администратора";
-                button2.Visible = true;
-                Size = new Size(321, 317);
-                button2.Text = "Выход";
-                button8.Text = "Вернуться к авторизации";
-                button7.Text = "Право доступа";
-            }
-        }
+        
+        
+        
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -55,7 +43,8 @@ namespace УП_МДК_01_01
         {
             Hide();
             Form1 form1 = new Form1();
-            form1.st(a);
+            form1.i("Администратор");
+            form1.d("Администратор");
             form1.Show();
         }
 
@@ -63,7 +52,8 @@ namespace УП_МДК_01_01
         {
             Hide();
             Form4 form4 = new Form4();
-            form4.st(a);
+            form4.i("Администратор");
+            form4.d("Администратор");
             form4.Show();
         }
 
@@ -71,7 +61,8 @@ namespace УП_МДК_01_01
         {
             Hide();
             Form6 form6 = new Form6();
-            form6.st(a);
+            form6.i("Администратор");
+            form6.d("Администратор");
             form6.Show();
         }
 
@@ -79,39 +70,24 @@ namespace УП_МДК_01_01
         {
             Hide();
             Form7 form7 = new Form7();
-            form7.st(a);
+            form7.i("Администратор");
+            form7.d("Администратор");
             form7.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (button7.Text == "Право доступа")
-            {
-                Hide();
+            Hide();
                 Form9 form5 = new Form9();
-                form5.st(a);
-                form5.Show();
-            }
-            if (button7.Text == "Вернуться к авторизации")
-            {
-                Close();
-                Form2 form5 = new Form2();
-                form5.Show();
-            }
+                form5.i("Администратор");
+            form5.Show();   
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (button8.Text == "Вернуться к авторизации")
-            {
-                Close();
+            Close();
                 Form2 form5 = new Form2();
                 form5.Show();
-            }
-            if (button8.Text == "Выход")
-            {
-                Application.Exit();
-            }
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -128,7 +104,7 @@ namespace УП_МДК_01_01
         {
             Hide();
             Form8 form8 = new Form8();
-            form8.st(a);
+            form8.i("Администратор");
             form8.Show();
         }
     }

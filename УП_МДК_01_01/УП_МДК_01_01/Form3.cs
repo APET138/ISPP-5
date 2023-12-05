@@ -29,8 +29,8 @@ namespace УП_МДК_01_01
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "уП01_ИСПП5_Работягова_ААDataSet1.Пользователи". При необходимости она может быть перемещена или удалена.
-            this.пользователиTableAdapter.Fill(this.уП01_ИСПП5_Работягова_ААDataSet1.Пользователи);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "уП01_ИСПП5_Работягова_ААDataSet3.Пользователи". При необходимости она может быть перемещена или удалена.
+            this.пользователиTableAdapter1.Fill(this.уП01_ИСПП5_Работягова_ААDataSet3.Пользователи);
 
         }
 
@@ -45,7 +45,7 @@ namespace УП_МДК_01_01
             string n = dta.Rows[dta.Rows.Count - 1]["Id"].ToString();
             SqlDataAdapter da = new SqlDataAdapter($"INSERT INTO Пользователи (Id,Логин,Пароль) VALUES ('{int.Parse(n) + 1}','{textBox1.Text}','{textBox2.Text}');", sqlConnect);
             da.Fill(dt);
-            пользователиTableAdapter.Update(уП01_ИСПП5_Работягова_ААDataSet1.Пользователи);
+            пользователиTableAdapter1.Update(уП01_ИСПП5_Работягова_ААDataSet3.Пользователи);
             MessageBox.Show($"Регистрация пользователя с логином {textBox1.Text} выполнена.\nВы зарегистрированы как гость");
             this.Hide();
             Form2 form2 = new Form2();
@@ -53,8 +53,29 @@ namespace УП_МДК_01_01
         }
          public void load()
          {
-            this.пользователиTableAdapter.Fill(this.уП01_ИСПП5_Работягова_ААDataSet1.Пользователи);
+            this.пользователиTableAdapter1.Fill(this.уП01_ИСПП5_Работягова_ААDataSet3.Пользователи);
             dataGridView1.Update();
          }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            textBox1.MaxLength = 30;
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Поле не может содержать цифры!", "Ошибка");
+            }
+
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            textBox2.MaxLength = 15;
+        }
     }
 }
