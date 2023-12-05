@@ -1,6 +1,6 @@
 ﻿namespace Практика_sql
 {
-    partial class Form2
+    partial class Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
+            this.textBox17 = new System.Windows.Forms.TextBox();
             this.apartmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSet();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Kod_apart = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -55,9 +56,9 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonPrev = new System.Windows.Forms.Button();
+            this.buttonNext = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.apartmentcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +72,8 @@
             this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
+            this.buttonDelete2 = new System.Windows.Forms.Button();
+            this.buttonAdd2 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.buildingBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -83,17 +84,17 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.Kod_build = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonUpdate2 = new System.Windows.Forms.Button();
+            this.buttonPrev2 = new System.Windows.Forms.Button();
+            this.buttonBack2 = new System.Windows.Forms.Button();
+            this.buttonNext2 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.buildingcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,21 +105,54 @@
             this.floorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ownerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.buttonAdd3 = new System.Windows.Forms.Button();
+            this.buttonDelete3 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.counterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Kod_count = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.buttonUpdate3 = new System.Windows.Forms.Button();
+            this.buttonPrev3 = new System.Windows.Forms.Button();
+            this.buttonBack3 = new System.Windows.Forms.Button();
+            this.buttonNext3 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.countercodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.factorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.counterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.payBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.Kod_pay = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.buttonDelete4 = new System.Windows.Forms.Button();
+            this.buttonAdd4 = new System.Windows.Forms.Button();
+            this.buttonUpdate4 = new System.Windows.Forms.Button();
+            this.buttonPrev4 = new System.Windows.Forms.Button();
+            this.buttonBack4 = new System.Windows.Forms.Button();
+            this.buttonNext4 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.paycodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.counterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,52 +164,48 @@
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tariffcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.indicatorsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.payBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.buttonAdd5 = new System.Windows.Forms.Button();
+            this.buttonDelete5 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Kod_elect = new System.Windows.Forms.Label();
+            this.electricitytariffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.buttonUpdate5 = new System.Windows.Forms.Button();
+            this.buttonPrev5 = new System.Windows.Forms.Button();
+            this.buttonBack5 = new System.Windows.Forms.Button();
+            this.buttonNext5 = new System.Windows.Forms.Button();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.tariffcodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pricepermonthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.electricitytariffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.buttonDelete6 = new System.Windows.Forms.Button();
+            this.buttonAdd6 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.Kod_ind = new System.Windows.Forms.Label();
+            this.indicatorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.buttonUpdate6 = new System.Windows.Forms.Button();
+            this.buttonPrev6 = new System.Windows.Forms.Button();
+            this.buttonBack6 = new System.Windows.Forms.Button();
+            this.buttonNext6 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.indicatorcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beginMonthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endMonthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.indicatorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apartmentsTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.ApartmentsTableAdapter();
             this.buildingTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.BuildingTableAdapter();
             this.counterTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.CounterTableAdapter();
             this.payTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.PayTableAdapter();
             this.indicatorsTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.IndicatorsTableAdapter();
             this.electricity_tariffTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.Electricity_tariffTableAdapter();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.apartmentsBindingSource)).BeginInit();
@@ -185,28 +215,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.buildingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.counterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.payBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.electricitytariffBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.indicatorsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonBack
             // 
-            this.button1.Location = new System.Drawing.Point(1014, 192);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonBack.Location = new System.Drawing.Point(1014, 6);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 0;
+            this.buttonBack.Text = "Назад";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // tabControl1
             // 
@@ -224,9 +254,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabPage1.Controls.Add(this.textBox17);
-            this.tabPage1.Controls.Add(this.button26);
-            this.tabPage1.Controls.Add(this.button25);
+            this.tabPage1.Controls.Add(this.buttonDelete);
+            this.tabPage1.Controls.Add(this.buttonAdd);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
@@ -238,7 +269,7 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.Kod_apart);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBox9);
             this.tabPage1.Controls.Add(this.textBox8);
@@ -246,10 +277,10 @@
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.button19);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.buttonUpdate);
+            this.tabPage1.Controls.Add(this.buttonPrev);
+            this.tabPage1.Controls.Add(this.buttonBack);
+            this.tabPage1.Controls.Add(this.buttonNext);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -257,28 +288,15 @@
             this.tabPage1.Size = new System.Drawing.Size(1098, 610);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Apartments";
-            this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click_1);
             // 
-            // button26
+            // textBox17
             // 
-            this.button26.Location = new System.Drawing.Point(1014, 40);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(75, 23);
-            this.button26.TabIndex = 30;
-            this.button26.Text = "Удалить";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(820, 40);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 23);
-            this.button25.TabIndex = 29;
-            this.button25.Text = "Добавить";
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
+            this.textBox17.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Building_number", true));
+            this.textBox17.Location = new System.Drawing.Point(398, 11);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(100, 20);
+            this.textBox17.TabIndex = 31;
             // 
             // apartmentsBindingSource
             // 
@@ -289,6 +307,26 @@
             // 
             this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.DataSetName = "УП_ПМ01_ИСПП_5_Буйлов_МАDataSet";
             this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(1014, 40);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.TabIndex = 30;
+            this.buttonDelete.Text = "Удалить";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(820, 35);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 28);
+            this.buttonAdd.TabIndex = 29;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label11
             // 
@@ -388,15 +426,15 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Квартира";
             // 
-            // label2
+            // Kod_apart
             // 
-            this.label2.AutoSize = true;
-            this.label2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Apartment_code", true));
-            this.label2.Location = new System.Drawing.Point(156, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Код";
+            this.Kod_apart.AutoSize = true;
+            this.Kod_apart.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Apartment_code", true));
+            this.Kod_apart.Location = new System.Drawing.Point(156, 16);
+            this.Kod_apart.Name = "Kod_apart";
+            this.Kod_apart.Size = new System.Drawing.Size(26, 13);
+            this.Kod_apart.TabIndex = 16;
+            this.Kod_apart.Text = "Код";
             // 
             // label1
             // 
@@ -455,39 +493,40 @@
             this.textBox1.Size = new System.Drawing.Size(52, 20);
             this.textBox1.TabIndex = 6;
             // 
-            // button19
+            // buttonUpdate
             // 
-            this.button19.Location = new System.Drawing.Point(901, 40);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 5;
-            this.button19.Text = "Обновить";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.buttonUpdate.Location = new System.Drawing.Point(901, 40);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.TabIndex = 5;
+            this.buttonUpdate.Text = "Обновить";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
-            // button2
+            // buttonPrev
             // 
-            this.button2.Location = new System.Drawing.Point(820, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "<<";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonPrev.Location = new System.Drawing.Point(820, 6);
+            this.buttonPrev.Name = "buttonPrev";
+            this.buttonPrev.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrev.TabIndex = 3;
+            this.buttonPrev.Text = "<<";
+            this.buttonPrev.UseVisualStyleBackColor = true;
+            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
             // 
-            // button3
+            // buttonNext
             // 
-            this.button3.Location = new System.Drawing.Point(901, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = ">>";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonNext.Location = new System.Drawing.Point(901, 6);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext.TabIndex = 4;
+            this.buttonNext.Text = ">>";
+            this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.apartmentcodeDataGridViewTextBoxColumn,
@@ -576,8 +615,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button27);
-            this.tabPage2.Controls.Add(this.button28);
+            this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.buttonDelete2);
+            this.tabPage2.Controls.Add(this.buttonAdd2);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.textBox5);
             this.tabPage2.Controls.Add(this.label17);
@@ -587,17 +627,17 @@
             this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.label23);
+            this.tabPage2.Controls.Add(this.Kod_build);
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.textBox7);
             this.tabPage2.Controls.Add(this.textBox13);
             this.tabPage2.Controls.Add(this.textBox14);
             this.tabPage2.Controls.Add(this.textBox15);
             this.tabPage2.Controls.Add(this.textBox16);
-            this.tabPage2.Controls.Add(this.button20);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.buttonUpdate2);
+            this.tabPage2.Controls.Add(this.buttonPrev2);
+            this.tabPage2.Controls.Add(this.buttonBack2);
+            this.tabPage2.Controls.Add(this.buttonNext2);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -605,37 +645,36 @@
             this.tabPage2.Size = new System.Drawing.Size(1098, 610);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Building ";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click_1);
             // 
-            // button27
+            // buttonDelete2
             // 
-            this.button27.Location = new System.Drawing.Point(1017, 35);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(75, 23);
-            this.button27.TabIndex = 46;
-            this.button27.Text = "Удалить";
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
+            this.buttonDelete2.Location = new System.Drawing.Point(1017, 35);
+            this.buttonDelete2.Name = "buttonDelete2";
+            this.buttonDelete2.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete2.TabIndex = 46;
+            this.buttonDelete2.Text = "Удалить";
+            this.buttonDelete2.UseVisualStyleBackColor = true;
+            this.buttonDelete2.Click += new System.EventHandler(this.buttonDelete2_Click);
             // 
-            // button28
+            // buttonAdd2
             // 
-            this.button28.Location = new System.Drawing.Point(820, 35);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 23);
-            this.button28.TabIndex = 47;
-            this.button28.Text = "Добавить";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
+            this.buttonAdd2.Location = new System.Drawing.Point(820, 35);
+            this.buttonAdd2.Name = "buttonAdd2";
+            this.buttonAdd2.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd2.TabIndex = 47;
+            this.buttonAdd2.Text = "Добавить";
+            this.buttonAdd2.UseVisualStyleBackColor = true;
+            this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(179, 137);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 13);
+            this.label16.Size = new System.Drawing.Size(90, 13);
             this.label16.TabIndex = 45;
-            this.label16.Text = "Floor";
+            this.label16.Text = "Тип перекрытий";
             // 
             // textBox5
             // 
@@ -656,9 +695,9 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(309, 137);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 13);
+            this.label17.Size = new System.Drawing.Size(105, 13);
             this.label17.TabIndex = 43;
-            this.label17.Text = "Owner";
+            this.label17.Text = "Балансодержатель";
             // 
             // textBox6
             // 
@@ -714,15 +753,15 @@
             this.label22.TabIndex = 37;
             this.label22.Text = "Адрес";
             // 
-            // label23
+            // Kod_build
             // 
-            this.label23.AutoSize = true;
-            this.label23.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.buildingBindingSource, "Building_code", true));
-            this.label23.Location = new System.Drawing.Point(90, 16);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(26, 13);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "Код";
+            this.Kod_build.AutoSize = true;
+            this.Kod_build.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.buildingBindingSource, "Building_code", true));
+            this.Kod_build.Location = new System.Drawing.Point(90, 16);
+            this.Kod_build.Name = "Kod_build";
+            this.Kod_build.Size = new System.Drawing.Size(26, 13);
+            this.Kod_build.TabIndex = 36;
+            this.Kod_build.Text = "Код";
             // 
             // label24
             // 
@@ -775,49 +814,50 @@
             this.textBox16.Size = new System.Drawing.Size(79, 66);
             this.textBox16.TabIndex = 29;
             // 
-            // button20
+            // buttonUpdate2
             // 
-            this.button20.Location = new System.Drawing.Point(901, 35);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 8;
-            this.button20.Text = "Обновить";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.buttonUpdate2.Location = new System.Drawing.Point(901, 35);
+            this.buttonUpdate2.Name = "buttonUpdate2";
+            this.buttonUpdate2.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate2.TabIndex = 8;
+            this.buttonUpdate2.Text = "Обновить";
+            this.buttonUpdate2.UseVisualStyleBackColor = true;
+            this.buttonUpdate2.Click += new System.EventHandler(this.buttonUpdate2_Click);
             // 
-            // button4
+            // buttonPrev2
             // 
-            this.button4.Location = new System.Drawing.Point(820, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "<<";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonPrev2.Location = new System.Drawing.Point(820, 6);
+            this.buttonPrev2.Name = "buttonPrev2";
+            this.buttonPrev2.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrev2.TabIndex = 6;
+            this.buttonPrev2.Text = "<<";
+            this.buttonPrev2.UseVisualStyleBackColor = true;
+            this.buttonPrev2.Click += new System.EventHandler(this.buttonPrev2_Click);
             // 
-            // button5
+            // buttonBack2
             // 
-            this.button5.Location = new System.Drawing.Point(1017, 173);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Назад";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonBack2.Location = new System.Drawing.Point(1017, 6);
+            this.buttonBack2.Name = "buttonBack2";
+            this.buttonBack2.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack2.TabIndex = 5;
+            this.buttonBack2.Text = "Назад";
+            this.buttonBack2.UseVisualStyleBackColor = true;
+            this.buttonBack2.Click += new System.EventHandler(this.buttonBack2_Click);
             // 
-            // button6
+            // buttonNext2
             // 
-            this.button6.Location = new System.Drawing.Point(901, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 7;
-            this.button6.Text = ">>";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonNext2.Location = new System.Drawing.Point(901, 6);
+            this.buttonNext2.Name = "buttonNext2";
+            this.buttonNext2.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext2.TabIndex = 7;
+            this.buttonNext2.Text = ">>";
+            this.buttonNext2.UseVisualStyleBackColor = true;
+            this.buttonNext2.Click += new System.EventHandler(this.buttonNext2_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buildingcodeDataGridViewTextBoxColumn,
@@ -885,20 +925,21 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button29);
-            this.tabPage3.Controls.Add(this.button30);
+            this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage3.Controls.Add(this.buttonAdd3);
+            this.tabPage3.Controls.Add(this.buttonDelete3);
             this.tabPage3.Controls.Add(this.textBox12);
             this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.label30);
             this.tabPage3.Controls.Add(this.label31);
-            this.tabPage3.Controls.Add(this.label32);
+            this.tabPage3.Controls.Add(this.Kod_count);
             this.tabPage3.Controls.Add(this.label33);
             this.tabPage3.Controls.Add(this.textBox21);
             this.tabPage3.Controls.Add(this.textBox23);
-            this.tabPage3.Controls.Add(this.button21);
-            this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.button8);
-            this.tabPage3.Controls.Add(this.button9);
+            this.tabPage3.Controls.Add(this.buttonUpdate3);
+            this.tabPage3.Controls.Add(this.buttonPrev3);
+            this.tabPage3.Controls.Add(this.buttonBack3);
+            this.tabPage3.Controls.Add(this.buttonNext3);
             this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -906,52 +947,147 @@
             this.tabPage3.Size = new System.Drawing.Size(1098, 610);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Counter";
-            this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // button21
+            // buttonAdd3
             // 
-            this.button21.Location = new System.Drawing.Point(901, 35);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 23);
-            this.button21.TabIndex = 8;
-            this.button21.Text = "Обновить";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.buttonAdd3.Location = new System.Drawing.Point(820, 35);
+            this.buttonAdd3.Name = "buttonAdd3";
+            this.buttonAdd3.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd3.TabIndex = 49;
+            this.buttonAdd3.Text = "Добавить";
+            this.buttonAdd3.UseVisualStyleBackColor = true;
+            this.buttonAdd3.Click += new System.EventHandler(this.buttonAdd3_Click);
             // 
-            // button7
+            // buttonDelete3
             // 
-            this.button7.Location = new System.Drawing.Point(820, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "<<";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.buttonDelete3.Location = new System.Drawing.Point(1017, 35);
+            this.buttonDelete3.Name = "buttonDelete3";
+            this.buttonDelete3.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete3.TabIndex = 48;
+            this.buttonDelete3.Text = "Удалить";
+            this.buttonDelete3.UseVisualStyleBackColor = true;
+            this.buttonDelete3.Click += new System.EventHandler(this.buttonDelete3_Click);
             // 
-            // button8
+            // textBox12
             // 
-            this.button8.Location = new System.Drawing.Point(1017, 178);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "Назад";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.counterBindingSource, "Flat", true));
+            this.textBox12.Location = new System.Drawing.Point(22, 109);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(52, 20);
+            this.textBox12.TabIndex = 40;
             // 
-            // button9
+            // counterBindingSource
             // 
-            this.button9.Location = new System.Drawing.Point(901, 6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 7;
-            this.button9.Text = ">>";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.counterBindingSource.DataMember = "Counter";
+            this.counterBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 93);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 13);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Код квартиры";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(155, 45);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(123, 13);
+            this.label30.TabIndex = 38;
+            this.label30.Text = "Коэффицент фазности";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(19, 45);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(26, 13);
+            this.label31.TabIndex = 37;
+            this.label31.Text = "Тип";
+            // 
+            // Kod_count
+            // 
+            this.Kod_count.AutoSize = true;
+            this.Kod_count.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.counterBindingSource, "Counter_code", true));
+            this.Kod_count.Location = new System.Drawing.Point(155, 16);
+            this.Kod_count.Name = "Kod_count";
+            this.Kod_count.Size = new System.Drawing.Size(26, 13);
+            this.Kod_count.TabIndex = 36;
+            this.Kod_count.Text = "Код";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(19, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(130, 13);
+            this.label33.TabIndex = 35;
+            this.label33.Text = "Код квартиросъемщика";
+            // 
+            // textBox21
+            // 
+            this.textBox21.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.counterBindingSource, "Factor", true));
+            this.textBox21.Location = new System.Drawing.Point(158, 61);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(52, 20);
+            this.textBox21.TabIndex = 31;
+            // 
+            // textBox23
+            // 
+            this.textBox23.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.counterBindingSource, "Type", true));
+            this.textBox23.Location = new System.Drawing.Point(22, 61);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(111, 20);
+            this.textBox23.TabIndex = 29;
+            // 
+            // buttonUpdate3
+            // 
+            this.buttonUpdate3.Location = new System.Drawing.Point(901, 35);
+            this.buttonUpdate3.Name = "buttonUpdate3";
+            this.buttonUpdate3.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate3.TabIndex = 8;
+            this.buttonUpdate3.Text = "Обновить";
+            this.buttonUpdate3.UseVisualStyleBackColor = true;
+            this.buttonUpdate3.Click += new System.EventHandler(this.buttonUpdate3_Click);
+            // 
+            // buttonPrev3
+            // 
+            this.buttonPrev3.Location = new System.Drawing.Point(820, 6);
+            this.buttonPrev3.Name = "buttonPrev3";
+            this.buttonPrev3.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrev3.TabIndex = 6;
+            this.buttonPrev3.Text = "<<";
+            this.buttonPrev3.UseVisualStyleBackColor = true;
+            this.buttonPrev3.Click += new System.EventHandler(this.buttonPrev3_Click);
+            // 
+            // buttonBack3
+            // 
+            this.buttonBack3.Location = new System.Drawing.Point(1017, 6);
+            this.buttonBack3.Name = "buttonBack3";
+            this.buttonBack3.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack3.TabIndex = 5;
+            this.buttonBack3.Text = "Назад";
+            this.buttonBack3.UseVisualStyleBackColor = true;
+            this.buttonBack3.Click += new System.EventHandler(this.buttonBack3_Click);
+            // 
+            // buttonNext3
+            // 
+            this.buttonNext3.Location = new System.Drawing.Point(901, 6);
+            this.buttonNext3.Name = "buttonNext3";
+            this.buttonNext3.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext3.TabIndex = 7;
+            this.buttonNext3.Text = ">>";
+            this.buttonNext3.UseVisualStyleBackColor = true;
+            this.buttonNext3.Click += new System.EventHandler(this.buttonNext3_Click);
             // 
             // dataGridView3
             // 
             this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.countercodeDataGridViewTextBoxColumn,
@@ -989,17 +1125,35 @@
             this.flatDataGridViewTextBoxColumn1.HeaderText = "Flat";
             this.flatDataGridViewTextBoxColumn1.Name = "flatDataGridViewTextBoxColumn1";
             // 
-            // counterBindingSource
-            // 
-            this.counterBindingSource.DataMember = "Counter";
-            this.counterBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
-            // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.button22);
-            this.tabPage4.Controls.Add(this.button10);
-            this.tabPage4.Controls.Add(this.button11);
-            this.tabPage4.Controls.Add(this.button12);
+            this.tabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage4.Controls.Add(this.textBox24);
+            this.tabPage4.Controls.Add(this.label34);
+            this.tabPage4.Controls.Add(this.label35);
+            this.tabPage4.Controls.Add(this.label36);
+            this.tabPage4.Controls.Add(this.textBox25);
+            this.tabPage4.Controls.Add(this.label37);
+            this.tabPage4.Controls.Add(this.textBox26);
+            this.tabPage4.Controls.Add(this.label38);
+            this.tabPage4.Controls.Add(this.label39);
+            this.tabPage4.Controls.Add(this.label40);
+            this.tabPage4.Controls.Add(this.label41);
+            this.tabPage4.Controls.Add(this.label42);
+            this.tabPage4.Controls.Add(this.Kod_pay);
+            this.tabPage4.Controls.Add(this.label44);
+            this.tabPage4.Controls.Add(this.textBox27);
+            this.tabPage4.Controls.Add(this.textBox28);
+            this.tabPage4.Controls.Add(this.textBox29);
+            this.tabPage4.Controls.Add(this.textBox30);
+            this.tabPage4.Controls.Add(this.textBox31);
+            this.tabPage4.Controls.Add(this.textBox32);
+            this.tabPage4.Controls.Add(this.buttonDelete4);
+            this.tabPage4.Controls.Add(this.buttonAdd4);
+            this.tabPage4.Controls.Add(this.buttonUpdate4);
+            this.tabPage4.Controls.Add(this.buttonPrev4);
+            this.tabPage4.Controls.Add(this.buttonBack4);
+            this.tabPage4.Controls.Add(this.buttonNext4);
             this.tabPage4.Controls.Add(this.dataGridView4);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -1007,52 +1161,250 @@
             this.tabPage4.Size = new System.Drawing.Size(1098, 610);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Pay";
-            this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // button22
+            // textBox24
             // 
-            this.button22.Location = new System.Drawing.Point(820, 32);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 9;
-            this.button22.Text = "Обновить";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.textBox24.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Indicators", true));
+            this.textBox24.Location = new System.Drawing.Point(434, 127);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(52, 20);
+            this.textBox24.TabIndex = 51;
+            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
             // 
-            // button10
+            // payBindingSource
             // 
-            this.button10.Location = new System.Drawing.Point(820, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "<<";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.payBindingSource.DataMember = "Pay";
+            this.payBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
             // 
-            // button11
+            // label34
             // 
-            this.button11.Location = new System.Drawing.Point(1017, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Назад";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(431, 111);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(94, 13);
+            this.label34.TabIndex = 50;
+            this.label34.Text = "Код показателей";
             // 
-            // button12
+            // label35
             // 
-            this.button12.Location = new System.Drawing.Point(901, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 8;
-            this.button12.Text = ">>";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(345, 111);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(66, 13);
+            this.label35.TabIndex = 49;
+            this.label35.Text = "Код тарифа";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(102, 111);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(45, 13);
+            this.label36.TabIndex = 48;
+            this.label36.Text = "Льготы";
+            // 
+            // textBox25
+            // 
+            this.textBox25.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Privilege", true));
+            this.textBox25.Location = new System.Drawing.Point(105, 127);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(71, 20);
+            this.textBox25.TabIndex = 47;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(202, 111);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(120, 13);
+            this.label37.TabIndex = 46;
+            this.label37.Text = "Фамилия Инспектора";
+            // 
+            // textBox26
+            // 
+            this.textBox26.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Surname", true));
+            this.textBox26.Location = new System.Drawing.Point(205, 127);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(100, 20);
+            this.textBox26.TabIndex = 45;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(18, 111);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(58, 13);
+            this.label38.TabIndex = 44;
+            this.label38.Text = "24ч тариф";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(271, 42);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(74, 13);
+            this.label39.TabIndex = 43;
+            this.label39.Text = "Тариф ночью";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(184, 42);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(69, 13);
+            this.label40.TabIndex = 42;
+            this.label40.Text = "Тариф днем";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(102, 42);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(40, 13);
+            this.label41.TabIndex = 41;
+            this.label41.Text = "Тариф";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(18, 42);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(47, 13);
+            this.label42.TabIndex = 40;
+            this.label42.Text = "Счетчик";
+            // 
+            // Kod_pay
+            // 
+            this.Kod_pay.AutoSize = true;
+            this.Kod_pay.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Pay_code", true));
+            this.Kod_pay.Location = new System.Drawing.Point(102, 13);
+            this.Kod_pay.Name = "Kod_pay";
+            this.Kod_pay.Size = new System.Drawing.Size(26, 13);
+            this.Kod_pay.TabIndex = 39;
+            this.Kod_pay.Text = "Код";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(18, 13);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(76, 13);
+            this.label44.TabIndex = 38;
+            this.label44.Text = "Код договора";
+            // 
+            // textBox27
+            // 
+            this.textBox27.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Night", true));
+            this.textBox27.Location = new System.Drawing.Point(274, 58);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(48, 20);
+            this.textBox27.TabIndex = 37;
+            // 
+            // textBox28
+            // 
+            this.textBox28.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Tariff_code", true));
+            this.textBox28.Location = new System.Drawing.Point(348, 127);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(52, 20);
+            this.textBox28.TabIndex = 36;
+            // 
+            // textBox29
+            // 
+            this.textBox29.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "hour24", true));
+            this.textBox29.Location = new System.Drawing.Point(21, 127);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(44, 20);
+            this.textBox29.TabIndex = 35;
+            // 
+            // textBox30
+            // 
+            this.textBox30.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Tariff", true));
+            this.textBox30.Location = new System.Drawing.Point(105, 58);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(48, 20);
+            this.textBox30.TabIndex = 34;
+            // 
+            // textBox31
+            // 
+            this.textBox31.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Day", true));
+            this.textBox31.Location = new System.Drawing.Point(187, 58);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(48, 20);
+            this.textBox31.TabIndex = 33;
+            // 
+            // textBox32
+            // 
+            this.textBox32.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Counter", true));
+            this.textBox32.Location = new System.Drawing.Point(21, 58);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(44, 20);
+            this.textBox32.TabIndex = 32;
+            // 
+            // buttonDelete4
+            // 
+            this.buttonDelete4.Location = new System.Drawing.Point(1017, 33);
+            this.buttonDelete4.Name = "buttonDelete4";
+            this.buttonDelete4.Size = new System.Drawing.Size(75, 22);
+            this.buttonDelete4.TabIndex = 11;
+            this.buttonDelete4.Text = "Удалить";
+            this.buttonDelete4.UseVisualStyleBackColor = true;
+            this.buttonDelete4.Click += new System.EventHandler(this.buttonDelete4_Click);
+            // 
+            // buttonAdd4
+            // 
+            this.buttonAdd4.Location = new System.Drawing.Point(820, 32);
+            this.buttonAdd4.Name = "buttonAdd4";
+            this.buttonAdd4.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd4.TabIndex = 10;
+            this.buttonAdd4.Text = "Добавить";
+            this.buttonAdd4.UseVisualStyleBackColor = true;
+            this.buttonAdd4.Click += new System.EventHandler(this.buttonAdd4_Click);
+            // 
+            // buttonUpdate4
+            // 
+            this.buttonUpdate4.Location = new System.Drawing.Point(901, 32);
+            this.buttonUpdate4.Name = "buttonUpdate4";
+            this.buttonUpdate4.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate4.TabIndex = 9;
+            this.buttonUpdate4.Text = "Обновить";
+            this.buttonUpdate4.UseVisualStyleBackColor = true;
+            this.buttonUpdate4.Click += new System.EventHandler(this.buttonUpdate4_Click);
+            // 
+            // buttonPrev4
+            // 
+            this.buttonPrev4.Location = new System.Drawing.Point(820, 3);
+            this.buttonPrev4.Name = "buttonPrev4";
+            this.buttonPrev4.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrev4.TabIndex = 7;
+            this.buttonPrev4.Text = "<<";
+            this.buttonPrev4.UseVisualStyleBackColor = true;
+            this.buttonPrev4.Click += new System.EventHandler(this.buttonPrev4_Click);
+            // 
+            // buttonBack4
+            // 
+            this.buttonBack4.Location = new System.Drawing.Point(1017, 3);
+            this.buttonBack4.Name = "buttonBack4";
+            this.buttonBack4.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack4.TabIndex = 6;
+            this.buttonBack4.Text = "Назад";
+            this.buttonBack4.UseVisualStyleBackColor = true;
+            this.buttonBack4.Click += new System.EventHandler(this.buttonBack4_Click);
+            // 
+            // buttonNext4
+            // 
+            this.buttonNext4.Location = new System.Drawing.Point(901, 3);
+            this.buttonNext4.Name = "buttonNext4";
+            this.buttonNext4.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext4.TabIndex = 8;
+            this.buttonNext4.Text = ">>";
+            this.buttonNext4.UseVisualStyleBackColor = true;
+            this.buttonNext4.Click += new System.EventHandler(this.buttonNext4_Click);
             // 
             // dataGridView4
             // 
             this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.paycodeDataGridViewTextBoxColumn,
@@ -1132,25 +1484,21 @@
             this.indicatorsDataGridViewTextBoxColumn.HeaderText = "Indicators";
             this.indicatorsDataGridViewTextBoxColumn.Name = "indicatorsDataGridViewTextBoxColumn";
             // 
-            // payBindingSource
-            // 
-            this.payBindingSource.DataMember = "Pay";
-            this.payBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
-            // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.button31);
-            this.tabPage5.Controls.Add(this.button32);
+            this.tabPage5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage5.Controls.Add(this.buttonAdd5);
+            this.tabPage5.Controls.Add(this.buttonDelete5);
             this.tabPage5.Controls.Add(this.label13);
             this.tabPage5.Controls.Add(this.label15);
-            this.tabPage5.Controls.Add(this.label25);
+            this.tabPage5.Controls.Add(this.Kod_elect);
             this.tabPage5.Controls.Add(this.label26);
             this.tabPage5.Controls.Add(this.textBox19);
             this.tabPage5.Controls.Add(this.textBox20);
-            this.tabPage5.Controls.Add(this.button23);
-            this.tabPage5.Controls.Add(this.button13);
-            this.tabPage5.Controls.Add(this.button14);
-            this.tabPage5.Controls.Add(this.button15);
+            this.tabPage5.Controls.Add(this.buttonUpdate5);
+            this.tabPage5.Controls.Add(this.buttonPrev5);
+            this.tabPage5.Controls.Add(this.buttonBack5);
+            this.tabPage5.Controls.Add(this.buttonNext5);
             this.tabPage5.Controls.Add(this.dataGridView6);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -1158,52 +1506,131 @@
             this.tabPage5.Size = new System.Drawing.Size(1098, 610);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Electricity tariff";
-            this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
-            // button23
+            // buttonAdd5
             // 
-            this.button23.Location = new System.Drawing.Point(823, 35);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
-            this.button23.TabIndex = 8;
-            this.button23.Text = "Обновить";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.buttonAdd5.Location = new System.Drawing.Point(823, 35);
+            this.buttonAdd5.Name = "buttonAdd5";
+            this.buttonAdd5.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd5.TabIndex = 51;
+            this.buttonAdd5.Text = "Добавить";
+            this.buttonAdd5.UseVisualStyleBackColor = true;
+            this.buttonAdd5.Click += new System.EventHandler(this.buttonAdd5_Click);
             // 
-            // button13
+            // buttonDelete5
             // 
-            this.button13.Location = new System.Drawing.Point(823, 6);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 6;
-            this.button13.Text = "<<";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.buttonDelete5.Location = new System.Drawing.Point(1020, 35);
+            this.buttonDelete5.Name = "buttonDelete5";
+            this.buttonDelete5.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete5.TabIndex = 50;
+            this.buttonDelete5.Text = "Удалить";
+            this.buttonDelete5.UseVisualStyleBackColor = true;
+            this.buttonDelete5.Click += new System.EventHandler(this.buttonDelete5_Click);
             // 
-            // button14
+            // label13
             // 
-            this.button14.Location = new System.Drawing.Point(1020, 6);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 5;
-            this.button14.Text = "Назад";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(152, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 13);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "Цена в месяц";
             // 
-            // button15
+            // label15
             // 
-            this.button15.Location = new System.Drawing.Point(904, 6);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 7;
-            this.button15.Text = ">>";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(16, 45);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(40, 13);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Месяц";
+            // 
+            // Kod_elect
+            // 
+            this.Kod_elect.AutoSize = true;
+            this.Kod_elect.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.electricitytariffBindingSource, "Tariff_code", true));
+            this.Kod_elect.Location = new System.Drawing.Point(88, 16);
+            this.Kod_elect.Name = "Kod_elect";
+            this.Kod_elect.Size = new System.Drawing.Size(26, 13);
+            this.Kod_elect.TabIndex = 44;
+            this.Kod_elect.Text = "Код";
+            // 
+            // electricitytariffBindingSource
+            // 
+            this.electricitytariffBindingSource.DataMember = "Electricity_tariff";
+            this.electricitytariffBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(16, 16);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(66, 13);
+            this.label26.TabIndex = 43;
+            this.label26.Text = "Код тарифа";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox19
+            // 
+            this.textBox19.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.electricitytariffBindingSource, "Price_per_month", true));
+            this.textBox19.Location = new System.Drawing.Point(155, 61);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(116, 20);
+            this.textBox19.TabIndex = 42;
+            // 
+            // textBox20
+            // 
+            this.textBox20.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.electricitytariffBindingSource, "Month", true));
+            this.textBox20.Location = new System.Drawing.Point(19, 61);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(116, 20);
+            this.textBox20.TabIndex = 41;
+            // 
+            // buttonUpdate5
+            // 
+            this.buttonUpdate5.Location = new System.Drawing.Point(904, 35);
+            this.buttonUpdate5.Name = "buttonUpdate5";
+            this.buttonUpdate5.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate5.TabIndex = 8;
+            this.buttonUpdate5.Text = "Обновить";
+            this.buttonUpdate5.UseVisualStyleBackColor = true;
+            this.buttonUpdate5.Click += new System.EventHandler(this.buttonUpdate5_Click);
+            // 
+            // buttonPrev5
+            // 
+            this.buttonPrev5.Location = new System.Drawing.Point(823, 6);
+            this.buttonPrev5.Name = "buttonPrev5";
+            this.buttonPrev5.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrev5.TabIndex = 6;
+            this.buttonPrev5.Text = "<<";
+            this.buttonPrev5.UseVisualStyleBackColor = true;
+            this.buttonPrev5.Click += new System.EventHandler(this.buttonPrev5_Click);
+            // 
+            // buttonBack5
+            // 
+            this.buttonBack5.Location = new System.Drawing.Point(1020, 6);
+            this.buttonBack5.Name = "buttonBack5";
+            this.buttonBack5.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack5.TabIndex = 5;
+            this.buttonBack5.Text = "Назад";
+            this.buttonBack5.UseVisualStyleBackColor = true;
+            this.buttonBack5.Click += new System.EventHandler(this.buttonBack5_Click);
+            // 
+            // buttonNext5
+            // 
+            this.buttonNext5.Location = new System.Drawing.Point(904, 6);
+            this.buttonNext5.Name = "buttonNext5";
+            this.buttonNext5.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext5.TabIndex = 7;
+            this.buttonNext5.Text = ">>";
+            this.buttonNext5.UseVisualStyleBackColor = true;
+            this.buttonNext5.Click += new System.EventHandler(this.buttonNext5_Click);
             // 
             // dataGridView6
             // 
             this.dataGridView6.AutoGenerateColumns = false;
+            this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tariffcodeDataGridViewTextBoxColumn1,
@@ -1234,17 +1661,21 @@
             this.pricepermonthDataGridViewTextBoxColumn.HeaderText = "Price_per_month";
             this.pricepermonthDataGridViewTextBoxColumn.Name = "pricepermonthDataGridViewTextBoxColumn";
             // 
-            // electricitytariffBindingSource
-            // 
-            this.electricitytariffBindingSource.DataMember = "Electricity_tariff";
-            this.electricitytariffBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
-            // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.button24);
-            this.tabPage6.Controls.Add(this.button16);
-            this.tabPage6.Controls.Add(this.button17);
-            this.tabPage6.Controls.Add(this.button18);
+            this.tabPage6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage6.Controls.Add(this.buttonDelete6);
+            this.tabPage6.Controls.Add(this.buttonAdd6);
+            this.tabPage6.Controls.Add(this.label12);
+            this.tabPage6.Controls.Add(this.label27);
+            this.tabPage6.Controls.Add(this.Kod_ind);
+            this.tabPage6.Controls.Add(this.label29);
+            this.tabPage6.Controls.Add(this.textBox18);
+            this.tabPage6.Controls.Add(this.textBox22);
+            this.tabPage6.Controls.Add(this.buttonUpdate6);
+            this.tabPage6.Controls.Add(this.buttonPrev6);
+            this.tabPage6.Controls.Add(this.buttonBack6);
+            this.tabPage6.Controls.Add(this.buttonNext6);
             this.tabPage6.Controls.Add(this.dataGridView5);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
@@ -1252,59 +1683,138 @@
             this.tabPage6.Size = new System.Drawing.Size(1098, 610);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Indicators";
-            this.tabPage6.UseVisualStyleBackColor = true;
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
-            // button24
+            // buttonDelete6
             // 
-            this.button24.Location = new System.Drawing.Point(820, 35);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 23);
-            this.button24.TabIndex = 8;
-            this.button24.Text = "Обновить";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.buttonDelete6.Location = new System.Drawing.Point(1017, 36);
+            this.buttonDelete6.Name = "buttonDelete6";
+            this.buttonDelete6.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete6.TabIndex = 54;
+            this.buttonDelete6.Text = "Удалить";
+            this.buttonDelete6.UseVisualStyleBackColor = true;
+            this.buttonDelete6.Click += new System.EventHandler(this.buttonAdd6_Click);
             // 
-            // button16
+            // buttonAdd6
             // 
-            this.button16.Location = new System.Drawing.Point(820, 6);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 6;
-            this.button16.Text = "<<";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.buttonAdd6.Location = new System.Drawing.Point(820, 35);
+            this.buttonAdd6.Name = "buttonAdd6";
+            this.buttonAdd6.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd6.TabIndex = 53;
+            this.buttonAdd6.Text = "Добавить";
+            this.buttonAdd6.UseVisualStyleBackColor = true;
+            this.buttonAdd6.Click += new System.EventHandler(this.buttonDelete6_Click);
             // 
-            // button17
+            // label12
             // 
-            this.button17.Location = new System.Drawing.Point(1017, 6);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 5;
-            this.button17.Text = "Назад";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(154, 45);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 13);
+            this.label12.TabIndex = 52;
+            this.label12.Text = "В конце месяца";
             // 
-            // button18
+            // label27
             // 
-            this.button18.Location = new System.Drawing.Point(901, 6);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 7;
-            this.button18.Text = ">>";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(18, 45);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(93, 13);
+            this.label27.TabIndex = 51;
+            this.label27.Text = "В начале месяца";
+            // 
+            // Kod_ind
+            // 
+            this.Kod_ind.AutoSize = true;
+            this.Kod_ind.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.indicatorsBindingSource, "Indicator_code", true));
+            this.Kod_ind.Location = new System.Drawing.Point(118, 16);
+            this.Kod_ind.Name = "Kod_ind";
+            this.Kod_ind.Size = new System.Drawing.Size(26, 13);
+            this.Kod_ind.TabIndex = 50;
+            this.Kod_ind.Text = "Код";
+            // 
+            // indicatorsBindingSource
+            // 
+            this.indicatorsBindingSource.DataMember = "Indicators";
+            this.indicatorsBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(18, 16);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(94, 13);
+            this.label29.TabIndex = 49;
+            this.label29.Text = "Код показателей";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox18
+            // 
+            this.textBox18.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.indicatorsBindingSource, "EndMonth", true));
+            this.textBox18.Location = new System.Drawing.Point(157, 61);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(116, 20);
+            this.textBox18.TabIndex = 48;
+            // 
+            // textBox22
+            // 
+            this.textBox22.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.indicatorsBindingSource, "BeginMonth", true));
+            this.textBox22.Location = new System.Drawing.Point(21, 61);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(116, 20);
+            this.textBox22.TabIndex = 47;
+            // 
+            // buttonUpdate6
+            // 
+            this.buttonUpdate6.Location = new System.Drawing.Point(901, 35);
+            this.buttonUpdate6.Name = "buttonUpdate6";
+            this.buttonUpdate6.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate6.TabIndex = 8;
+            this.buttonUpdate6.Text = "Обновить";
+            this.buttonUpdate6.UseVisualStyleBackColor = true;
+            this.buttonUpdate6.Click += new System.EventHandler(this.buttonUpdate6_Click);
+            // 
+            // buttonPrev6
+            // 
+            this.buttonPrev6.Location = new System.Drawing.Point(820, 6);
+            this.buttonPrev6.Name = "buttonPrev6";
+            this.buttonPrev6.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrev6.TabIndex = 6;
+            this.buttonPrev6.Text = "<<";
+            this.buttonPrev6.UseVisualStyleBackColor = true;
+            this.buttonPrev6.Click += new System.EventHandler(this.buttonPrev6_Click);
+            // 
+            // buttonBack6
+            // 
+            this.buttonBack6.Location = new System.Drawing.Point(1017, 6);
+            this.buttonBack6.Name = "buttonBack6";
+            this.buttonBack6.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack6.TabIndex = 5;
+            this.buttonBack6.Text = "Назад";
+            this.buttonBack6.UseVisualStyleBackColor = true;
+            this.buttonBack6.Click += new System.EventHandler(this.buttonBack6_Click);
+            // 
+            // buttonNext6
+            // 
+            this.buttonNext6.Location = new System.Drawing.Point(901, 6);
+            this.buttonNext6.Name = "buttonNext6";
+            this.buttonNext6.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext6.TabIndex = 7;
+            this.buttonNext6.Text = ">>";
+            this.buttonNext6.UseVisualStyleBackColor = true;
+            this.buttonNext6.Click += new System.EventHandler(this.buttonNext6_Click);
             // 
             // dataGridView5
             // 
             this.dataGridView5.AutoGenerateColumns = false;
+            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.indicatorcodeDataGridViewTextBoxColumn,
             this.beginMonthDataGridViewTextBoxColumn,
             this.endMonthDataGridViewTextBoxColumn});
             this.dataGridView5.DataSource = this.indicatorsBindingSource;
-            this.dataGridView5.Location = new System.Drawing.Point(17, 139);
+            this.dataGridView5.Location = new System.Drawing.Point(0, 195);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(349, 373);
             this.dataGridView5.TabIndex = 3;
@@ -1328,11 +1838,6 @@
             this.endMonthDataGridViewTextBoxColumn.DataPropertyName = "EndMonth";
             this.endMonthDataGridViewTextBoxColumn.HeaderText = "EndMonth";
             this.endMonthDataGridViewTextBoxColumn.Name = "endMonthDataGridViewTextBoxColumn";
-            // 
-            // indicatorsBindingSource
-            // 
-            this.indicatorsBindingSource.DataMember = "Indicators";
-            this.indicatorsBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
             // 
             // apartmentsTableAdapter
             // 
@@ -1358,185 +1863,14 @@
             // 
             this.electricity_tariffTableAdapter.ClearBeforeFill = true;
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(155, 45);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(123, 13);
-            this.label30.TabIndex = 38;
-            this.label30.Text = "Коэффицент фазности";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(19, 45);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(26, 13);
-            this.label31.TabIndex = 37;
-            this.label31.Text = "Тип";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.counterBindingSource, "Counter_code", true));
-            this.label32.Location = new System.Drawing.Point(155, 16);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(26, 13);
-            this.label32.TabIndex = 36;
-            this.label32.Text = "Код";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(19, 16);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(130, 13);
-            this.label33.TabIndex = 35;
-            this.label33.Text = "Код квартиросъемщика";
-            // 
-            // textBox21
-            // 
-            this.textBox21.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.counterBindingSource, "Factor", true));
-            this.textBox21.Location = new System.Drawing.Point(158, 61);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(52, 20);
-            this.textBox21.TabIndex = 31;
-            // 
-            // textBox23
-            // 
-            this.textBox23.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.counterBindingSource, "Type", true));
-            this.textBox23.Location = new System.Drawing.Point(22, 61);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(111, 20);
-            this.textBox23.TabIndex = 29;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 93);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 13);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Код квартиры";
-            // 
-            // textBox12
-            // 
-            this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.counterBindingSource, "Flat", true));
-            this.textBox12.Location = new System.Drawing.Point(22, 109);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(52, 20);
-            this.textBox12.TabIndex = 40;
-            // 
-            // button29
-            // 
-            this.button29.Location = new System.Drawing.Point(820, 35);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 23);
-            this.button29.TabIndex = 49;
-            this.button29.Text = "Добавить";
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
-            // 
-            // button30
-            // 
-            this.button30.Location = new System.Drawing.Point(1017, 35);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 23);
-            this.button30.TabIndex = 48;
-            this.button30.Text = "Удалить";
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
-            // 
-            // textBox17
-            // 
-            this.textBox17.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Building_number", true));
-            this.textBox17.Location = new System.Drawing.Point(398, 11);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 31;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(152, 45);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 13);
-            this.label13.TabIndex = 46;
-            this.label13.Text = "Цена в месяц";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(16, 45);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 13);
-            this.label15.TabIndex = 45;
-            this.label15.Text = "Месяц";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.electricitytariffBindingSource, "Tariff_code", true));
-            this.label25.Location = new System.Drawing.Point(88, 16);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(26, 13);
-            this.label25.TabIndex = 44;
-            this.label25.Text = "Код";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(16, 16);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(66, 13);
-            this.label26.TabIndex = 43;
-            this.label26.Text = "Код тарифа";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox19
-            // 
-            this.textBox19.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.electricitytariffBindingSource, "Price_per_month", true));
-            this.textBox19.Location = new System.Drawing.Point(155, 61);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(116, 20);
-            this.textBox19.TabIndex = 42;
-            // 
-            // textBox20
-            // 
-            this.textBox20.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.electricitytariffBindingSource, "Month", true));
-            this.textBox20.Location = new System.Drawing.Point(19, 61);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(116, 20);
-            this.textBox20.TabIndex = 41;
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(904, 35);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(75, 23);
-            this.button31.TabIndex = 51;
-            this.button31.Text = "Добавить";
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.button31_Click);
-            // 
-            // button32
-            // 
-            this.button32.Location = new System.Drawing.Point(985, 35);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(75, 23);
-            this.button32.TabIndex = 50;
-            this.button32.Text = "Удалить";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button32_Click);
-            // 
-            // Form2
+            // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1119, 646);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form2";
+            this.Name = "Admin";
             this.Text = "Админ";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.tabControl1.ResumeLayout(false);
@@ -1551,25 +1885,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.counterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.electricitytariffBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicatorsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private УП_ПМ01_ИСПП_5_Буйлов_МАDataSet уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1626,23 +1962,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tariffcodeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn monthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricepermonthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button buttonPrev;
+        private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Button buttonPrev2;
+        private System.Windows.Forms.Button buttonBack2;
+        private System.Windows.Forms.Button buttonNext2;
+        private System.Windows.Forms.Button buttonPrev3;
+        private System.Windows.Forms.Button buttonBack3;
+        private System.Windows.Forms.Button buttonNext3;
+        private System.Windows.Forms.Button buttonPrev4;
+        private System.Windows.Forms.Button buttonBack4;
+        private System.Windows.Forms.Button buttonNext4;
+        private System.Windows.Forms.Button buttonPrev5;
+        private System.Windows.Forms.Button buttonBack5;
+        private System.Windows.Forms.Button buttonNext5;
+        private System.Windows.Forms.Button buttonPrev6;
+        private System.Windows.Forms.Button buttonBack6;
+        private System.Windows.Forms.Button buttonNext6;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildingcodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn districtDataGridViewTextBoxColumn;
@@ -1651,15 +1987,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn flatsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn floorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ownerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonUpdate2;
+        private System.Windows.Forms.Button buttonUpdate3;
+        private System.Windows.Forms.Button buttonUpdate4;
+        private System.Windows.Forms.Button buttonUpdate5;
+        private System.Windows.Forms.Button buttonUpdate6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Kod_apart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
@@ -1676,8 +2012,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label17;
@@ -1687,33 +2023,63 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label Kod_build;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button buttonDelete2;
+        private System.Windows.Forms.Button buttonAdd2;
+        private System.Windows.Forms.Button buttonAdd3;
+        private System.Windows.Forms.Button buttonDelete3;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label Kod_count;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button buttonAdd5;
+        private System.Windows.Forms.Button buttonDelete5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label Kod_elect;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label Kod_ind;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Button buttonDelete6;
+        private System.Windows.Forms.Button buttonAdd6;
+        private System.Windows.Forms.Button buttonDelete4;
+        private System.Windows.Forms.Button buttonAdd4;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label Kod_pay;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox textBox30;
+        private System.Windows.Forms.TextBox textBox31;
+        private System.Windows.Forms.TextBox textBox32;
     }
 }

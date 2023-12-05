@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Практика_sql
 {
-    public partial class Form2 : System.Windows.Forms.Form
+    public partial class Admin : System.Windows.Forms.Form
     {
-        public Form2()
+        public Admin()
         {
             InitializeComponent();
         }
@@ -40,9 +40,9 @@ namespace Практика_sql
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
 
@@ -87,7 +87,7 @@ namespace Практика_sql
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonPrev_Click(object sender, EventArgs e)
         {
             int i = dataGridView1.RowCount;
             int index = dataGridView1.CurrentRow.Index;
@@ -103,7 +103,7 @@ namespace Практика_sql
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonNext_Click(object sender, EventArgs e)
         {
             int i = dataGridView1.RowCount;
             int index = dataGridView1.CurrentRow.Index;
@@ -115,7 +115,7 @@ namespace Практика_sql
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonPrev2_Click(object sender, EventArgs e)
         {
             int i = dataGridView2.RowCount;
             int index = dataGridView2.CurrentRow.Index;
@@ -131,7 +131,7 @@ namespace Практика_sql
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void buttonNext2_Click(object sender, EventArgs e)
         {
             int i = dataGridView2.RowCount;
             int index = dataGridView2.CurrentRow.Index;
@@ -142,8 +142,8 @@ namespace Практика_sql
                 dataGridView2.CurrentCell = dataGridView2[0, index + 1];
             }
         }
-
-        private void button7_Click(object sender, EventArgs e)
+        
+        private void buttonPrev3_Click(object sender, EventArgs e)
         {
             int i = dataGridView3.RowCount;
             int index = dataGridView3.CurrentRow.Index;
@@ -159,7 +159,7 @@ namespace Практика_sql
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void buttonNext3_Click(object sender, EventArgs e)
         {
             int i = dataGridView3.RowCount;
             int index = dataGridView3.CurrentRow.Index;
@@ -170,8 +170,8 @@ namespace Практика_sql
                 dataGridView3.CurrentCell = dataGridView3[0, index + 1];
             }
         }
-
-        private void button13_Click(object sender, EventArgs e)
+       
+        private void buttonPrev5_Click(object sender, EventArgs e)
         {
             int i = dataGridView6.RowCount;
             int index = dataGridView6.CurrentRow.Index;
@@ -187,7 +187,7 @@ namespace Практика_sql
             }
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void buttonNext5_Click(object sender, EventArgs e)
         {
             int i = dataGridView6.RowCount;
             int index = dataGridView6.CurrentRow.Index;
@@ -199,7 +199,7 @@ namespace Практика_sql
             }
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void buttonPrev6_Click(object sender, EventArgs e)
         {
             int i = dataGridView5.RowCount;
             int index = dataGridView5.CurrentRow.Index;
@@ -215,7 +215,7 @@ namespace Практика_sql
             }
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void buttonNext6_Click(object sender, EventArgs e)
         {
             int i = dataGridView5.RowCount;
             int index = dataGridView5.CurrentRow.Index;
@@ -227,7 +227,7 @@ namespace Практика_sql
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void buttonPrev4_Click(object sender, EventArgs e)
         {
             int i = dataGridView4.RowCount;
             int index = dataGridView4.CurrentRow.Index;
@@ -243,7 +243,7 @@ namespace Практика_sql
             }
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void buttonNext4_Click(object sender, EventArgs e)
         {
             int i = dataGridView4.RowCount;
             int index = dataGridView4.CurrentRow.Index;
@@ -260,68 +260,68 @@ namespace Практика_sql
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonBack2_Click(object sender, EventArgs e)
         {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void buttonBack3_Click(object sender, EventArgs e)
         {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void buttonBack4_Click(object sender, EventArgs e)
         {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void buttonBack5_Click(object sender, EventArgs e)
         {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void buttonBack6_Click(object sender, EventArgs e)
         {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void buttonUpdate_Click(object sender, EventArgs e)
         {
             apartmentsTableAdapter.Update(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet);
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void buttonUpdate2_Click(object sender, EventArgs e)
         {
             buildingTableAdapter.Update(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet);
         }
 
-        private void button21_Click(object sender, EventArgs e)
+        private void buttonUpdate3_Click(object sender, EventArgs e)
         {
-            counterTableAdapter.Fill(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Counter);
+            counterTableAdapter.Update(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Counter);
         }
 
-        private void button22_Click(object sender, EventArgs e)
+        private void buttonUpdate4_Click(object sender, EventArgs e)
         {
-            payTableAdapter.Fill(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Pay);
+            payTableAdapter.Update(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Pay);
         }
 
-        private void button23_Click(object sender, EventArgs e)
+        private void buttonUpdate5_Click(object sender, EventArgs e)
         {
-            electricity_tariffTableAdapter.Fill(this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Electricity_tariff);
+            electricity_tariffTableAdapter.Update(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Electricity_tariff);
         }
-        private void button24_Click(object sender, EventArgs e)
-        {
-            indicatorsTableAdapter.Fill(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Indicators);
+        private void buttonUpdate6_Click(object sender, EventArgs e)
+        {   
+            indicatorsTableAdapter.Update(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Indicators);
         }
         
 
@@ -330,7 +330,7 @@ namespace Практика_sql
 
         }
 
-        private void button25_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             //Добавление нового пользователя через запрос SQl
 
@@ -347,7 +347,7 @@ namespace Практика_sql
             MessageBox.Show("Успешно добавлен");
         }
 
-        private void button26_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
             //Удаление пользователя
             DialogResult result = MessageBox.Show("Выберите один из вариантов", "Сообщение", MessageBoxButtons.OKCancel);
@@ -355,7 +355,7 @@ namespace Практика_sql
             {
                 for (int j = 0; j < dataGridView1.RowCount; j++)
                 {
-                    if (dataGridView1.Rows[j].Cells[0].Value.ToString().Contains(label2.Text))
+                    if (dataGridView1.Rows[j].Cells[0].Value.ToString().Contains(Kod_apart.Text))
                     {
                         dataGridView1.Rows[j].Selected = true;
                         dataGridView1.CurrentCell = dataGridView1[0, j];
@@ -367,7 +367,7 @@ namespace Практика_sql
            
         }
 
-        private void button28_Click(object sender, EventArgs e)
+        private void buttonAdd2_Click(object sender, EventArgs e)
         {
             //Добавление нового пользователя через запрос SQl
 
@@ -384,7 +384,7 @@ namespace Практика_sql
             MessageBox.Show("Успешно добавлен");
         }
 
-        private void button27_Click(object sender, EventArgs e)
+        private void buttonDelete2_Click(object sender, EventArgs e)
         {
             //Удаление пользователя
             DialogResult result = MessageBox.Show("Выберите один из вариантов", "Сообщение", MessageBoxButtons.OKCancel);
@@ -392,7 +392,7 @@ namespace Практика_sql
             {
                 for (int j = 0; j < dataGridView2.RowCount; j++)
                 {
-                    if (dataGridView2.Rows[j].Cells[0].Value.ToString().Contains(label23.Text))
+                    if (dataGridView2.Rows[j].Cells[0].Value.ToString().Contains(Kod_build.Text))
                     {
                         dataGridView2.Rows[j].Selected = true;
                         dataGridView2.CurrentCell = dataGridView2[0, j];
@@ -404,7 +404,7 @@ namespace Практика_sql
           
         }
 
-        private void button29_Click(object sender, EventArgs e)
+        private void buttonAdd3_Click(object sender, EventArgs e)
         {
             //Добавление нового пользователя через запрос SQl
 
@@ -421,7 +421,7 @@ namespace Практика_sql
             MessageBox.Show("Успешно добавлен");
         }
 
-        private void button30_Click(object sender, EventArgs e)
+        private void buttonDelete3_Click(object sender, EventArgs e)
         {
             //Удаление пользователя
             DialogResult result = MessageBox.Show("Выберите один из вариантов", "Сообщение", MessageBoxButtons.OKCancel);
@@ -429,7 +429,7 @@ namespace Практика_sql
             {
                 for (int j = 0; j < dataGridView3.RowCount; j++)
                 {
-                    if (dataGridView3.Rows[j].Cells[0].Value.ToString().Contains(label32.Text))
+                    if (dataGridView3.Rows[j].Cells[0].Value.ToString().Contains(Kod_count.Text))
                     {
                         dataGridView3.Rows[j].Selected = true;
                         dataGridView3.CurrentCell = dataGridView3[0, j];
@@ -440,7 +440,7 @@ namespace Практика_sql
             }
         }
 
-        private void button31_Click(object sender, EventArgs e)
+        private void buttonAdd5_Click(object sender, EventArgs e)
         {
             //Добавление нового пользователя через запрос SQl
 
@@ -457,7 +457,7 @@ namespace Практика_sql
             MessageBox.Show("Успешно добавлен");
         }
 
-        private void button32_Click(object sender, EventArgs e)
+        private void buttonDelete5_Click(object sender, EventArgs e)
         {
             //Удаление пользователя
             DialogResult result = MessageBox.Show("Выберите один из вариантов", "Сообщение", MessageBoxButtons.OKCancel);
@@ -465,7 +465,7 @@ namespace Практика_sql
             {
                 for (int j = 0; j < dataGridView6.RowCount; j++)
                 {
-                    if (dataGridView6.Rows[j].Cells[0].Value.ToString().Contains(label25.Text))
+                    if (dataGridView6.Rows[j].Cells[0].Value.ToString().Contains(Kod_elect.Text))
                     {
                         dataGridView6.Rows[j].Selected = true;
                         dataGridView6.CurrentCell = dataGridView6[0, j];
@@ -474,6 +474,83 @@ namespace Практика_sql
                     }
                 }
             }
+        }
+
+        private void buttonAdd6_Click(object sender, EventArgs e)
+        {
+            //Добавление нового пользователя через запрос SQl
+
+            SqlConnection sqlConnect = new SqlConnection("Data Source=sql;Initial Catalog = уП_ПМ01_ИСПП_5_Буйлов_МА; Integrated Security = True");
+            sqlConnect.Open();
+            SqlDataAdapter da = new SqlDataAdapter($"INSERT   INTO Indicators (BeginMonth,EndMonth) VALUES('{textBox22.Text}','{textBox18.Text}');", sqlConnect); ;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+
+            //Перерисовка таблицы в datagridview
+
+            indicatorsTableAdapter.Fill(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Indicators);
+            MessageBox.Show("Успешно добавлен");
+        }
+
+        private void buttonDelete6_Click(object sender, EventArgs e)
+        {
+            //Удаление пользователя
+            DialogResult result = MessageBox.Show("Выберите один из вариантов", "Сообщение", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                for (int j = 0; j < dataGridView5.RowCount; j++)
+                {
+                    if (dataGridView5.Rows[j].Cells[0].Value.ToString().Contains(Kod_ind.Text))
+                    {
+                        dataGridView5.Rows[j].Selected = true;
+                        dataGridView5.CurrentCell = dataGridView5[0, j];
+                        dataGridView5.Rows.RemoveAt(j);
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void buttonAdd4_Click(object sender, EventArgs e)
+        {
+            //Добавление нового пользователя через запрос SQl
+
+            SqlConnection sqlConnect = new SqlConnection("Data Source=sql;Initial Catalog = уП_ПМ01_ИСПП_5_Буйлов_МА; Integrated Security = True");
+            sqlConnect.Open();
+            SqlDataAdapter da = new SqlDataAdapter($"INSERT   INTO Pay (Counter,Tariff,Day,Night,hour24,Privilege,Surname,Tariff_code,Indicators) VALUES('{textBox32.Text}','{textBox30.Text}','{textBox31.Text}','{textBox27.Text}','{textBox29.Text}','{textBox25.Text}','{textBox26.Text}','{textBox28.Text}','{textBox24.Text}');", sqlConnect); ;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+
+            //Перерисовка таблицы в datagridview
+
+           payTableAdapter.Fill(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Pay);
+            MessageBox.Show("Успешно добавлен");
+        }
+
+        private void buttonDelete4_Click(object sender, EventArgs e)
+        {
+            //Удаление пользователя
+            DialogResult result = MessageBox.Show("Выберите один из вариантов", "Сообщение", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                for (int j = 0; j < dataGridView5.RowCount; j++)
+                {
+                    if (dataGridView4.Rows[j].Cells[0].Value.ToString().Contains(Kod_pay.Text))
+                    {
+                        dataGridView4.Rows[j].Selected = true;
+                        dataGridView4.CurrentCell = dataGridView4[0, j];
+                        dataGridView4.Rows.RemoveAt(j);
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void textBox24_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

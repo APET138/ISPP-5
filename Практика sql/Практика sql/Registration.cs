@@ -12,38 +12,57 @@ using System.Data.SqlClient;
 
 namespace Практика_sql
 {
-    public partial class Form5 : Form
+    public partial class Registration : Form
     {
-        public Form5()
+        public Registration()
         {
             InitializeComponent();
         }
-        int k = 0;
-        private void button1_Click(object sender, EventArgs e)
+        int index;
+        private void buttonRegister_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlConnect = new SqlConnection("Data Source=sql;Initial Catalog =уП_ПМ01_ИСПП_5_Буйлов_МА; Integrated Security = True");
-            sqlConnect.Open();
-            SqlDataAdapter da = new SqlDataAdapter($"INSERT INTO Пользователи(Логин, Пароль,Права_Доступа)VALUES('{textBox1.Text}','{textBox2.Text}','Квартиросъемщик')", sqlConnect);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            Boolean flag = false;
-            for (int i = 0; i < dt.Rows.Count; i++)
-                if ((dt.Rows[i]["Логин"].ToString() == textBox1.Text) &&
-               (dt.Rows[i]["Пароль"].ToString() == textBox2.Text)) { flag = true; k = i; }
-
-            if (flag == true)
-            {
-                switch (dt.Rows[k]["Логин, Пароль"].ToString())
+            using (SqlConnection sqlConnect = new SqlConnection("Data Source=sql;Initial Catalog =уП_ПМ01_ИСПП_5_Буйлов_МА; Integrated Security = True"))
+            { 
+                sqlConnect.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Пользователи", sqlConnect);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                Boolean Логин = true;
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    case "Квартиросъемщик":
-                    default: MessageBox.Show("Пользователь уже существует!"); break;
+                    if (dt.Rows[i]["Логин"].ToString() == textBox1.Text)
+                    {
+                        Логин = false;
+                    }
+                } 
+                if (textBox1.Text== "" || textBox2.Text== "")
+                {
+                    MessageBox.Show("Введите все данные!");
+                }
+                else
+                {
+                    if (Логин == false)
+                    {
+                        MessageBox.Show("Пользователь уже существует!");
+                    }
+                    else
+                    {
+                        index = index + 1;
+                        SqlDataAdapter infol1 = new SqlDataAdapter($"INSERT INTO Пользователи(Логин, Пароль,Права_Доступа)VALUES('{textBox1.Text}','{textBox2.Text}','Квартиросъемщик')", sqlConnect);
+                        DataTable dt1 = new DataTable();
+                        infol1.Fill(dt1);
+                        MessageBox.Show("Пользователь создан!");
+                        User check = new User();
+                        check.Show();
+                        Hide();
+                    }
                 }
             }
         }
 
-            private void button2_Click(object sender, EventArgs e)
+            private void buttonBack_Click(object sender, EventArgs e)
             {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
             }

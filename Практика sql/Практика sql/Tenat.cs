@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Практика_sql
 {
-    public partial class Form3 : Form
+    public partial class Tenat : Form
     {
-        public Form3()
+        public Tenat()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
         }
@@ -42,7 +42,7 @@ namespace Практика_sql
 
 
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void buttonPrev_Click(object sender, EventArgs e)
         {
       
 
@@ -113,7 +113,7 @@ namespace Практика_sql
                 dataGridView5.Rows[j].Selected = false;
                 if (dataGridView4.Rows[j].Cells[0].Value != null)
                 {
-                    if (dataGridView5.Rows[j].Cells[0].Value.ToString().Contains(label14.Text))
+                    if (dataGridView5.Rows[j].Cells[0].Value.ToString().Contains(Tarif.Text))
                     {
 
                         dataGridView5.Rows[j].Selected = true;
@@ -124,7 +124,7 @@ namespace Практика_sql
             }
 
         }
-            private void button2_Click(object sender, EventArgs e)
+            private void buttonNext_Click(object sender, EventArgs e)
         {
             int i = dataGridView1.RowCount;
             int index = dataGridView1.CurrentRow.Index;
@@ -147,14 +147,14 @@ namespace Практика_sql
 
         }
         int k;
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonOpen_Click(object sender, EventArgs e)
         {
             if (k == 0)
             {
                 dataGridView1.Visible = true;
                 
                 this.Width = 1000;
-                button3.Text = "Закрыть";
+                buttonOpen.Text = "Закрыть";
                 k = 1;
             }
             else
@@ -162,7 +162,7 @@ namespace Практика_sql
                 dataGridView1.Visible = false;
                 
                 this.Width = 320;
-                button3.Text = "Открыть";
+                buttonOpen.Text = "Открыть";
                 k = 0;
             }
         }
@@ -170,17 +170,7 @@ namespace Практика_sql
         private void label10_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        
-
-       
-
+        }    
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -197,6 +187,11 @@ namespace Практика_sql
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Counter2_Click(object sender, EventArgs e)
         {
 
         }

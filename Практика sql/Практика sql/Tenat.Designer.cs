@@ -1,6 +1,6 @@
 ﻿namespace Практика_sql
 {
-    partial class Form3
+    partial class Tenat
     {
         /// <summary>
         /// Required designer variable.
@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1return = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Lastname = new System.Windows.Forms.Label();
             this.apartmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSet();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Passport = new System.Windows.Forms.Label();
+            this.Patronymic = new System.Windows.Forms.Label();
+            this.ForstName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.buttonPrev = new System.Windows.Forms.Button();
+            this.buttonNext = new System.Windows.Forms.Button();
+            this.Counter2 = new System.Windows.Forms.Label();
             this.indicatorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Counter1 = new System.Windows.Forms.Label();
+            this.buttonOpen = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.month = new System.Windows.Forms.Label();
             this.electricitytariffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Flat = new System.Windows.Forms.Label();
             this.counter = new System.Windows.Forms.Label();
             this.counterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.indi = new System.Windows.Forms.Label();
             this.payBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label14 = new System.Windows.Forms.Label();
+            this.Tarif = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.Dom = new System.Windows.Forms.Label();
+            this.Namber = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.apartmentcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,15 +114,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1return
+            // buttonBack
             // 
-            this.button1return.Location = new System.Drawing.Point(207, 288);
-            this.button1return.Name = "button1return";
-            this.button1return.Size = new System.Drawing.Size(75, 23);
-            this.button1return.TabIndex = 0;
-            this.button1return.Text = "Назад";
-            this.button1return.UseVisualStyleBackColor = true;
-            this.button1return.Click += new System.EventHandler(this.button1_Click);
+            this.buttonBack.Location = new System.Drawing.Point(207, 288);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 0;
+            this.buttonBack.Text = "Назад";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label1
             // 
@@ -142,15 +142,15 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Номер квартиры";
             // 
-            // label3
+            // Lastname
             // 
-            this.label3.AutoSize = true;
-            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Lastname", true));
-            this.label3.Location = new System.Drawing.Point(5, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Фамилия";
+            this.Lastname.AutoSize = true;
+            this.Lastname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Lastname", true));
+            this.Lastname.Location = new System.Drawing.Point(5, 79);
+            this.Lastname.Name = "Lastname";
+            this.Lastname.Size = new System.Drawing.Size(56, 13);
+            this.Lastname.TabIndex = 4;
+            this.Lastname.Text = "Фамилия";
             // 
             // apartmentsBindingSource
             // 
@@ -171,36 +171,36 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Номер дома";
             // 
-            // label6
+            // Passport
             // 
-            this.label6.AutoSize = true;
-            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Passport", true));
-            this.label6.Location = new System.Drawing.Point(5, 147);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Паспорт";
+            this.Passport.AutoSize = true;
+            this.Passport.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Passport", true));
+            this.Passport.Location = new System.Drawing.Point(5, 147);
+            this.Passport.Name = "Passport";
+            this.Passport.Size = new System.Drawing.Size(50, 13);
+            this.Passport.TabIndex = 7;
+            this.Passport.Text = "Паспорт";
             // 
-            // label7
+            // Patronymic
             // 
-            this.label7.AutoSize = true;
-            this.label7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Patronymic", true));
-            this.label7.Location = new System.Drawing.Point(5, 124);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Отчество";
+            this.Patronymic.AutoSize = true;
+            this.Patronymic.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Patronymic", true));
+            this.Patronymic.Location = new System.Drawing.Point(5, 124);
+            this.Patronymic.Name = "Patronymic";
+            this.Patronymic.Size = new System.Drawing.Size(54, 13);
+            this.Patronymic.TabIndex = 6;
+            this.Patronymic.Text = "Отчество";
             // 
-            // label8
+            // ForstName
             // 
-            this.label8.AllowDrop = true;
-            this.label8.AutoSize = true;
-            this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "ForstName", true));
-            this.label8.Location = new System.Drawing.Point(5, 102);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Имя";
+            this.ForstName.AllowDrop = true;
+            this.ForstName.AutoSize = true;
+            this.ForstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "ForstName", true));
+            this.ForstName.Location = new System.Drawing.Point(5, 102);
+            this.ForstName.Name = "ForstName";
+            this.ForstName.Size = new System.Drawing.Size(29, 13);
+            this.ForstName.TabIndex = 5;
+            this.ForstName.Text = "Имя";
             // 
             // label9
             // 
@@ -212,60 +212,61 @@
             this.label9.Text = "Показатели счетчика в месяц";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // button1
+            // buttonPrev
             // 
-            this.button1.Location = new System.Drawing.Point(7, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "<<";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.buttonPrev.Location = new System.Drawing.Point(7, 288);
+            this.buttonPrev.Name = "buttonPrev";
+            this.buttonPrev.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrev.TabIndex = 10;
+            this.buttonPrev.Text = "<<";
+            this.buttonPrev.UseVisualStyleBackColor = true;
+            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
             // 
-            // button2
+            // buttonNext
             // 
-            this.button2.Location = new System.Drawing.Point(88, 288);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = ">>";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonNext.Location = new System.Drawing.Point(88, 288);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext.TabIndex = 11;
+            this.buttonNext.Text = ">>";
+            this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
-            // label10
+            // Counter2
             // 
-            this.label10.AutoSize = true;
-            this.label10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.indicatorsBindingSource, "EndMonth", true));
-            this.label10.Location = new System.Drawing.Point(119, 209);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "счетчик";
+            this.Counter2.AutoSize = true;
+            this.Counter2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.indicatorsBindingSource, "EndMonth", true));
+            this.Counter2.Location = new System.Drawing.Point(119, 209);
+            this.Counter2.Name = "Counter2";
+            this.Counter2.Size = new System.Drawing.Size(46, 13);
+            this.Counter2.TabIndex = 13;
+            this.Counter2.Text = "счетчик";
+            this.Counter2.Click += new System.EventHandler(this.Counter2_Click);
             // 
             // indicatorsBindingSource
             // 
             this.indicatorsBindingSource.DataMember = "Indicators";
             this.indicatorsBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
             // 
-            // label11
+            // Counter1
             // 
-            this.label11.AutoSize = true;
-            this.label11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.indicatorsBindingSource, "BeginMonth", true));
-            this.label11.Location = new System.Drawing.Point(29, 209);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "счетчик";
+            this.Counter1.AutoSize = true;
+            this.Counter1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.indicatorsBindingSource, "BeginMonth", true));
+            this.Counter1.Location = new System.Drawing.Point(29, 209);
+            this.Counter1.Name = "Counter1";
+            this.Counter1.Size = new System.Drawing.Size(46, 13);
+            this.Counter1.TabIndex = 14;
+            this.Counter1.Text = "счетчик";
             // 
-            // button3
+            // buttonOpen
             // 
-            this.button3.Location = new System.Drawing.Point(7, 317);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "открыть";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonOpen.Location = new System.Drawing.Point(7, 317);
+            this.buttonOpen.Name = "buttonOpen";
+            this.buttonOpen.Size = new System.Drawing.Size(75, 23);
+            this.buttonOpen.TabIndex = 15;
+            this.buttonOpen.Text = "открыть";
+            this.buttonOpen.UseVisualStyleBackColor = true;
+            this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
             // 
             // label5
             // 
@@ -285,16 +286,16 @@
             this.label12.TabIndex = 18;
             this.label12.Text = "В конце месяца";
             // 
-            // label13
+            // month
             // 
-            this.label13.AutoSize = true;
-            this.label13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.electricitytariffBindingSource, "Month", true));
-            this.label13.Location = new System.Drawing.Point(208, 180);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 13);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Месяц";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.month.AutoSize = true;
+            this.month.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.electricitytariffBindingSource, "Month", true));
+            this.month.Location = new System.Drawing.Point(208, 180);
+            this.month.Name = "month";
+            this.month.Size = new System.Drawing.Size(40, 13);
+            this.month.TabIndex = 23;
+            this.month.Text = "Месяц";
+            this.month.Click += new System.EventHandler(this.label13_Click);
             // 
             // electricitytariffBindingSource
             // 
@@ -342,34 +343,35 @@
             this.payBindingSource.DataMember = "Pay";
             this.payBindingSource.DataSource = this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
             // 
-            // label14
+            // Tarif
             // 
-            this.label14.AutoSize = true;
-            this.label14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Tariff_code", true));
-            this.label14.Location = new System.Drawing.Point(126, 115);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(27, 13);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "labe";
-            this.label14.UseWaitCursor = true;
+            this.Tarif.AutoSize = true;
+            this.Tarif.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payBindingSource, "Tariff_code", true));
+            this.Tarif.Location = new System.Drawing.Point(126, 115);
+            this.Tarif.Name = "Tarif";
+            this.Tarif.Size = new System.Drawing.Size(27, 13);
+            this.Tarif.TabIndex = 32;
+            this.Tarif.Text = "labe";
+            this.Tarif.UseWaitCursor = true;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label15);
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.Dom);
+            this.panel1.Controls.Add(this.Namber);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Flat);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.Counter2);
+            this.panel1.Controls.Add(this.Counter1);
+            this.panel1.Controls.Add(this.month);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.Lastname);
+            this.panel1.Controls.Add(this.ForstName);
+            this.panel1.Controls.Add(this.Patronymic);
+            this.panel1.Controls.Add(this.Passport);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(7, 9);
             this.panel1.Name = "panel1";
@@ -377,25 +379,25 @@
             this.panel1.TabIndex = 33;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label16
+            // Dom
             // 
-            this.label16.AutoSize = true;
-            this.label16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Building_number", true));
-            this.label16.Location = new System.Drawing.Point(144, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 13);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "Дом";
+            this.Dom.AutoSize = true;
+            this.Dom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Building_number", true));
+            this.Dom.Location = new System.Drawing.Point(144, 57);
+            this.Dom.Name = "Dom";
+            this.Dom.Size = new System.Drawing.Size(30, 13);
+            this.Dom.TabIndex = 31;
+            this.Dom.Text = "Дом";
             // 
-            // label15
+            // Namber
             // 
-            this.label15.AutoSize = true;
-            this.label15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Flat", true));
-            this.label15.Location = new System.Drawing.Point(144, 33);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Номер";
+            this.Namber.AutoSize = true;
+            this.Namber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.apartmentsBindingSource, "Flat", true));
+            this.Namber.Location = new System.Drawing.Point(144, 33);
+            this.Namber.Name = "Namber";
+            this.Namber.Size = new System.Drawing.Size(41, 13);
+            this.Namber.TabIndex = 30;
+            this.Namber.Text = "Номер";
             // 
             // dataGridView1
             // 
@@ -699,25 +701,26 @@
             // 
             this.electricity_tariffTableAdapter.ClearBeforeFill = true;
             // 
-            // Form3
+            // Tenat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(304, 346);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.Tarif);
             this.Controls.Add(this.indi);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.counter);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button1return);
+            this.Controls.Add(this.buttonNext);
+            this.Controls.Add(this.buttonPrev);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView5);
-            this.Name = "Form3";
+            this.Name = "Tenat";
             this.Text = "Квартиросъемщик";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.apartmentsBindingSource)).EndInit();
@@ -740,35 +743,35 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1return;
+        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Lastname;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Passport;
+        private System.Windows.Forms.Label Patronymic;
+        private System.Windows.Forms.Label ForstName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonPrev;
+        private System.Windows.Forms.Button buttonNext;
        
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label Counter2;
+        private System.Windows.Forms.Label Counter1;
+        private System.Windows.Forms.Button buttonOpen;
     
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label12;
         
           
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label month;
      
         private System.Windows.Forms.Label Flat;
         private System.Windows.Forms.Label counter;
         private System.Windows.Forms.Label indi;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label Tarif;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label Dom;
+        private System.Windows.Forms.Label Namber;
         private System.Windows.Forms.DataGridView dataGridView1;
         private УП_ПМ01_ИСПП_5_Буйлов_МАDataSet уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
         private System.Windows.Forms.BindingSource apartmentsBindingSource;

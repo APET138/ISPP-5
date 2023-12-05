@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Практика_sql
 {
-    public partial class Form4 : Form
+    public partial class Inspector : Form
     {
-        public Form4()
+        public Inspector()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 check = new Form1();
+            User check = new User();
             check.Show();
             Hide();
         }
@@ -43,7 +43,7 @@ namespace Практика_sql
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonNext_Click(object sender, EventArgs e)
         {
             int i = dataGridView1.RowCount;
             int index = dataGridView1.CurrentRow.Index;
@@ -56,7 +56,7 @@ namespace Практика_sql
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonPrev_Click(object sender, EventArgs e)
         {
             int i = dataGridView1.RowCount;
             int index = dataGridView1.CurrentRow.Index;
@@ -72,14 +72,14 @@ namespace Практика_sql
             }
         }
         int k;
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonOpen_Click(object sender, EventArgs e)
         {
             if (k == 0)
             {
                 dataGridView1.Visible = true;
 
                 this.Width = 900;
-                button4.Text = "Закрыть";
+                buttonOpen.Text = "Закрыть";
                 k = 1;
             }
             else
@@ -87,15 +87,15 @@ namespace Практика_sql
                 dataGridView1.Visible = false;
 
                 this.Width = 320;
-                button4.Text = "Открыть";
+                buttonOpen.Text = "Открыть";
                 k = 0;
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonUpdate_Click(object sender, EventArgs e)
         {
-           
-            dataGridView1.Refresh();
+
+            payTableAdapter1.Update(уП_ПМ01_ИСПП_5_Буйлов_МАDataSet1.Pay);
         }
     }
 }

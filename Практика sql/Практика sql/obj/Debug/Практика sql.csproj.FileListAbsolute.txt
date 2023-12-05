@@ -7,9 +7,9 @@
 \\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика sql.csproj.CoreCompileInputs.cache
 \\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика sql.exe
 \\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика sql.pdb
-\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Form1.resources
-\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Form2.resources
-\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Form3.resources
-\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Form4.resources
-\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Form5.resources
 \\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика sql.csproj.SuggestedBindingRedirects.cache
+\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Registration.resources
+\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Inspector.resources
+\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Tenat.resources
+\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.User.resources
+\\apetfs\ИСПП-5\Буйлов_МА\Учебная практика ПМ 01\Практика sql\Практика sql\obj\Debug\Практика_sql.Admin.resources
