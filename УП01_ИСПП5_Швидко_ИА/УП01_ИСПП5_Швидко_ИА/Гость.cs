@@ -21,16 +21,15 @@ namespace УП01_ИСПП5_Швидко_ИА
             Поле_для_таблиц_DataGridView1.Size = new Size(794, 301);
         }
 
-        public void Tob(int i)               //Добавляет таблицы
+        public void Zap(int v)             //Добавляет таблицы
         {
             SqlConnection sqlConnect = new SqlConnection("Data Source=sql;Initial Catalog = уП01_ИСПП5_Швидко_ИА; Integrated Security = True");
             sqlConnect.Open();
-            SqlDataAdapter[] so = new SqlDataAdapter[2];
-            so[0] = new SqlDataAdapter("select Название_растения, Название_сорта, Год_выведения, Адаптация, Морозоустойчивость, Способ_посадки, Фотография, Срок_созревания_в_днях, Примечание, Наличие_в_текущее_время from Сорта_растений", sqlConnect);
-            so[1] = new SqlDataAdapter("select Срок_годности, Одобрено_инспекцией, Вид_упаковки, Количество_в_упаковке, Цена, Дата_расфасовки, Вес_семян_в_граммах, Код_сорта_растения from Упаковки_семян", sqlConnect);
-            DataSet ps = new DataSet();
-            so[i].Fill(ps);
-            Поле_для_таблиц_DataGridView1.DataSource = ps.Tables[0];
+            SqlDataAdapter[] sos = new SqlDataAdapter[1];
+            sos[0] = new SqlDataAdapter("select Название_растения, Название_сорта, Год_выведения, Адаптация, Морозоустойчивость, Способ_посадки, Фотография, Срок_созревания_в_днях, Примечание, Наличие_в_текущее_время, Срок_годности, Одобрено_инспекцией, Вид_упаковки, Количество_в_упаковке, Цена, Вес_семян_в_граммах from Сорта_растений join Упаковки_семян on Сорта_растений.Код_сорта_растения = Упаковки_семян.Код_сорта_растения", sqlConnect);
+            DataSet pk = new DataSet();
+            sos[v].Fill(pk);
+            Поле_для_таблиц_DataGridView1.DataSource = pk.Tables[0];
         }
         private void Гость_Load(object sender, EventArgs e)        //Загрузка данных в таблицы
         {
@@ -48,20 +47,6 @@ namespace УП01_ИСПП5_Швидко_ИА
         private void выйти_Click(object sender, EventArgs e)                    //Прекращает работу программы
         {
             Application.Exit();
-        }
-
-        private void Таблица_Сорта_растений_Click(object sender, EventArgs e)                   //Открывает таблицу 'Сорта растени'
-        {
-            Tob(0);
-            Фотография_представителя_PictureBox2.Visible = true;
-            Поле_для_таблиц_DataGridView1.Size = new Size(598, 301);
-        }
-
-        private void Таблица_Упаковки_семян_Click(object sender, EventArgs e)                         //Открывает таблицу 'Упаковки семян'
-        {
-            Tob(1);
-            Фотография_представителя_PictureBox2.Visible = false;
-            Поле_для_таблиц_DataGridView1.Size = new Size(794, 301);
         }
 
         private void Поисковая_строка_TextChanged(object sender, EventArgs e)               //Выделение строки, которая подходит под введённые данные в поисковую строку
@@ -102,6 +87,13 @@ namespace УП01_ИСПП5_Швидко_ИА
                 Фотография_представителя_PictureBox2.Image = Image.FromFile(pic);
             }
             catch { }
+        }
+
+        private void Асортимент_ToolStripMenuItem3_Click(object sender, EventArgs e)                    //Открывает таблицы 'Сорта растени' и 'Упаковки семян'
+        {
+            Zap(0);
+            Фотография_представителя_PictureBox2.Visible = true;
+            Поле_для_таблиц_DataGridView1.Size = new Size(598, 301);
         }
     }
 }
