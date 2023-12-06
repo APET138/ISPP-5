@@ -40,12 +40,9 @@
             this.Patronymic = new System.Windows.Forms.Label();
             this.ForstName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.buttonPrev = new System.Windows.Forms.Button();
-            this.buttonNext = new System.Windows.Forms.Button();
             this.Counter2 = new System.Windows.Forms.Label();
             this.indicatorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Counter1 = new System.Windows.Forms.Label();
-            this.buttonOpen = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.month = new System.Windows.Forms.Label();
@@ -59,6 +56,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Dom = new System.Windows.Forms.Label();
             this.Namber = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.apartmentcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,12 +64,10 @@
             this.peopleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eStoveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.buildingnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenantcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apartmentsTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.ApartmentsTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.countercodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,6 +96,7 @@
             this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pricepermonthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.electricity_tariffTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.Electricity_tariffTableAdapter();
+            this.apartmentsTableAdapter = new Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.ApartmentsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.apartmentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.indicatorsBindingSource)).BeginInit();
@@ -116,7 +113,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(207, 288);
+            this.buttonBack.Location = new System.Drawing.Point(226, 311);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 0;
@@ -212,26 +209,6 @@
             this.label9.Text = "Показатели счетчика в месяц";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // buttonPrev
-            // 
-            this.buttonPrev.Location = new System.Drawing.Point(7, 288);
-            this.buttonPrev.Name = "buttonPrev";
-            this.buttonPrev.Size = new System.Drawing.Size(75, 23);
-            this.buttonPrev.TabIndex = 10;
-            this.buttonPrev.Text = "<<";
-            this.buttonPrev.UseVisualStyleBackColor = true;
-            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
-            // 
-            // buttonNext
-            // 
-            this.buttonNext.Location = new System.Drawing.Point(88, 288);
-            this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(75, 23);
-            this.buttonNext.TabIndex = 11;
-            this.buttonNext.Text = ">>";
-            this.buttonNext.UseVisualStyleBackColor = true;
-            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
-            // 
             // Counter2
             // 
             this.Counter2.AutoSize = true;
@@ -257,16 +234,6 @@
             this.Counter1.Size = new System.Drawing.Size(46, 13);
             this.Counter1.TabIndex = 14;
             this.Counter1.Text = "счетчик";
-            // 
-            // buttonOpen
-            // 
-            this.buttonOpen.Location = new System.Drawing.Point(7, 317);
-            this.buttonOpen.Name = "buttonOpen";
-            this.buttonOpen.Size = new System.Drawing.Size(75, 23);
-            this.buttonOpen.TabIndex = 15;
-            this.buttonOpen.Text = "открыть";
-            this.buttonOpen.UseVisualStyleBackColor = true;
-            this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
             // 
             // label5
             // 
@@ -399,6 +366,15 @@
             this.Namber.TabIndex = 30;
             this.Namber.Text = "Номер";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(84, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "adsfdf";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -410,7 +386,6 @@
             this.peopleDataGridViewTextBoxColumn,
             this.eStoveDataGridViewCheckBoxColumn,
             this.buildingnumberDataGridViewTextBoxColumn,
-            this.tenantcodeDataGridViewTextBoxColumn,
             this.lastnameDataGridViewTextBoxColumn,
             this.forstNameDataGridViewTextBoxColumn,
             this.patronymicDataGridViewTextBoxColumn,
@@ -459,12 +434,6 @@
             this.buildingnumberDataGridViewTextBoxColumn.HeaderText = "Building_number";
             this.buildingnumberDataGridViewTextBoxColumn.Name = "buildingnumberDataGridViewTextBoxColumn";
             // 
-            // tenantcodeDataGridViewTextBoxColumn
-            // 
-            this.tenantcodeDataGridViewTextBoxColumn.DataPropertyName = "Tenant_code";
-            this.tenantcodeDataGridViewTextBoxColumn.HeaderText = "Tenant_code";
-            this.tenantcodeDataGridViewTextBoxColumn.Name = "tenantcodeDataGridViewTextBoxColumn";
-            // 
             // lastnameDataGridViewTextBoxColumn
             // 
             this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "Lastname";
@@ -488,10 +457,6 @@
             this.passportDataGridViewTextBoxColumn.DataPropertyName = "Passport";
             this.passportDataGridViewTextBoxColumn.HeaderText = "Passport";
             this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
-            // 
-            // apartmentsTableAdapter
-            // 
-            this.apartmentsTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridView2
             // 
@@ -701,26 +666,29 @@
             // 
             this.electricity_tariffTableAdapter.ClearBeforeFill = true;
             // 
+            // apartmentsTableAdapter
+            // 
+            this.apartmentsTableAdapter.ClearBeforeFill = true;
+            // 
             // Tenat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(304, 346);
+            this.ClientSize = new System.Drawing.Size(313, 346);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Tarif);
             this.Controls.Add(this.indi);
-            this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.counter);
-            this.Controls.Add(this.buttonNext);
-            this.Controls.Add(this.buttonPrev);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView5);
+            this.Controls.Add(this.label3);
             this.Name = "Tenat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Квартиросъемщик";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.apartmentsBindingSource)).EndInit();
@@ -752,12 +720,9 @@
         private System.Windows.Forms.Label Patronymic;
         private System.Windows.Forms.Label ForstName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button buttonPrev;
-        private System.Windows.Forms.Button buttonNext;
        
         private System.Windows.Forms.Label Counter2;
         private System.Windows.Forms.Label Counter1;
-        private System.Windows.Forms.Button buttonOpen;
     
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label12;
@@ -774,19 +739,7 @@
         private System.Windows.Forms.Label Namber;
         private System.Windows.Forms.DataGridView dataGridView1;
         private УП_ПМ01_ИСПП_5_Буйлов_МАDataSet уП_ПМ01_ИСПП_5_Буйлов_МАDataSet;
-        private System.Windows.Forms.BindingSource apartmentsBindingSource;
-        private УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.ApartmentsTableAdapter apartmentsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apartmentcodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn flatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn flatTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peopleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn eStoveDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn buildingnumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenantcodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn forstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource counterBindingSource;
         private УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.CounterTableAdapter counterTableAdapter;
@@ -819,5 +772,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tariffcodeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn monthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricepermonthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.BindingSource apartmentsBindingSource;
+        private УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTableAdapters.ApartmentsTableAdapter apartmentsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apartmentcodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn flatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn flatTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peopleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn eStoveDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buildingnumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn forstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
     }
 }

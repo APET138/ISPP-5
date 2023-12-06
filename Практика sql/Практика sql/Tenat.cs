@@ -23,9 +23,26 @@ namespace Практика_sql
             check.Show();
             Hide();
         }
+        string regist;
+        public void Registr(string reg)
+        {
+            regist = reg;
+            label3.Text = regist;
+            for (int j = 0; j < dataGridView1.RowCount; j++)
+            { if (dataGridView1.Rows[j].Cells[0].Value.ToString().Contains(label3.Text))
+                    {
 
+                        dataGridView1.Rows[j].Selected = true;
+                        dataGridView1.CurrentCell = dataGridView1[0, j];
+                        break;
+                    }
+               
+            }
+        }
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Apartments". При необходимости она может быть перемещена или удалена.
+            this.apartmentsTableAdapter.Fill(this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Apartments);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Electricity_tariff". При необходимости она может быть перемещена или удалена.
             this.electricity_tariffTableAdapter.Fill(this.уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Electricity_tariff);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "уП_ПМ01_ИСПП_5_Буйлов_МАDataSet.Indicators". При необходимости она может быть перемещена или удалена.
@@ -40,28 +57,9 @@ namespace Практика_sql
 
         }
 
+       
 
-
-        private void buttonPrev_Click(object sender, EventArgs e)
-        {
-      
-
-            int i = dataGridView1.RowCount;
-            int index = dataGridView1.CurrentRow.Index;
-            dataGridView1.Rows[index].Selected = true;
-            if (index != 0)
-            {
-                dataGridView1.CurrentCell = dataGridView1[0, index - 1];
-            }
-            else
-            {
-                dataGridView1.Rows[index].Selected = true;
-                dataGridView1.CurrentCell = dataGridView1[0, i - 1];
-            }
-            searchInDataGridView(Flat.Text);
-
-
-        }
+        
         public void searchInDataGridView(string k)
         {
             /*Метод для поиска данных на datagridView*/
@@ -124,18 +122,7 @@ namespace Практика_sql
             }
 
         }
-            private void buttonNext_Click(object sender, EventArgs e)
-        {
-            int i = dataGridView1.RowCount;
-            int index = dataGridView1.CurrentRow.Index;
-            if ((i - 1) <= index) { dataGridView1.CurrentCell = dataGridView1[0, 0]; }
-            else
-            {
-                dataGridView1.Rows[index].Selected = true;
-                dataGridView1.CurrentCell = dataGridView1[0, index + 1];
-            }
-            searchInDataGridView(Flat.Text);
-        }
+          
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -147,25 +134,7 @@ namespace Практика_sql
 
         }
         int k;
-        private void buttonOpen_Click(object sender, EventArgs e)
-        {
-            if (k == 0)
-            {
-                dataGridView1.Visible = true;
-                
-                this.Width = 1000;
-                buttonOpen.Text = "Закрыть";
-                k = 1;
-            }
-            else
-            {
-                dataGridView1.Visible = false;
-                
-                this.Width = 320;
-                buttonOpen.Text = "Открыть";
-                k = 0;
-            }
-        }
+       
 
         private void label10_Click(object sender, EventArgs e)
         {

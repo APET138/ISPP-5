@@ -384,6 +384,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBack);
             this.Name = "Inspector";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Инспектор";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

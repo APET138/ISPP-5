@@ -18,6 +18,7 @@ namespace Практика_sql
             InitializeComponent();
         }
         int k = 0;
+      
         private void buttonlogin_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnect = new SqlConnection("Data Source=sql;Initial Catalog =уП_ПМ01_ИСПП_5_Буйлов_МА; Integrated Security = True");
@@ -44,7 +45,10 @@ namespace Практика_sql
                     case "Квартиросъемщик":
                         this.Hide();
                         Tenat form3 = new Tenat();
-                        form3.Show(); break;
+                        form3.Show();
+                        form3.Registr(dt.Rows[k]["reg"].ToString());
+
+                        break;
 
                     case "Инспектор":
                         this.Hide();
@@ -77,6 +81,11 @@ namespace Практика_sql
         }
 
         private void Login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void User_Load(object sender, EventArgs e)
         {
 
         }

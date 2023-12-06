@@ -66,7 +66,6 @@
             this.peopleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eStoveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.buildingnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenantcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -535,7 +534,6 @@
             this.peopleDataGridViewTextBoxColumn,
             this.eStoveDataGridViewCheckBoxColumn,
             this.buildingnumberDataGridViewTextBoxColumn,
-            this.tenantcodeDataGridViewTextBoxColumn,
             this.lastnameDataGridViewTextBoxColumn,
             this.forstNameDataGridViewTextBoxColumn,
             this.patronymicDataGridViewTextBoxColumn,
@@ -582,12 +580,6 @@
             this.buildingnumberDataGridViewTextBoxColumn.DataPropertyName = "Building_number";
             this.buildingnumberDataGridViewTextBoxColumn.HeaderText = "Building_number";
             this.buildingnumberDataGridViewTextBoxColumn.Name = "buildingnumberDataGridViewTextBoxColumn";
-            // 
-            // tenantcodeDataGridViewTextBoxColumn
-            // 
-            this.tenantcodeDataGridViewTextBoxColumn.DataPropertyName = "Tenant_code";
-            this.tenantcodeDataGridViewTextBoxColumn.HeaderText = "Tenant_code";
-            this.tenantcodeDataGridViewTextBoxColumn.Name = "tenantcodeDataGridViewTextBoxColumn";
             // 
             // lastnameDataGridViewTextBoxColumn
             // 
@@ -1871,6 +1863,7 @@
             this.ClientSize = new System.Drawing.Size(1119, 646);
             this.Controls.Add(this.tabControl1);
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Админ";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.tabControl1.ResumeLayout(false);

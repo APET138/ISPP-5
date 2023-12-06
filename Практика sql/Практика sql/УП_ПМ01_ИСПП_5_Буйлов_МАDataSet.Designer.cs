@@ -536,8 +536,6 @@ namespace Практика_sql {
             
             private global::System.Data.DataColumn columnBuilding_number;
             
-            private global::System.Data.DataColumn columnTenant_code;
-            
             private global::System.Data.DataColumn columnLastname;
             
             private global::System.Data.DataColumn columnForstName;
@@ -629,14 +627,6 @@ namespace Практика_sql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Tenant_codeColumn {
-                get {
-                    return this.columnTenant_code;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn LastnameColumn {
                 get {
                     return this.columnLastname;
@@ -704,7 +694,7 @@ namespace Практика_sql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ApartmentsRow AddApartmentsRow(decimal Flat, decimal FlatType, decimal People, bool EStove, BuildingRow parentBuildingRowByFK1, int Tenant_code, string Lastname, string ForstName, string Patronymic, string Passport) {
+            public ApartmentsRow AddApartmentsRow(decimal Flat, decimal FlatType, decimal People, bool EStove, BuildingRow parentBuildingRowByFK1, string Lastname, string ForstName, string Patronymic, string Passport) {
                 ApartmentsRow rowApartmentsRow = ((ApartmentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -713,7 +703,6 @@ namespace Практика_sql {
                         People,
                         EStove,
                         null,
-                        Tenant_code,
                         Lastname,
                         ForstName,
                         Patronymic,
@@ -756,7 +745,6 @@ namespace Практика_sql {
                 this.columnPeople = base.Columns["People"];
                 this.columnEStove = base.Columns["EStove"];
                 this.columnBuilding_number = base.Columns["Building_number"];
-                this.columnTenant_code = base.Columns["Tenant_code"];
                 this.columnLastname = base.Columns["Lastname"];
                 this.columnForstName = base.Columns["ForstName"];
                 this.columnPatronymic = base.Columns["Patronymic"];
@@ -778,8 +766,6 @@ namespace Практика_sql {
                 base.Columns.Add(this.columnEStove);
                 this.columnBuilding_number = new global::System.Data.DataColumn("Building_number", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBuilding_number);
-                this.columnTenant_code = new global::System.Data.DataColumn("Tenant_code", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTenant_code);
                 this.columnLastname = new global::System.Data.DataColumn("Lastname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastname);
                 this.columnForstName = new global::System.Data.DataColumn("ForstName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2592,6 +2578,8 @@ namespace Практика_sql {
             
             private global::System.Data.DataColumn columnПрава_доступа;
             
+            private global::System.Data.DataColumn columnreg;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ПользователиDataTable() {
@@ -2659,6 +2647,14 @@ namespace Практика_sql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn regColumn {
+                get {
+                    return this.columnreg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2694,13 +2690,14 @@ namespace Практика_sql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ПользователиRow AddПользователиRow(string Логин, string Пароль, string Права_доступа) {
+            public ПользователиRow AddПользователиRow(string Логин, string Пароль, string Права_доступа, int reg) {
                 ПользователиRow rowПользователиRow = ((ПользователиRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Логин,
                         Пароль,
-                        Права_доступа};
+                        Права_доступа,
+                        reg};
                 rowПользователиRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowПользователиRow);
                 return rowПользователиRow;
@@ -2734,6 +2731,7 @@ namespace Практика_sql {
                 this.columnЛогин = base.Columns["Логин"];
                 this.columnПароль = base.Columns["Пароль"];
                 this.columnПрава_доступа = base.Columns["Права_доступа"];
+                this.columnreg = base.Columns["reg"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2747,6 +2745,8 @@ namespace Практика_sql {
                 base.Columns.Add(this.columnПароль);
                 this.columnПрава_доступа = new global::System.Data.DataColumn("Права_доступа", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnПрава_доступа);
+                this.columnreg = new global::System.Data.DataColumn("reg", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreg);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКод_пользователя}, true));
                 this.columnКод_пользователя.AutoIncrement = true;
@@ -2991,22 +2991,6 @@ namespace Практика_sql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Tenant_code {
-                get {
-                    try {
-                        return ((int)(this[this.tableApartments.Tenant_codeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Tenant_code\' в таблице \'Apartments\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableApartments.Tenant_codeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Lastname {
                 get {
                     try {
@@ -3138,18 +3122,6 @@ namespace Практика_sql {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetBuilding_numberNull() {
                 this[this.tableApartments.Building_numberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTenant_codeNull() {
-                return this.IsNull(this.tableApartments.Tenant_codeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTenant_codeNull() {
-                this[this.tableApartments.Tenant_codeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4150,6 +4122,22 @@ namespace Практика_sql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int reg {
+                get {
+                    try {
+                        return ((int)(this[this.tableПользователи.regColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'reg\' в таблице \'Пользователи\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПользователи.regColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsЛогинNull() {
                 return this.IsNull(this.tableПользователи.ЛогинColumn);
             }
@@ -4182,6 +4170,18 @@ namespace Практика_sql {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetПрава_доступаNull() {
                 this[this.tableПользователи.Права_доступаColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsregNull() {
+                return this.IsNull(this.tableПользователи.regColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetregNull() {
+                this[this.tableПользователи.regColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4554,7 +4554,6 @@ namespace Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTa
             tableMapping.ColumnMappings.Add("People", "People");
             tableMapping.ColumnMappings.Add("EStove", "EStove");
             tableMapping.ColumnMappings.Add("Building_number", "Building_number");
-            tableMapping.ColumnMappings.Add("Tenant_code", "Tenant_code");
             tableMapping.ColumnMappings.Add("Lastname", "Lastname");
             tableMapping.ColumnMappings.Add("ForstName", "ForstName");
             tableMapping.ColumnMappings.Add("Patronymic", "Patronymic");
@@ -4562,7 +4561,7 @@ namespace Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTa
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Apartments] WHERE (([Apartment_code] = @Original_Apartment_code) AND ((@IsNull_Flat = 1 AND [Flat] IS NULL) OR ([Flat] = @Original_Flat)) AND ((@IsNull_FlatType = 1 AND [FlatType] IS NULL) OR ([FlatType] = @Original_FlatType)) AND ((@IsNull_People = 1 AND [People] IS NULL) OR ([People] = @Original_People)) AND ((@IsNull_EStove = 1 AND [EStove] IS NULL) OR ([EStove] = @Original_EStove)) AND ((@IsNull_Building_number = 1 AND [Building_number] IS NULL) OR ([Building_number] = @Original_Building_number)) AND ((@IsNull_Tenant_code = 1 AND [Tenant_code] IS NULL) OR ([Tenant_code] = @Original_Tenant_code)) AND ((@IsNull_Lastname = 1 AND [Lastname] IS NULL) OR ([Lastname] = @Original_Lastname)) AND ((@IsNull_ForstName = 1 AND [ForstName] IS NULL) OR ([ForstName] = @Original_ForstName)) AND ((@IsNull_Patronymic = 1 AND [Patronymic] IS NULL) OR ([Patronymic] = @Original_Patronymic)) AND ((@IsNull_Passport = 1 AND [Passport] IS NULL) OR ([Passport] = @Original_Passport)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Apartments] WHERE (([Apartment_code] = @Original_Apartment_code) AND ((@IsNull_Flat = 1 AND [Flat] IS NULL) OR ([Flat] = @Original_Flat)) AND ((@IsNull_FlatType = 1 AND [FlatType] IS NULL) OR ([FlatType] = @Original_FlatType)) AND ((@IsNull_People = 1 AND [People] IS NULL) OR ([People] = @Original_People)) AND ((@IsNull_EStove = 1 AND [EStove] IS NULL) OR ([EStove] = @Original_EStove)) AND ((@IsNull_Building_number = 1 AND [Building_number] IS NULL) OR ([Building_number] = @Original_Building_number)) AND ((@IsNull_Lastname = 1 AND [Lastname] IS NULL) OR ([Lastname] = @Original_Lastname)) AND ((@IsNull_ForstName = 1 AND [ForstName] IS NULL) OR ([ForstName] = @Original_ForstName)) AND ((@IsNull_Patronymic = 1 AND [Patronymic] IS NULL) OR ([Patronymic] = @Original_Patronymic)) AND ((@IsNull_Passport = 1 AND [Passport] IS NULL) OR ([Passport] = @Original_Passport)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Apartment_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Apartment_code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Flat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Flat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4575,8 +4574,6 @@ namespace Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTa
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EStove", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EStove", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Building_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building_number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Building_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tenant_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tenant_code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tenant_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tenant_code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Lastname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ForstName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ForstName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4587,30 +4584,28 @@ namespace Практика_sql.УП_ПМ01_ИСПП_5_Буйлов_МАDataSetTa
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Passport", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Passport", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Apartments] ([Flat], [FlatType], [People], [EStove], [Building_number], [Tenant_code], [Lastname], [ForstName], [Patronymic], [Passport]) VALUES (@Flat, @FlatType, @People, @EStove, @Building_number, @Tenant_code, @Lastname, @ForstName, @Patronymic, @Passport);
-SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_code, Lastname, ForstName, Patronymic, Passport FROM Apartments WHERE (Apartment_code = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Apartments] ([Flat], [FlatType], [People], [EStove], [Building_number], [Lastname], [ForstName], [Patronymic], [Passport]) VALUES (@Flat, @FlatType, @People, @EStove, @Building_number, @Lastname, @ForstName, @Patronymic, @Passport);
+SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Lastname, ForstName, Patronymic, Passport FROM Apartments WHERE (Apartment_code = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Flat", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "Flat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FlatType", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 1, 0, "FlatType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@People", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 2, 0, "People", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EStove", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EStove", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Building_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tenant_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tenant_code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ForstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ForstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Patronymic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patronymic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Passport", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Passport", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Apartments] SET [Flat] = @Flat, [FlatType] = @FlatType, [People] = @People, [EStove] = @EStove, [Building_number] = @Building_number, [Tenant_code] = @Tenant_code, [Lastname] = @Lastname, [ForstName] = @ForstName, [Patronymic] = @Patronymic, [Passport] = @Passport WHERE (([Apartment_code] = @Original_Apartment_code) AND ((@IsNull_Flat = 1 AND [Flat] IS NULL) OR ([Flat] = @Original_Flat)) AND ((@IsNull_FlatType = 1 AND [FlatType] IS NULL) OR ([FlatType] = @Original_FlatType)) AND ((@IsNull_People = 1 AND [People] IS NULL) OR ([People] = @Original_People)) AND ((@IsNull_EStove = 1 AND [EStove] IS NULL) OR ([EStove] = @Original_EStove)) AND ((@IsNull_Building_number = 1 AND [Building_number] IS NULL) OR ([Building_number] = @Original_Building_number)) AND ((@IsNull_Tenant_code = 1 AND [Tenant_code] IS NULL) OR ([Tenant_code] = @Original_Tenant_code)) AND ((@IsNull_Lastname = 1 AND [Lastname] IS NULL) OR ([Lastname] = @Original_Lastname)) AND ((@IsNull_ForstName = 1 AND [ForstName] IS NULL) OR ([ForstName] = @Original_ForstName)) AND ((@IsNull_Patronymic = 1 AND [Patronymic] IS NULL) OR ([Patronymic] = @Original_Patronymic)) AND ((@IsNull_Passport = 1 AND [Passport] IS NULL) OR ([Passport] = @Original_Passport)));
-SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_code, Lastname, ForstName, Patronymic, Passport FROM Apartments WHERE (Apartment_code = @Apartment_code)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Apartments] SET [Flat] = @Flat, [FlatType] = @FlatType, [People] = @People, [EStove] = @EStove, [Building_number] = @Building_number, [Lastname] = @Lastname, [ForstName] = @ForstName, [Patronymic] = @Patronymic, [Passport] = @Passport WHERE (([Apartment_code] = @Original_Apartment_code) AND ((@IsNull_Flat = 1 AND [Flat] IS NULL) OR ([Flat] = @Original_Flat)) AND ((@IsNull_FlatType = 1 AND [FlatType] IS NULL) OR ([FlatType] = @Original_FlatType)) AND ((@IsNull_People = 1 AND [People] IS NULL) OR ([People] = @Original_People)) AND ((@IsNull_EStove = 1 AND [EStove] IS NULL) OR ([EStove] = @Original_EStove)) AND ((@IsNull_Building_number = 1 AND [Building_number] IS NULL) OR ([Building_number] = @Original_Building_number)) AND ((@IsNull_Lastname = 1 AND [Lastname] IS NULL) OR ([Lastname] = @Original_Lastname)) AND ((@IsNull_ForstName = 1 AND [ForstName] IS NULL) OR ([ForstName] = @Original_ForstName)) AND ((@IsNull_Patronymic = 1 AND [Patronymic] IS NULL) OR ([Patronymic] = @Original_Patronymic)) AND ((@IsNull_Passport = 1 AND [Passport] IS NULL) OR ([Passport] = @Original_Passport)));
+SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Lastname, ForstName, Patronymic, Passport FROM Apartments WHERE (Apartment_code = @Apartment_code)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Flat", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "Flat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FlatType", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 1, 0, "FlatType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@People", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 2, 0, "People", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EStove", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EStove", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Building_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tenant_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tenant_code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ForstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ForstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Patronymic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patronymic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4626,8 +4621,6 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EStove", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EStove", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Building_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building_number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Building_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tenant_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tenant_code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tenant_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tenant_code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Lastname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ForstName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ForstName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4652,8 +4645,8 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_co" +
-                "de, Lastname, ForstName, Patronymic, Passport FROM dbo.Apartments";
+            this._commandCollection[0].CommandText = "SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Lastname," +
+                " ForstName, Patronymic, Passport FROM Apartments";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4714,7 +4707,7 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Apartment_code, global::System.Nullable<decimal> Original_Flat, global::System.Nullable<decimal> Original_FlatType, global::System.Nullable<decimal> Original_People, global::System.Nullable<bool> Original_EStove, global::System.Nullable<int> Original_Building_number, global::System.Nullable<int> Original_Tenant_code, string Original_Lastname, string Original_ForstName, string Original_Patronymic, string Original_Passport) {
+        public virtual int Delete(int Original_Apartment_code, global::System.Nullable<decimal> Original_Flat, global::System.Nullable<decimal> Original_FlatType, global::System.Nullable<decimal> Original_People, global::System.Nullable<bool> Original_EStove, global::System.Nullable<int> Original_Building_number, string Original_Lastname, string Original_ForstName, string Original_Patronymic, string Original_Passport) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Apartment_code));
             if ((Original_Flat.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -4756,45 +4749,37 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_Tenant_code.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_Tenant_code.Value));
-            }
-            else {
+            if ((Original_Lastname == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_Lastname == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Lastname));
+            }
+            if ((Original_ForstName == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Lastname));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_ForstName));
             }
-            if ((Original_ForstName == null)) {
+            if ((Original_Patronymic == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_ForstName));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Patronymic));
             }
-            if ((Original_Patronymic == null)) {
+            if ((Original_Passport == null)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Patronymic));
-            }
-            if ((Original_Passport == null)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Passport));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Passport));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4816,7 +4801,7 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<decimal> Flat, global::System.Nullable<decimal> FlatType, global::System.Nullable<decimal> People, global::System.Nullable<bool> EStove, global::System.Nullable<int> Building_number, global::System.Nullable<int> Tenant_code, string Lastname, string ForstName, string Patronymic, string Passport) {
+        public virtual int Insert(global::System.Nullable<decimal> Flat, global::System.Nullable<decimal> FlatType, global::System.Nullable<decimal> People, global::System.Nullable<bool> EStove, global::System.Nullable<int> Building_number, string Lastname, string ForstName, string Patronymic, string Passport) {
             if ((Flat.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(Flat.Value));
             }
@@ -4847,35 +4832,29 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Tenant_code.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Tenant_code.Value));
-            }
-            else {
+            if ((Lastname == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Lastname == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Lastname));
+            }
+            if ((ForstName == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Lastname));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ForstName));
             }
-            if ((ForstName == null)) {
+            if ((Patronymic == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(ForstName));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Patronymic));
             }
-            if ((Patronymic == null)) {
+            if ((Passport == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Patronymic));
-            }
-            if ((Passport == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Passport));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Passport));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4903,7 +4882,6 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
                     global::System.Nullable<decimal> People, 
                     global::System.Nullable<bool> EStove, 
                     global::System.Nullable<int> Building_number, 
-                    global::System.Nullable<int> Tenant_code, 
                     string Lastname, 
                     string ForstName, 
                     string Patronymic, 
@@ -4914,7 +4892,6 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
                     global::System.Nullable<decimal> Original_People, 
                     global::System.Nullable<bool> Original_EStove, 
                     global::System.Nullable<int> Original_Building_number, 
-                    global::System.Nullable<int> Original_Tenant_code, 
                     string Original_Lastname, 
                     string Original_ForstName, 
                     string Original_Patronymic, 
@@ -4950,118 +4927,104 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Tenant_code.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Tenant_code.Value));
-            }
-            else {
+            if ((Lastname == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Lastname == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Lastname));
+            }
+            if ((ForstName == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Lastname));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ForstName));
             }
-            if ((ForstName == null)) {
+            if ((Patronymic == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(ForstName));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Patronymic));
             }
-            if ((Patronymic == null)) {
+            if ((Passport == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Patronymic));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Passport));
             }
-            if ((Passport == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Passport));
-            }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Apartment_code));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Apartment_code));
             if ((Original_Flat.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(Original_Flat.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_Flat.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((Original_FlatType.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_FlatType.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_FlatType.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             if ((Original_People.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(Original_People.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_People.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_EStove.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Original_EStove.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(Original_EStove.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             if ((Original_Building_number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Building_number.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Building_number.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Tenant_code.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_Tenant_code.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             if ((Original_Lastname == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Lastname));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Lastname));
             }
             if ((Original_ForstName == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_ForstName));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_ForstName));
             }
             if ((Original_Patronymic == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Patronymic));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_Patronymic));
             }
             if ((Original_Passport == null)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_Passport));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Passport));
             }
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Apartment_code));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Apartment_code));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5088,7 +5051,6 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
                     global::System.Nullable<decimal> People, 
                     global::System.Nullable<bool> EStove, 
                     global::System.Nullable<int> Building_number, 
-                    global::System.Nullable<int> Tenant_code, 
                     string Lastname, 
                     string ForstName, 
                     string Patronymic, 
@@ -5099,12 +5061,11 @@ SELECT Apartment_code, Flat, FlatType, People, EStove, Building_number, Tenant_c
                     global::System.Nullable<decimal> Original_People, 
                     global::System.Nullable<bool> Original_EStove, 
                     global::System.Nullable<int> Original_Building_number, 
-                    global::System.Nullable<int> Original_Tenant_code, 
                     string Original_Lastname, 
                     string Original_ForstName, 
                     string Original_Patronymic, 
                     string Original_Passport) {
-            return this.Update(Flat, FlatType, People, EStove, Building_number, Tenant_code, Lastname, ForstName, Patronymic, Passport, Original_Apartment_code, Original_Flat, Original_FlatType, Original_People, Original_EStove, Original_Building_number, Original_Tenant_code, Original_Lastname, Original_ForstName, Original_Patronymic, Original_Passport, Original_Apartment_code);
+            return this.Update(Flat, FlatType, People, EStove, Building_number, Lastname, ForstName, Patronymic, Passport, Original_Apartment_code, Original_Flat, Original_FlatType, Original_People, Original_EStove, Original_Building_number, Original_Lastname, Original_ForstName, Original_Patronymic, Original_Passport, Original_Apartment_code);
         }
     }
     
@@ -7533,10 +7494,11 @@ SELECT Pay_code, Counter, Tariff, Day, Night, hour24, Privilege, Surname, Tariff
             tableMapping.ColumnMappings.Add("Логин", "Логин");
             tableMapping.ColumnMappings.Add("Пароль", "Пароль");
             tableMapping.ColumnMappings.Add("Права_доступа", "Права_доступа");
+            tableMapping.ColumnMappings.Add("reg", "reg");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Пользователи] WHERE (([Код_пользователя] = @Original_Код_пользователя) AND ((@IsNull_Логин = 1 AND [Логин] IS NULL) OR ([Логин] = @Original_Логин)) AND ((@IsNull_Пароль = 1 AND [Пароль] IS NULL) OR ([Пароль] = @Original_Пароль)) AND ((@IsNull_Права_доступа = 1 AND [Права_доступа] IS NULL) OR ([Права_доступа] = @Original_Права_доступа)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Пользователи] WHERE (([Код_пользователя] = @Original_Код_пользователя) AND ((@IsNull_Логин = 1 AND [Логин] IS NULL) OR ([Логин] = @Original_Логин)) AND ((@IsNull_Пароль = 1 AND [Пароль] IS NULL) OR ([Пароль] = @Original_Пароль)) AND ((@IsNull_Права_доступа = 1 AND [Права_доступа] IS NULL) OR ([Права_доступа] = @Original_Права_доступа)) AND ((@IsNull_reg = 1 AND [reg] IS NULL) OR ([reg] = @Original_reg)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Код_пользователя", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Код_пользователя", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Логин", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логин", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -7545,23 +7507,27 @@ SELECT Pay_code, Counter, Tariff, Day, Night, hour24, Privilege, Surname, Tariff
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Пароль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Пароль", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Права_доступа", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Права_доступа", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Права_доступа", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Права_доступа", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_reg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reg", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reg", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Пользователи] ([Логин], [Пароль], [Права_доступа]) VALUES (@Ло" +
-                "гин, @Пароль, @Права_доступа);\r\nSELECT Код_пользователя, Логин, Пароль, Права_до" +
-                "ступа FROM Пользователи WHERE (Код_пользователя = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Пользователи] ([Логин], [Пароль], [Права_доступа], [reg]) VALUES (@Л" +
+                "огин, @Пароль, @Права_доступа, @reg);\r\nSELECT Код_пользователя, Логин, Пароль, П" +
+                "рава_доступа, reg FROM Пользователи WHERE (Код_пользователя = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Логин", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логин", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Пароль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Пароль", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Права_доступа", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Права_доступа", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Пользователи] SET [Логин] = @Логин, [Пароль] = @Пароль, [Права_доступа] = @Права_доступа WHERE (([Код_пользователя] = @Original_Код_пользователя) AND ((@IsNull_Логин = 1 AND [Логин] IS NULL) OR ([Логин] = @Original_Логин)) AND ((@IsNull_Пароль = 1 AND [Пароль] IS NULL) OR ([Пароль] = @Original_Пароль)) AND ((@IsNull_Права_доступа = 1 AND [Права_доступа] IS NULL) OR ([Права_доступа] = @Original_Права_доступа)));
-SELECT Код_пользователя, Логин, Пароль, Права_доступа FROM Пользователи WHERE (Код_пользователя = @Код_пользователя)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Пользователи] SET [Логин] = @Логин, [Пароль] = @Пароль, [Права_доступа] = @Права_доступа, [reg] = @reg WHERE (([Код_пользователя] = @Original_Код_пользователя) AND ((@IsNull_Логин = 1 AND [Логин] IS NULL) OR ([Логин] = @Original_Логин)) AND ((@IsNull_Пароль = 1 AND [Пароль] IS NULL) OR ([Пароль] = @Original_Пароль)) AND ((@IsNull_Права_доступа = 1 AND [Права_доступа] IS NULL) OR ([Права_доступа] = @Original_Права_доступа)) AND ((@IsNull_reg = 1 AND [reg] IS NULL) OR ([reg] = @Original_reg)));
+SELECT Код_пользователя, Логин, Пароль, Права_доступа, reg FROM Пользователи WHERE (Код_пользователя = @Код_пользователя)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Логин", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логин", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Пароль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Пароль", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Права_доступа", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Права_доступа", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Код_пользователя", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Код_пользователя", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Логин", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логин", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Логин", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логин", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7569,6 +7535,8 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Пароль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Пароль", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Права_доступа", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Права_доступа", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Права_доступа", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Права_доступа", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_reg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reg", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reg", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Код_пользователя", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Код_пользователя", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -7585,7 +7553,7 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Код_пользователя, Логин, Пароль, Права_доступа FROM dbo.Пользователи";
+            this._commandCollection[0].CommandText = "SELECT Код_пользователя, Логин, Пароль, Права_доступа, reg FROM Пользователи";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7646,7 +7614,7 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Код_пользователя, string Original_Логин, string Original_Пароль, string Original_Права_доступа) {
+        public virtual int Delete(int Original_Код_пользователя, string Original_Логин, string Original_Пароль, string Original_Права_доступа, global::System.Nullable<int> Original_reg) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Код_пользователя));
             if ((Original_Логин == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -7672,6 +7640,14 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Права_доступа));
             }
+            if ((Original_reg.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_reg.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7692,7 +7668,7 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Логин, string Пароль, string Права_доступа) {
+        public virtual int Insert(string Логин, string Пароль, string Права_доступа, global::System.Nullable<int> reg) {
             if ((Логин == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -7710,6 +7686,12 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Права_доступа));
+            }
+            if ((reg.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(reg.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7731,7 +7713,7 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Логин, string Пароль, string Права_доступа, int Original_Код_пользователя, string Original_Логин, string Original_Пароль, string Original_Права_доступа, int Код_пользователя) {
+        public virtual int Update(string Логин, string Пароль, string Права_доступа, global::System.Nullable<int> reg, int Original_Код_пользователя, string Original_Логин, string Original_Пароль, string Original_Права_доступа, global::System.Nullable<int> Original_reg, int Код_пользователя) {
             if ((Логин == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -7750,32 +7732,46 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Права_доступа));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Код_пользователя));
-            if ((Original_Логин == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            if ((reg.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(reg.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Логин));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Код_пользователя));
+            if ((Original_Логин == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Логин));
             }
             if ((Original_Пароль == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Пароль));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Пароль));
             }
             if ((Original_Права_доступа == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Права_доступа));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Права_доступа));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Код_пользователя));
+            if ((Original_reg.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_reg.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Код_пользователя));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7796,8 +7792,8 @@ SELECT Код_пользователя, Логин, Пароль, Права_д�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Логин, string Пароль, string Права_доступа, int Original_Код_пользователя, string Original_Логин, string Original_Пароль, string Original_Права_доступа) {
-            return this.Update(Логин, Пароль, Права_доступа, Original_Код_пользователя, Original_Логин, Original_Пароль, Original_Права_доступа, Original_Код_пользователя);
+        public virtual int Update(string Логин, string Пароль, string Права_доступа, global::System.Nullable<int> reg, int Original_Код_пользователя, string Original_Логин, string Original_Пароль, string Original_Права_доступа, global::System.Nullable<int> Original_reg) {
+            return this.Update(Логин, Пароль, Права_доступа, reg, Original_Код_пользователя, Original_Логин, Original_Пароль, Original_Права_доступа, Original_reg, Original_Код_пользователя);
         }
     }
     
