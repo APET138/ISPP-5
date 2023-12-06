@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{339B673E-65A9-40F6-8F21-A2F013DEA466}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>autoShop</RootNamespace>
+    <AssemblyName>autoShop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo-lada.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="autoShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>autoShopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisteredUser.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="АвтомобилиADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="АвтомобилиADM.Designer.cs">
+      <DependentUpon>АвтомобилиADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="АвтомобилиUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="АвтомобилиUSER.Designer.cs">
+      <DependentUpon>АвтомобилиUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Авторизация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДвигателиADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДвигателиADM.Designer.cs">
+      <DependentUpon>ДвигателиADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДвигателиUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДвигателиUSER.Designer.cs">
+      <DependentUpon>ДвигателиUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДиректорскийПерсонал.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДиректорскийПерсонал.Designer.cs">
+      <DependentUpon>ДиректорскийПерсонал.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Заказы.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Заказы.Designer.cs">
+      <DependentUpon>Заказы.cs</DependentUpon>
+    </Compile>
+    <Compile Include="КлиентUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="КлиентUSER.Designer.cs">
+      <DependentUpon>КлиентUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="КлиентыADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="КлиентыADM.Designer.cs">
+      <DependentUpon>КлиентыADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="КузовыADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="КузовыADM.Designer.cs">
+      <DependentUpon>КузовыADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="КузовыUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="КузовыUSER.Designer.cs">
+      <DependentUpon>КузовыUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ЛичныйКабинет.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ЛичныйКабинет.Designer.cs">
+      <DependentUpon>ЛичныйКабинет.cs</DependentUpon>
+    </Compile>
+    <Compile Include="МаркиADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="МаркиADM.Designer.cs">
+      <DependentUpon>МаркиADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="МаркиUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="МаркиUSER.Designer.cs">
+      <DependentUpon>МаркиUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="МенюАдмина.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="МенюАдмина.Designer.cs">
+      <DependentUpon>МенюАдмина.cs</DependentUpon>
+    </Compile>
+    <Compile Include="МенюПользователя.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="МенюПользователя.Designer.cs">
+      <DependentUpon>МенюПользователя.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОформлениеЗаказа.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОформлениеЗаказа.Designer.cs">
+      <DependentUpon>ОформлениеЗаказа.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ПросмотрЗаказовADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ПросмотрЗаказовADM.Designer.cs">
+      <DependentUpon>ПросмотрЗаказовADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ПросмотрЗаказовUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ПросмотрЗаказовUSER.Designer.cs">
+      <DependentUpon>ПросмотрЗаказовUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Регистрация.Designer.cs">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="МенюГостя.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="МенюГостя.Designer.cs">
+      <DependentUpon>МенюГостя.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДобавлениеКлиента.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДобавлениеКлиента.Designer.cs">
+      <DependentUpon>ДобавлениеКлиента.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="МенюПокупателя.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="МенюПокупателя.Designer.cs">
+      <DependentUpon>МенюПокупателя.cs</DependentUpon>
+    </Compile>
+    <Compile Include="УправлениеПользователями.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="УправлениеПользователями.Designer.cs">
+      <DependentUpon>УправлениеПользователями.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Филиалы.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Филиалы.Designer.cs">
+      <DependentUpon>Филиалы.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="АвтомобилиADM.resx">
+      <DependentUpon>АвтомобилиADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="АвтомобилиUSER.resx">
+      <DependentUpon>АвтомобилиUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДвигателиADM.resx">
+      <DependentUpon>ДвигателиADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДвигателиUSER.resx">
+      <DependentUpon>ДвигателиUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДиректорскийПерсонал.resx">
+      <DependentUpon>ДиректорскийПерсонал.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Заказы.resx">
+      <DependentUpon>Заказы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="КлиентUSER.resx">
+      <DependentUpon>КлиентUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="КлиентыADM.resx">
+      <DependentUpon>КлиентыADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="КузовыADM.resx">
+      <DependentUpon>КузовыADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="КузовыUSER.resx">
+      <DependentUpon>КузовыUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ЛичныйКабинет.resx">
+      <DependentUpon>ЛичныйКабинет.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="МаркиADM.resx">
+      <DependentUpon>МаркиADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="МаркиUSER.resx">
+      <DependentUpon>МаркиUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="МенюАдмина.resx">
+      <DependentUpon>МенюАдмина.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="МенюПользователя.resx">
+      <DependentUpon>МенюПользователя.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОформлениеЗаказа.resx">
+      <DependentUpon>ОформлениеЗаказа.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ПросмотрЗаказовADM.resx">
+      <DependentUpon>ПросмотрЗаказовADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ПросмотрЗаказовUSER.resx">
+      <DependentUpon>ПросмотрЗаказовUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Регистрация.resx">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="МенюГостя.resx">
+      <DependentUpon>МенюГостя.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДобавлениеКлиента.resx">
+      <DependentUpon>ДобавлениеКлиента.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="МенюПокупателя.resx">
+      <DependentUpon>МенюПокупателя.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="УправлениеПользователями.resx">
+      <DependentUpon>УправлениеПользователями.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Филиалы.resx">
+      <DependentUpon>Филиалы.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="autoShopDataSet.xsc">
+      <DependentUpon>autoShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="autoShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>autoShopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="autoShopDataSet.xss">
+      <DependentUpon>autoShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\glazik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\glazik_zakryt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\audi.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ford focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\granta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\honda civic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\mercedez benz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\nissan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\niva legend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\niva travel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\toyota camri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\vesta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ford_focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\honda_civic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\mercedez_benz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\niva_legend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\niva_travel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\toyota_camri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo-lada.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
