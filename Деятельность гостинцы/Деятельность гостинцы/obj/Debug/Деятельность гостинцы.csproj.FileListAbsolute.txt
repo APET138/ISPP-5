@@ -1,0 +1,20 @@
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\bin\Debug\Деятельность гостинцы.exe.config
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\bin\Debug\Деятельность гостинцы.exe
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\bin\Debug\Деятельность гостинцы.pdb
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность гостинцы.csproj.AssemblyReference.cache
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность_гостинцы.Form1.resources
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность_гостинцы.Properties.Resources.resources
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность гостинцы.csproj.GenerateResource.cache
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность гостинцы.csproj.CoreCompileInputs.cache
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность гостинцы.exe
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность гостинцы.pdb
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность_гостинцы.GuestForm.resources
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность_гостинцы.ManagerForm.resources
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\bin\Debug\Деятельность гостинцы.exe.manifest
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\bin\Debug\Деятельность гостинцы.application
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность гостинцы.exe.manifest
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность гостинцы.application
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность_гостинцы.AdminForm.resources
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\bin\Debug\QRCoder.dll
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность гостинцы.csproj.CopyComplete
+C:\Users\Tays\Desktop\Практика\Деятельность гостинцы\Деятельность гостинцы\obj\Debug\Деятельность_гостинцы.InvoiceForm.resources
