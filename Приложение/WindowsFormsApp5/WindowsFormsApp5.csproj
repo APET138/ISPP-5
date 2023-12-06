@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E669D1A-5C9F-4D52-95E4-B7505EB3DF6F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp5</RootNamespace>
+    <AssemblyName>WindowsFormsApp5</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="decoration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="decoration.Designer.cs">
+      <DependentUpon>decoration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entrance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entrance.Designer.cs">
+      <DependentUpon>entrance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buildings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buildings.Designer.cs">
+      <DependentUpon>buildings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms parts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms parts.Designer.cs">
+      <DependentUpon>Rooms parts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms.Designer.cs">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Б_АЮ_Учебная_ПрактикаDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Б_АЮ_Учебная_ПрактикаDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Б_АЮ_Учебная_ПрактикаDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="decoration.resx">
+      <DependentUpon>decoration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entrance.resx">
+      <DependentUpon>entrance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buildings.resx">
+      <DependentUpon>buildings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms parts.resx">
+      <DependentUpon>Rooms parts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms.resx">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet.xsc">
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Б_АЮ_Учебная_ПрактикаDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet.xss">
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet1.xsc">
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Б_АЮ_Учебная_ПрактикаDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet1.xss">
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet2.xsc">
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Б_АЮ_Учебная_ПрактикаDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Б_АЮ_Учебная_ПрактикаDataSet2.xss">
+      <DependentUpon>Б_АЮ_Учебная_ПрактикаDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
