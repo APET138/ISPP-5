@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88FE84F4-EFA5-4392-9B30-665309879402}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Учебная_практика</RootNamespace>
+    <AssemblyName>Учебная практика</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Avtorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Avtorization.Designer.cs">
+      <DependentUpon>Avtorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAbiturient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAbiturient.Designer.cs">
+      <DependentUpon>CreateAbiturient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateCommission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCommission.Designer.cs">
+      <DependentUpon>CreateCommission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateContract.Designer.cs">
+      <DependentUpon>CreateContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateEGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEGE.Designer.cs">
+      <DependentUpon>CreateEGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatEnrollment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatEnrollment.Designer.cs">
+      <DependentUpon>CreatEnrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatPravo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatPravo.Designer.cs">
+      <DependentUpon>CreatPravo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables.Designer.cs">
+      <DependentUpon>Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbityrientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbityrientForm.Designer.cs">
+      <DependentUpon>AbityrientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Попов_СЕ_МДК_01_01DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Попов_СЕ_МДК_01_01DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="УП__ПМ01_Попов_СЕ_Приемная_комиссия_университетаDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>УП__ПМ01_Попов_СЕ_Приемная_комиссия_университетаDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Avtorization.resx">
+      <DependentUpon>Avtorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAbiturient.resx">
+      <DependentUpon>CreateAbiturient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateCommission.resx">
+      <DependentUpon>CreateCommission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateContract.resx">
+      <DependentUpon>CreateContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateEGE.resx">
+      <DependentUpon>CreateEGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatEnrollment.resx">
+      <DependentUpon>CreatEnrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatPravo.resx">
+      <DependentUpon>CreatPravo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables.resx">
+      <DependentUpon>Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbityrientForm.resx">
+      <DependentUpon>AbityrientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Попов_СЕ_МДК_01_01DataSet.xsc">
+      <DependentUpon>Попов_СЕ_МДК_01_01DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Попов_СЕ_МДК_01_01DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Попов_СЕ_МДК_01_01DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Попов_СЕ_МДК_01_01DataSet.xss">
+      <DependentUpon>Попов_СЕ_МДК_01_01DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="УП__ПМ01_Попов_СЕ_Приемная_комиссия_университетаDataSet.xsc">
+      <DependentUpon>УП__ПМ01_Попов_СЕ_Приемная_комиссия_университетаDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="УП__ПМ01_Попов_СЕ_Приемная_комиссия_университетаDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>УП__ПМ01_Попов_СЕ_Приемная_комиссия_университетаDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="УП__ПМ01_Попов_СЕ_Приемная_комиссия_университетаDataSet.xss">
+      <DependentUpon>УП__ПМ01_Попов_СЕ_Приемная_комиссия_университетаDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\751463.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

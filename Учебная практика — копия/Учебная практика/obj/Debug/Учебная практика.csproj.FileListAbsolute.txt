@@ -1,0 +1,32 @@
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\bin\Debug\Учебная практика.exe.config
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\bin\Debug\Учебная практика.exe
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\bin\Debug\Учебная практика.pdb
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная практика.csproj.AssemblyReference.cache
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная практика.csproj.SuggestedBindingRedirects.cache
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.Properties.Resources.resources
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная практика.csproj.GenerateResource.cache
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная практика.csproj.CoreCompileInputs.cache
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная практика.exe
+\\apetfs\ИСПП-5\Попов_СЕ\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная практика.pdb
+\\apetfs\испп-5\попов_се\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.Avtorization.resources
+\\apetfs\испп-5\попов_се\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.Tables.resources
+\\apetfs\испп-5\попов_се\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.Registration.resources
+\\apetfs\испп-5\попов_се\Учебная практика 01.01\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.AbityrientForm.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\bin\Debug\Учебная практика.exe.config
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\bin\Debug\Учебная практика.exe
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\bin\Debug\Учебная практика.pdb
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная практика.csproj.AssemblyReference.cache
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная практика.csproj.SuggestedBindingRedirects.cache
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.Avtorization.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.Tables.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.AbityrientForm.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.Properties.Resources.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная практика.csproj.GenerateResource.cache
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная практика.csproj.CoreCompileInputs.cache
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная практика.exe
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная практика.pdb
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.RegistrationForm.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.CreateAbiturient.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.CreateEGE.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.CreateContract.resources
+C:\Users\пк\OneDrive\Рабочий стол\Учебная практика\Учебная практика\obj\Debug\Учебная_практика.CreateCommission.resources
