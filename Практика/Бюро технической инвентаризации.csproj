@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{849CCF59-40B0-4C5E-AC23-D0F0BDC115F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Бюро_технической_инвентаризации</RootNamespace>
+    <AssemblyName>Бюро технической инвентаризации</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Главная форма\AddChiefForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\AddChiefForm.Designer.cs">
+      <DependentUpon>AddChiefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\AddDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\AddDepartmentForm.Designer.cs">
+      <DependentUpon>AddDepartmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\AddExecutorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\AddExecutorForm.Designer.cs">
+      <DependentUpon>AddExecutorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\AddTechForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\AddTechForm.Designer.cs">
+      <DependentUpon>AddTechForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\EditChiefForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\EditChiefForm.Designer.cs">
+      <DependentUpon>EditChiefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\EditDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\EditDepartmentForm.Designer.cs">
+      <DependentUpon>EditDepartmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\EditExecutorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\EditExecutorForm.Designer.cs">
+      <DependentUpon>EditExecutorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\EditTechForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\EditTechForm.Designer.cs">
+      <DependentUpon>EditTechForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\AddCompleteApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\AddCompleteApp.Designer.cs">
+      <DependentUpon>AddCompleteApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\EditCompleteApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\EditCompleteApp.Designer.cs">
+      <DependentUpon>EditCompleteApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\EditApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\EditApp.Designer.cs">
+      <DependentUpon>EditApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\AddApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\AddApp.Designer.cs">
+      <DependentUpon>AddApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="АвторизацияРегистрация\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="АвторизацияРегистрация\AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="АвторизацияРегистрация\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="АвторизацияРегистрация\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\AddCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\AddCust.Designer.cs">
+      <DependentUpon>AddCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная форма\EditCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная форма\EditCust.Designer.cs">
+      <DependentUpon>EditCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="УП01_ИСПП5_Иванченко_ИВAdminDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>УП01_ИСПП5_Иванченко_ИВAdminDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="УП01_ИСПП5_Иванченко_ИВDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>УП01_ИСПП5_Иванченко_ИВDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Администратор\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администратор\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администратор\EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\AddApp.resx">
+      <DependentUpon>AddApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\AddChiefForm.resx">
+      <DependentUpon>AddChiefForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\AddCompleteApp.resx">
+      <DependentUpon>AddCompleteApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\AddDepartmentForm.resx">
+      <DependentUpon>AddDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\AddExecutorForm.resx">
+      <DependentUpon>AddExecutorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\AddTechForm.resx">
+      <DependentUpon>AddTechForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\EditChiefForm.resx">
+      <DependentUpon>EditChiefForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\EditCompleteApp.resx">
+      <DependentUpon>EditCompleteApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\EditDepartmentForm.resx">
+      <DependentUpon>EditDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\EditExecutorForm.resx">
+      <DependentUpon>EditExecutorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\EditTechForm.resx">
+      <DependentUpon>EditTechForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="АвторизацияРегистрация\AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="АвторизацияРегистрация\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\AddCust.resx">
+      <DependentUpon>AddCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\EditCust.resx">
+      <DependentUpon>EditCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная форма\EditApp.resx">
+      <DependentUpon>EditApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="УП01_ИСПП5_Иванченко_ИВAdminDataSet.xsc">
+      <DependentUpon>УП01_ИСПП5_Иванченко_ИВAdminDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="УП01_ИСПП5_Иванченко_ИВAdminDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>УП01_ИСПП5_Иванченко_ИВAdminDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="УП01_ИСПП5_Иванченко_ИВAdminDataSet.xss">
+      <DependentUpon>УП01_ИСПП5_Иванченко_ИВAdminDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="УП01_ИСПП5_Иванченко_ИВDataSet.xsc">
+      <DependentUpon>УП01_ИСПП5_Иванченко_ИВDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="УП01_ИСПП5_Иванченко_ИВDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>УП01_ИСПП5_Иванченко_ИВDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="УП01_ИСПП5_Иванченко_ИВDataSet.xss">
+      <DependentUpon>УП01_ИСПП5_Иванченко_ИВDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КнопкаВыхода.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Логин.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Пароль.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Очистка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rVqhsDxlE3IzmbOgF-aoaPamsD7ZM0L7nX-9ujUlhcjTuD5RXo--0sU8_qcuHx15VJUcKW4PHXwRyTPjZL-pIIkI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\БТИ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\БТИ1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Логин1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Очистка1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-person-12123240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Пароль1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Подтверждение пароля.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Показать пароль.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скрыть пароль.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\НомерТелефона.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\НомерТелефона1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ПерсДанные.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КнопкаВыхода1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Обновление.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавить.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Редактирование.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Редактирование1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Инфо.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Редактирование пользователей.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавление пользователя.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
