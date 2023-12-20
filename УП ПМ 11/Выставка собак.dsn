@@ -1,0 +1,8 @@
+[ODBC]
+DRIVER=SQL Server
+UID=макуров_ва
+DATABASE=УП11_ИСПП_5_Макуров_ВА
+WSID=F13
+APP=Microsoft Office
+Trusted_Connection=Yes
+SERVER=sql
