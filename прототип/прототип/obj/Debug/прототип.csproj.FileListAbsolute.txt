@@ -1,0 +1,12 @@
+C:\Users\Иван\Desktop\прототип\прототип\bin\Debug\прототип.exe.config
+C:\Users\Иван\Desktop\прототип\прототип\bin\Debug\прототип.exe
+C:\Users\Иван\Desktop\прототип\прототип\bin\Debug\прототип.pdb
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.csproj.AssemblyReference.cache
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.csproj.SuggestedBindingRedirects.cache
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.Form1.resources
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.Properties.Resources.resources
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.csproj.GenerateResource.cache
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.csproj.CoreCompileInputs.cache
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.exe
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.pdb
+C:\Users\Иван\Desktop\прототип\прототип\obj\Debug\прототип.Form2.resources
