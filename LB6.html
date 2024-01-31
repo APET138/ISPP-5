@@ -1,0 +1,32 @@
+<html>
+<head><title>Основы</title></head>
+<body>
+<canvas id="draw" width="300" height="200"></canvas> 
+<script>
+var x1=(Math.PI/180)*0;
+var x2=(Math.PI/180)*360;
+var canvas=document.getElementById("draw");
+var x=canvas.getContext ("2d");
+
+x.fillStyle="red";
+x.moveTo (23,23);
+x.lineTo (68,68);
+x.lineTo (23,73);
+x.fill ();
+
+x.fillStyle="green";
+x.fillRect(58,3,44,44);
+
+
+x.beginPath();
+x.fillStyle="yellow";
+x.arc (87,65,15,x1,x2);
+x.moveTo (100,100);
+x.fill ();
+
+x.strokeStyle="blue";
+x.strokeRect (20,2,86,86);
+
+</script>
+</body>
+</html>
