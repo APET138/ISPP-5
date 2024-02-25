@@ -1,0 +1,24 @@
+.box {
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
+}
+ 
+.box-1 {
+  background-color: #C00000;
+}
+ 
+.box-2 {
+  background-color: #E36C0A;
+}
+ 
+.box-3 {
+  background-color: #FFC000;
+}
+
+.box-4 {
+  background-color: #00B050;
+}
