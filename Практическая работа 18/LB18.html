@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Программа для ввода пароля</title>
+</head>
+<body>
+<script type="text/javascript">
+var password = prompt("Введите пароль");
+if (password === "123") {
+    printPage(password);
+} else {
+    alert("Введён неверный пароль"); 
+}
+function printPage(password) { 
+    document.write("Пароль: " + password);
+    window.print(); 
+}
+</script>
+</body>
+</html>
