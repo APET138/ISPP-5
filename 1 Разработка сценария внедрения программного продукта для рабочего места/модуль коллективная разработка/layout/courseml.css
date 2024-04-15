@@ -1,0 +1,70 @@
+.m{font-style : italic;color: #1a2b00;}
+.bold {font-weight: bold;}
+.underlined { text-decoration : underline;} 
+.italic {font-style : italic;}
+.note {
+	background-color : #EEE5D7;
+}
+.term{
+        font-style : italic;
+        font-weight : bold;
+        color : #121F48;
+}
+.title{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color : #121F48;
+	font-weight : bold;
+}
+.reference {
+	color : #1a2b00;
+}
+
+.popup
+{
+	position:absolute;
+	background:#f9f9f9;
+	border: 1px solid #015397;
+	z-index:100;
+}
+
+.popupth { background:#015397; }
+
+
+table{
+
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	border: 0px;
+}
+
+td {
+	  text-align: center;
+   border-right: 0px;
+  vertical-align: middle;  
+	}
+	
+tr{
+	 text-align: center;
+   border-right: 0px;
+}
+.table{
+	background-color : #000000;
+}
+.td{
+	padding: 4px 4px;
+ font-size: 16px;
+	font-family: times;
+	color: #000000;
+	background-color : #F2F2F2;
+}
+.th{
+        font-size: 16px;
+        font-weight : bold;
+        font-family: times;
+        color: #000000;
+        background-color: #b6bfc4;
+        text-align:center;
+}

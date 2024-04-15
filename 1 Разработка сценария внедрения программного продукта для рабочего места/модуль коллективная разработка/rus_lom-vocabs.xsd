@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by MIC (OSI) -->
+<xs:schema targetNamespace="http://spec.edu.ru/xsd/RUS_LOM/Vocab" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://spec.edu.ru/xsd/RUS_LOM/Vocab" xmlns:ag="http://ltsc.ieee.org/xsd/LOM/unique" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="SourceValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="RUS_LOMv1.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FormalServiceValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="advertising"/>
+			<xs:enumeration value="news distribution"/>
+			<xs:enumeration value="consulting by telephone"/>
+			<xs:enumeration value="consulting by internet"/>
+			<xs:enumeration value="training"/>
+			<xs:enumeration value="adaptation"/>
+			<xs:enumeration value="other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RoleValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="distributor"/>
+			<xs:enumeration value="system administrator"/>
+			<xs:enumeration value="developer of models"/>
+			<xs:enumeration value="compiler"/>
+			<xs:enumeration value="revision maker"/>
+			<xs:enumeration value="methodologist"/>
+			<xs:enumeration value="translator"/>
+			<xs:enumeration value="technical editor"/>
+			<xs:enumeration value="scientific editor"/>
+			<xs:enumeration value="responsible editor"/>
+			<xs:enumeration value="literary editor"/>
+			<xs:enumeration value="art editor"/>
+			<xs:enumeration value="proofreader"/>
+			<xs:enumeration value="reviewer"/>
+			<xs:enumeration value="member of editorial board"/>
+			<xs:enumeration value="composer"/>
+			<xs:enumeration value="painter"/>
+			<xs:enumeration value="designer"/>
+			<xs:enumeration value="draftsman"/>
+			<xs:enumeration value="photographer"/>
+			<xs:enumeration value="sound engineer"/>
+			<xs:enumeration value="cameraman"/>
+			<xs:enumeration value="video engineer"/>
+			<xs:enumeration value="multimedia developer"/>
+			<xs:enumeration value="producer"/>
+			<xs:enumeration value="performer"/>
+			<xs:enumeration value="sponsor"/>
+			<xs:enumeration value="author of additional component"/>
+			<xs:enumeration value="producer of medium"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PeriodOfUpdatingValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="more often than daily"/>
+			<xs:enumeration value="daily"/>
+			<xs:enumeration value="weekly"/>
+			<xs:enumeration value="every half month"/>
+			<xs:enumeration value="monthly"/>
+			<xs:enumeration value="every quatter"/>
+			<xs:enumeration value="half year"/>
+			<xs:enumeration value="period not fixed"/>
+			<xs:enumeration value="not updatable"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CharsetValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="cyrillic DOS"/>
+			<xs:enumeration value="cyrillic Windows"/>
+			<xs:enumeration value="cyrillic KOI8-R"/>
+			<xs:enumeration value="US-ASCII"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TypeValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="codec"/>
+			<xs:enumeration value="driver"/>
+			<xs:enumeration value="player/reader"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NameValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Indeo"/>
+			<xs:enumeration value="DivX"/>
+			<xs:enumeration value="XVid"/>
+			<xs:enumeration value="Microsoft MPEG-4 Video"/>
+			<xs:enumeration value="MPEG Layer-3 (MP3)"/>
+			<xs:enumeration value="Windows Media Audio"/>
+			<xs:enumeration value="Windows Media Video"/>
+			<xs:enumeration value="DirectX"/>
+			<xs:enumeration value="OpenGL"/>
+			<xs:enumeration value="Macromedia Flash"/>
+			<xs:enumeration value="QuickTime"/>
+			<xs:enumeration value="Windows Media"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TypeOfMediumValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="CD-ROM"/>
+			<xs:enumeration value="photo-CD"/>
+			<xs:enumeration value="DVD"/>
+			<xs:enumeration value="diskette"/>
+			<xs:enumeration value="ZIP"/>
+			<xs:enumeration value="CD-MO"/>
+			<xs:enumeration value="CD Audio"/>
+			<xs:enumeration value="DVD Audio"/>
+			<xs:enumeration value="audio cassette"/>
+			<xs:enumeration value="MD"/>
+			<xs:enumeration value="DAT"/>
+			<xs:enumeration value="VHS/SVHS"/>
+			<xs:enumeration value="DVD Video"/>
+			<xs:enumeration value="CD Video"/>
+			<xs:enumeration value="Video8/Hi8"/>
+			<xs:enumeration value="MiniDV"/>
+			<xs:enumeration value="other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AccessTypeValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="HTTP"/>
+			<xs:enumeration value="HTTP+medium"/>
+			<xs:enumeration value="telnet"/>
+			<xs:enumeration value="download"/>
+			<xs:enumeration value="RTTP/RTSP"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IntendedendUserRoleValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="methodoligist"/>
+			<xs:enumeration value="researcher"/>
+			<xs:enumeration value="university entrant"/>
+			<xs:enumeration value="instructional designer"/>
+			<xs:enumeration value="graphical designer"/>
+			<xs:enumeration value="multimedia developer"/>
+			<xs:enumeration value="programmer"/>
+			<xs:enumeration value="technical implementer"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AccessRightsValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="free"/>
+			<xs:enumeration value="free with registration"/>
+			<xs:enumeration value="purchase of license (and medium)"/>
+			<xs:enumeration value="subscriber payment"/>
+			<xs:enumeration value="payment for connection time"/>
+			<xs:enumeration value="payment for traffic"/>
+			<xs:enumeration value="payment for documents"/>
+			<xs:enumeration value="payment for queries"/>
+			<xs:enumeration value="rent of software"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="KindValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="associatewith"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PurposeValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="resource type"/>
+			<xs:enumeration value="resource purpose"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LearningResourceTypeValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="lesson"/>
+			<xs:enumeration value="test"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

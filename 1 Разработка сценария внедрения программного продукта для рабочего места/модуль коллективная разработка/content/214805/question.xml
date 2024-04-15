@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"?>
+<item>
+	<controls>
+		<group>
+			<elements type="container" id="container">
+				<element id="c1" header="true" style="line" rowCapacity="3" maxCapacity="2" containerborder="1" height="100" width="290">
+					<font size="15pt">Повысят эффективность работы</font>
+				</element>
+				<element id="c2" header="true" style="line" rowCapacity="3" maxCapacity="2" containerborder="1" height="100" width="290">
+					<font size="15pt">Понизят эффективность</font>
+				</element>
+			</elements>
+			<elements id="drag" type="draggable" maxReuse="1" shuffle="true" style="line" remove="true" gap="5" textStyle="plate">
+				<element id="i1" width="288"><p align="center">Перейти на модель проектной группы<br/>MSF</p></element>
+				<element id="i2" width="288"><p align="center">Внедрить средство коллективной<br/>разработки</p></element>
+				<element id="i3" width="288"><p align="center">Нанять еще программистов</p></element>
+				<element id="i4" width="288"><p align="center">Отказаться от бригады главного<br/>программиста</p></element>
+			</elements>
+			<choices>
+				<choice bonus="100" id="v" value="[c1+i1+i2]+[c2+i3+i4]" status="correct"/>
+				<choice bonus="0"/>
+			</choices>
+		</group>
+		<feedbacks>
+			<feedback value="v">
+				<p align="center">
+					<img width="60%" height="60%" src="../../media/img/212346/212346.png" exist="true" id="00219940623811178"/>
+					<font color="forestgreen" size="6">
+						<b>Правильно!</b>
+					</font>
+				</p>
+			</feedback>
+			<feedback>
+				<p align="center">
+					<img width="60%" height="60%" src="../../media/img/212347/212347.png" exist="true" id="00219940624139179"/>
+					<font color="tomato" size="6">
+						<b>Увы, неверно</b>
+					</font>
+				</p>
+			</feedback>
+		</feedbacks>
+	</controls>
+	<body>
+		<p>Представьте, что вы являетесь руководителем группы, которая занимается разработкой корпоративной информационной системы. Группа состоит из 5 программистов и 4 <a href="popup_1" color="blue">аналитиков</a> и работает по иерархической схеме. Программисты организованы в бригаду главного программиста. Вы хотите повысить производительность работы. Какие методы приведут к выполнению задачи, а какие только понизят эффективность работы?</p>
+		<table border="0" cellspacing="6" cellpadding="2">
+			<tr>
+				<td>
+					<control value="c1"/>
+					<control value="c2"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<control value="drag"/>
+				</td>
+			</tr>
+		</table>
+	</body>
+	<hints>
+		<help>
+			<br/>
+			<p>Переместите результаты в нужные ячейки и нажмите кнопку «Подвердить ответ».</p>
+		</help>
+	</hints>
+	<links>
+		<link id="popup_1">
+			<p>Аналитики занимаются сбором требований, разработкой спецификаций, разработкой концепции ПО, т. е. работами по разработке программного продукта, не требующими непосредственной работы с кодом программы.</p>
+		</link>
+	</links>
+</item>

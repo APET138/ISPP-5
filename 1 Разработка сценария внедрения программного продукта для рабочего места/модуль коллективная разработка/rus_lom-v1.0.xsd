@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by MIC (OSI) -->
+<xs:schema targetNamespace="http://ltsc.ieee.org/xsd/LOM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rlv="http://spec.edu.ru/xsd/RUS_LOM/Vocab" xmlns:rl="http://spec.edu.ru/xsd/RUS_LOM" xmlns:ag="http://ltsc.ieee.org/xsd/LOM/unique" xmlns="http://ltsc.ieee.org/xsd/LOM" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+	<xs:include schemaLocation="lom-types.xsd"/>
+	<xs:include schemaLocation="lom-vocabs.xsd"/>
+	<xs:include schemaLocation="lom-vocabs-extended.xsd"/>
+	<xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="lom-unique.xsd"/>
+	<xs:import namespace="http://spec.edu.ru/xsd/RUS_LOM" schemaLocation="rus_lom-elements.xsd"/>
+	<xs:element name="lom">
+		<xs:annotation>
+			<xs:documentation>Корневой элемент LOM</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="general">
+					<xs:annotation>
+						<xs:documentation>1. Общие сведения об ИР.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="identifier" type="Identifier">
+								<xs:annotation>
+									<xs:documentation>1.1. Глобальное уникальное обозначение ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:unique name="identifierUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="title">
+								<xs:annotation>
+									<xs:documentation>1.2. Заглавие ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString">
+											<xs:attributeGroup ref="ag:title"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="language">
+								<xs:annotation>
+									<xs:documentation>1.3. Язык ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CharacterString">
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="description">
+								<xs:annotation>
+									<xs:documentation>1.4. Описание ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString"/>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="keyword">
+								<xs:annotation>
+									<xs:documentation>1.5. Ключевое слово.Ключевое слово или фраза, характеризующие ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString"/>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="coverage">
+								<xs:annotation>
+									<xs:documentation>1.6. Пространственный и временной охват содержимого ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString"/>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="structure">
+								<xs:annotation>
+									<xs:documentation>1.7. Структура, образуемая отношениями между компонентами ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="StructureVocab">
+											<xs:attributeGroup ref="ag:structure"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="structureUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="aggregationLevel">
+								<xs:annotation>
+									<xs:documentation>1.8. Уровень агрегации ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="AggregationLevelVocab">
+											<xs:attributeGroup ref="ag:aggregationLevel"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="aggregationLevelUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element ref="rl:service">
+								<xs:annotation>
+									<xs:documentation>1.e1. Услуги, оказываемые на базе ИР.</xs:documentation>
+									<xs:documentation>1.e1. Услуги, оказываемые на базе ИР.</xs:documentation>
+									<xs:documentation>1.e1. Услуги, оказываемые на базе ИР.</xs:documentation>
+									<xs:documentation>1.e1. Услуги, оказываемые на базе ИР.</xs:documentation>
+									<xs:documentation>1.e1. Услуги, оказываемые на базе ИР.</xs:documentation>
+									<xs:documentation>1.e1. Услуги, оказываемые на базе ИР.</xs:documentation>
+									<xs:documentation>1.e1. Услуги, оказываемые на базе ИР.</xs:documentation>
+									<xs:documentation>1.e1. Услуги, оказываемые на базе ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:formalSpan">
+								<xs:annotation>
+									<xs:documentation>1.e2. Формальное представление временного охвата содержимого ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:choice>
+						<xs:attributeGroup ref="ag:general"/>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="generalUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="lifeCycle">
+					<xs:annotation>
+						<xs:documentation>2. Жизненный цикл ИР.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="version">
+								<xs:annotation>
+									<xs:documentation>2.1. Версия ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString">
+											<xs:attributeGroup ref="ag:version"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="status">
+								<xs:annotation>
+									<xs:documentation>2.2. Статус ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="StatusVocab">
+											<xs:attributeGroup ref="ag:status"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="contribute">
+								<xs:annotation>
+									<xs:documentation>2.3. Информация о субъектах, внесших вклад в создание и развитие ИР, а также обеспечение его текущего состояния. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:choice minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="role">
+											<xs:annotation>
+												<xs:documentation>2.3.1. Вид вклада в ИР.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:extension base="RoleVocabCommon">
+														<xs:attributeGroup ref="ag:role"/>
+														<xs:attributeGroup ref="customAttributes"/>
+													</xs:extension>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="entity" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>2.3.2. Субъект, внесший вклад в ИР.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="VCard">
+														<xs:attributeGroup ref="customAttributes"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="date">
+											<xs:annotation>
+												<xs:documentation>2.3.3. Дата вклада.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:extension base="DateTime">
+														<xs:attributeGroup ref="ag:date"/>
+														<xs:attributeGroup ref="customAttributes"/>
+													</xs:extension>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:group ref="customElements"/>
+									</xs:choice>
+									<xs:attributeGroup ref="customAttributes"/>
+								</xs:complexType>
+								<xs:unique name="contributeUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element ref="rl:periodOfUpdating">
+								<xs:annotation>
+									<xs:documentation>2.e1. Период обновления ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:lastUpdating">
+								<xs:annotation>
+									<xs:documentation>2.e2. Дата последнего обновления ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:placeOfPublication">
+								<xs:annotation>
+									<xs:documentation>2.e3. Место издания.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:sourceOfPublication">
+								<xs:annotation>
+									<xs:documentation>2.e4. Источник публикации.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:volume">
+								<xs:annotation>
+									<xs:documentation>2.e5. Том.Номер тома сериального или многотомного издания, соответствующего ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:number">
+								<xs:annotation>
+									<xs:documentation>2.e6. Номер (выпуск).</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:demo">
+								<xs:annotation>
+									<xs:documentation>2.e7. Демо-версия (иллюстрация основных возможностей) ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:choice>
+						<xs:attributeGroup ref="ag:lifeCycle"/>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="lifeCycleUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="metaMetadata">
+					<xs:annotation>
+						<xs:documentation>3. Метаметаданные.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="identifier">
+								<xs:annotation>
+									<xs:documentation>3.1. Глобальное уникальное обозначение описания ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="Identifier"/>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="meta.identifierUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="contribute">
+								<xs:annotation>
+									<xs:documentation>3.2. Контейнер, содержащий элементы, которые представляют информацию о субъектах, внесших вклад в создание и обеспечение текущего состояния описания ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:choice minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="role">
+											<xs:annotation>
+												<xs:documentation>3.2.1. Вид вклада в описание ИР.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:extension base="RoleMetaVocab">
+														<xs:attributeGroup ref="ag:role"/>
+														<xs:attributeGroup ref="customAttributes"/>
+													</xs:extension>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="entity" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>3.2.2. Субъект, внесший вклад в описание ИР.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="VCard">
+														<xs:attributeGroup ref="customAttributes"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="date">
+											<xs:annotation>
+												<xs:documentation>3.2.3. Дата вклада.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:extension base="DateTime">
+														<xs:attributeGroup ref="ag:date"/>
+														<xs:attributeGroup ref="customAttributes"/>
+													</xs:extension>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:group ref="customElements"/>
+									</xs:choice>
+									<xs:attributeGroup ref="customAttributes"/>
+								</xs:complexType>
+								<xs:unique name="meta.contributeUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="metadataScheme">
+								<xs:annotation>
+									<xs:documentation>3.3. Схема метаданных. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CharacterString">
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="language">
+								<xs:annotation>
+									<xs:documentation>3.4. Язык описания ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CharacterString">
+											<xs:attributeGroup ref="ag:language"/>
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:group ref="customElements"/>
+						</xs:choice>
+						<xs:attributeGroup ref="ag:metaMetadata"/>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="metaMetadataUniqie">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="technical">
+					<xs:annotation>
+						<xs:documentation>4. Технические характеристики ИР.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="format">
+								<xs:annotation>
+									<xs:documentation>4.1. Тип данных, используемых в ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CharacterString">
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="size">
+								<xs:annotation>
+									<xs:documentation>4.2. Объем цифрового ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:positiveInteger">
+											<xs:attributeGroup ref="ag:size"/>
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="location">
+								<xs:annotation>
+									<xs:documentation>4.3. Доступ к ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CharacterString">
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="requirement">
+								<xs:annotation>
+									<xs:documentation>4.4. Технические требования. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element name="orComposite" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>4.4.1. Альтернативное техническое требование.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:choice minOccurs="0" maxOccurs="unbounded">
+													<xs:sequence>
+														<xs:element name="type">
+															<xs:annotation>
+																<xs:documentation>4.4.1.1. Тип технологии или программной среды, требуемой для использования компьютерного ИР.</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:complexContent>
+																	<xs:extension base="TypeVocabCommon">
+																		<xs:attributeGroup ref="ag:type"/>
+																		<xs:attributeGroup ref="customAttributes"/>
+																	</xs:extension>
+																</xs:complexContent>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="name">
+															<xs:annotation>
+																<xs:documentation>4.4.1.2. Название технологии или программной среды.</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:complexContent>
+																	<xs:extension base="NameVocabCommon">
+																		<xs:attributeGroup ref="ag:name"/>
+																		<xs:attributeGroup ref="customAttributes"/>
+																	</xs:extension>
+																</xs:complexContent>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:element name="minimumVersion">
+														<xs:annotation>
+															<xs:documentation>4.4.1.3. Низшая (минимальная) версия технологии или программной среды, позволяющая использовать ИР.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="CharacterString">
+																	<xs:attributeGroup ref="ag:minimumVersion"/>
+																	<xs:attributeGroup ref="customAttributes"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="maximumVersion">
+														<xs:annotation>
+															<xs:documentation>4.4.1.4. Высшая (максимальная) версия технологии или программной среды, позволяющая использовать ИР.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="CharacterString">
+																	<xs:attributeGroup ref="ag:maximumVersion"/>
+																	<xs:attributeGroup ref="customAttributes"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:group ref="customElements"/>
+												</xs:choice>
+												<xs:attributeGroup ref="customAttributes"/>
+											</xs:complexType>
+											<xs:unique name="orCompositeUnique">
+												<xs:selector xpath="*"/>
+												<xs:field xpath="@uniqueElementName"/>
+											</xs:unique>
+										</xs:element>
+									</xs:sequence>
+									<xs:attributeGroup ref="customAttributes"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="installationRemarks">
+								<xs:annotation>
+									<xs:documentation>4.5. Порядок инсталляции.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString">
+											<xs:attributeGroup ref="ag:installationRemarks"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="otherPlatformRequirements">
+								<xs:annotation>
+									<xs:documentation>4.6. Прочие технические требования.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString">
+											<xs:attributeGroup ref="ag:otherPlatformRequirements"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="duration">
+								<xs:annotation>
+									<xs:documentation>4.7. Длительность воспроизведения.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="Duration">
+											<xs:attributeGroup ref="ag:duration"/>
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element ref="rl:charset">
+								<xs:annotation>
+									<xs:documentation>4.e1. Набор символов.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:numberOfDocuments">
+								<xs:annotation>
+									<xs:documentation>4.e2. Число документов.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:medium">
+								<xs:annotation>
+									<xs:documentation>4.e3. Данные о носителе информации.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:accessType">
+								<xs:annotation>
+									<xs:documentation>4.e4. Способ удаленного доступа к ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:preview"/>
+						</xs:choice>
+						<xs:attributeGroup ref="ag:technical"/>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="technicalUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="educational">
+					<xs:annotation>
+						<xs:documentation>5. Образовательные характеристики ИР.(+)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="interactivityType">
+								<xs:annotation>
+									<xs:documentation>5.1. Тип интерактивности ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="InteractivityTypeVocab">
+											<xs:attributeGroup ref="ag:interactivityType"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="interactivityTypeUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="learningResourceType">
+								<xs:annotation>
+									<xs:documentation>5.2. Тип образовательного ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LearningResourceTypeVocabCommon"/>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="learningResourceTypeUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="interactivityLevel">
+								<xs:annotation>
+									<xs:documentation>5.3. Уровень интерактивности ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="InteractivityLevelVocab">
+											<xs:attributeGroup ref="ag:interactivityLevel"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="ubteractivityLevelUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="semanticDensity">
+								<xs:annotation>
+									<xs:documentation>5.4. Семантическая емкость ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="SemanticDensityVocab">
+											<xs:attributeGroup ref="ag:semanticDensity"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="semanticDensityUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="intendedUserRole">
+								<xs:annotation>
+									<xs:documentation>5.5. Категория пользователей. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="IntendedEndUserRoleVocabCommon"/>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="indendedUserRoleUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="context">
+								<xs:annotation>
+									<xs:documentation>5.6. Уровень образования. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="ContextVocab"/>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="contextUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="typicalAgeRange">
+								<xs:annotation>
+									<xs:documentation>5.7. Возрастной диапазон пользователей ИР. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CharacterString">
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="difficulty">
+								<xs:annotation>
+									<xs:documentation>5.8. Сложность ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="DifficultyVocab">
+											<xs:attributeGroup ref="ag:difficulty"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="difficultyUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="typicalLearningTime">
+								<xs:annotation>
+									<xs:documentation>5.9. Контактное время.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="Duration">
+											<xs:attributeGroup ref="ag:typicalLearningTime"/>
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="typicalLearningTime">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="description">
+								<xs:annotation>
+									<xs:documentation>5.10. Методика применения ИР в учебном процессе. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString"/>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="educational.descriptionUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="language">
+								<xs:annotation>
+									<xs:documentation>5.11. Язык конечных пользователей. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CharacterString">
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element ref="rl:certification">
+								<xs:annotation>
+									<xs:documentation>5.e1. Сведения о грифах и сертификатах, присвоенных ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:choice>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="educationalUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="rights">
+					<xs:annotation>
+						<xs:documentation>6. Права интеллектуальной собственности на ИР.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="cost">
+								<xs:annotation>
+									<xs:documentation>6.1. Признак платности ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="CostVocab">
+											<xs:attributeGroup ref="ag:cost"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="costUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="copyrightAndOtherRestrictions">
+								<xs:annotation>
+									<xs:documentation>6.2. Признак наличия или отсутствия ограничений по использованию ИР, связанных с правами интеллектуальной собственности.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="CopyrightAndOtherRestrictionsVocab">
+											<xs:attributeGroup ref="ag:copyrightAndOtherRestrictions"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="copyrightAndOtherRestrictionsUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="description">
+								<xs:annotation>
+									<xs:documentation>6.3. Комментарий по правовым условиям использования ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString">
+											<xs:attributeGroup ref="ag:description"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="rights.descriptionUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element ref="rl:owner">
+								<xs:annotation>
+									<xs:documentation>6.e1. Правообладатель.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:rightsComment">
+								<xs:annotation>
+									<xs:documentation>6.e2. Описание отношений, связанных с правами интеллектуальной собственности на ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="rl:accessRights">
+								<xs:annotation>
+									<xs:documentation>6.e3. Права доступа к ИР.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:choice>
+						<xs:attributeGroup ref="ag:rights"/>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="rughtsUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="relation">
+					<xs:annotation>
+						<xs:documentation>7. Отношение. (+)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="kind">
+								<xs:annotation>
+									<xs:documentation>7.1. Тип отношения.Тип отношения данного ИР к ИР, идентифицируемого контейнером 7.2.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="KindVocabCommon">
+											<xs:attributeGroup ref="ag:kind"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="kindUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="resource">
+								<xs:annotation>
+									<xs:documentation>7.2. . Ресурс, связанный с данным ИР.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:choice minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="identifier">
+											<xs:annotation>
+												<xs:documentation>7.2.1. Глобальное уникальное обозначение ИР, связанного с описываемым ИР. (+)</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:extension base="Identifier"/>
+												</xs:complexContent>
+											</xs:complexType>
+											<xs:unique name="resource.identifierUnique">
+												<xs:selector xpath="*"/>
+												<xs:field xpath="@uniqueElementName"/>
+											</xs:unique>
+										</xs:element>
+										<xs:element name="description">
+											<xs:annotation>
+												<xs:documentation>7.2.2. Характеристика ресурса, связанного с описываемым ИР. (+)</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:extension base="LanguageString">
+														<xs:attributeGroup ref="customAttributes"/>
+													</xs:extension>
+												</xs:complexContent>
+											</xs:complexType>
+											<xs:unique name="resource.descriptionUnique">
+												<xs:selector xpath="*"/>
+												<xs:field xpath="@uniqueElementName"/>
+											</xs:unique>
+										</xs:element>
+										<xs:group ref="customElements"/>
+									</xs:choice>
+									<xs:attributeGroup ref="ag:resource"/>
+									<xs:attributeGroup ref="customAttributes"/>
+								</xs:complexType>
+								<xs:unique name="resourceUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:group ref="customElements"/>
+						</xs:choice>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="relationUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="annotation">
+					<xs:annotation>
+						<xs:documentation>8. Аннотация. (+)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="entity">
+								<xs:annotation>
+									<xs:documentation>8.1. Автор аннотации.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="VCard">
+											<xs:attributeGroup ref="ag:entity"/>
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="date">
+								<xs:annotation>
+									<xs:documentation>8.2. Дата составления аннотации.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="DateTime">
+											<xs:attributeGroup ref="ag:date"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="annotation.dateUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="description">
+								<xs:annotation>
+									<xs:documentation>8.3. Текст аннотации.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString">
+											<xs:attributeGroup ref="ag:description"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="annotation.description">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:group ref="customElements"/>
+						</xs:choice>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="annotationUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="classification">
+					<xs:annotation>
+						<xs:documentation>9. Классификационные признаки. (+)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="purpose">
+								<xs:annotation>
+									<xs:documentation>9.1. Назначение классификации.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="PurposeVocabCommon">
+											<xs:attributeGroup ref="ag:purpose"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="purposeUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="taxonPath">
+								<xs:annotation>
+									<xs:documentation>9.2. Путь в классификаторе. (+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:choice minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="source">
+											<xs:annotation>
+												<xs:documentation>9.2.1. Название классификатора (классификационной системы).</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:extension base="LanguageString">
+														<xs:attributeGroup ref="ag:source"/>
+													</xs:extension>
+												</xs:complexContent>
+											</xs:complexType>
+											<xs:unique name="sourceUnique">
+												<xs:selector xpath="*"/>
+												<xs:field xpath="@uniqueElementName"/>
+											</xs:unique>
+										</xs:element>
+										<xs:element name="taxon">
+											<xs:annotation>
+												<xs:documentation>9.2.2. Вершина классификатора. (+)</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:choice minOccurs="0" maxOccurs="unbounded">
+													<xs:element name="id">
+														<xs:annotation>
+															<xs:documentation>9.2.2.1. Идентификатор вершины классификатора.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="CharacterString">
+																	<xs:attributeGroup ref="ag:id"/>
+																	<xs:attributeGroup ref="customAttributes"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="entry">
+														<xs:annotation>
+															<xs:documentation>9.2.2.2. Текстовое наименование вершины классификатора.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:complexContent>
+																<xs:extension base="LanguageString">
+																	<xs:attributeGroup ref="ag:entry"/>
+																</xs:extension>
+															</xs:complexContent>
+														</xs:complexType>
+														<xs:unique name="entryUnique">
+															<xs:selector xpath="*"/>
+															<xs:field xpath="@uniqueElementName"/>
+														</xs:unique>
+													</xs:element>
+													<xs:group ref="customElements"/>
+												</xs:choice>
+												<xs:attributeGroup ref="customAttributes"/>
+											</xs:complexType>
+											<xs:unique name="taxonUnique">
+												<xs:selector xpath="*"/>
+												<xs:field xpath="@uniqueElementName"/>
+											</xs:unique>
+										</xs:element>
+										<xs:group ref="customElements"/>
+									</xs:choice>
+									<xs:attributeGroup ref="customAttributes"/>
+								</xs:complexType>
+								<xs:unique name="taxonPathUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="description">
+								<xs:annotation>
+									<xs:documentation>9.3. Описание ИР в контексте цели классификации.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString">
+											<xs:attributeGroup ref="ag:description"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="classification.descriptionUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="keyword">
+								<xs:annotation>
+									<xs:documentation>9.4. Ключевое слово в контексте цели классификации.(+)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="LanguageString"/>
+									</xs:complexContent>
+								</xs:complexType>
+								<xs:unique name="classification.keywordUnique">
+									<xs:selector xpath="*"/>
+									<xs:field xpath="@uniqueElementName"/>
+								</xs:unique>
+							</xs:element>
+							<xs:group ref="customElements"/>
+						</xs:choice>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="classificationUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:group ref="customElements"/>
+			</xs:choice>
+			<xs:attributeGroup ref="customAttributes"/>
+		</xs:complexType>
+		<xs:unique name="lomUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+</xs:schema>

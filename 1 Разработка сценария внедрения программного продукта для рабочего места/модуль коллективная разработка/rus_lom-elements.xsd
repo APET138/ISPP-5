@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by MIC (OSI) -->
+<xs:schema targetNamespace="http://spec.edu.ru/xsd/RUS_LOM" xmlns:rlv="http://spec.edu.ru/xsd/RUS_LOM/Vocab" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://spec.edu.ru/xsd/RUS_LOM" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://ltsc.ieee.org/xsd/LOM" schemaLocation="lom-types.xsd"/>
+	<xs:import namespace="http://spec.edu.ru/xsd/RUS_LOM/Vocab" schemaLocation="rus_lom-vocabs.xsd"/>
+	<xs:complexType name="BinaryResource">
+		<xs:annotation>
+			<xs:documentation>Тип данных для представления бинарной информации</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="binaryResource">
+				<xs:annotation>
+					<xs:documentation>Контейнер для представления бинарной информации</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="format">
+							<xs:annotation>
+								<xs:documentation>Тип бинарных данных</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="lom:CharacterString">
+										<xs:attribute name="uniqueElementName" fixed="format"/>
+										<xs:attributeGroup ref="customAttributes"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="blob">
+							<xs:annotation>
+								<xs:documentation>Бинарные данные</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="lom:CharacterString">
+										<xs:attribute name="uniqueElementName" fixed="blob"/>
+										<xs:attributeGroup ref="customAttributes"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:group ref="customElements"/>
+					</xs:choice>
+					<xs:attribute name="uniqueElementName" fixed="binaryResource"/>
+					<xs:attributeGroup ref="customAttributes"/>
+				</xs:complexType>
+				<xs:unique name="binaryResourceUnique">
+					<xs:selector xpath="*"/>
+					<xs:field xpath="@uniqueElementName"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="href">
+				<xs:annotation>
+					<xs:documentation>Ссылка на ресурс, содержащий бинарные данные</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="lom:CharacterString">
+							<xs:attribute name="binaryResource" fixed="href"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="description" type="lom:LanguageString">
+				<xs:annotation>
+					<xs:documentation>Комментарий к бинарным данным</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="Source" mixed="true">
+		<xs:simpleContent>
+			<xs:extension base="rlv:SourceValues">
+				<xs:attribute name="uniqueElementName" fixed="source"/>
+				<xs:attributeGroup ref="customAttributes"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- RUS_LOM vocab types -->
+	<xs:complexType name="FormalServiceVocab">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="rlv:FormalServiceValues">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="PeriodOfUpdatingVocab">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="rlv:PeriodOfUpdatingValues">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="CharsetVocab">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="rlv:CharsetValues">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="TypeOfMediumVocab">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="rlv:TypeOfMediumValues">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="AccessTypeVocab">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="rlv:AccessTypeValues">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="AccessRightsVocab">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="rlv:AccessRightsValues">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<!-- elements -->
+	<xs:element name="service">
+		<xs:annotation>
+			<xs:documentation>1.e1. Услуги, оказываемые на базе ИР</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="serviceDescription">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="lom:LanguageString">
+								<xs:attribute name="uniqueElementName" fixed="serviceDescription"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="formalService" type="FormalServiceVocab">
+					<xs:annotation>
+						<xs:documentation>(+)</xs:documentation>
+					</xs:annotation>
+					<xs:unique name="formalServiceUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:group ref="customElements"/>
+			</xs:choice>
+			<xs:attribute name="uniqueElementName" fixed="service"/>
+			<xs:attributeGroup ref="customAttributes"/>
+		</xs:complexType>
+		<xs:unique name="serviceUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="formalSpan">
+		<xs:annotation>
+			<xs:documentation>1.e2. Формальное представление временного охвата содержимого ИР</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="lom:DateTime">
+					<xs:attribute name="unqueElementName" fixed="formalSpan"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:unique name="formalSpanUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="periodOfUpdating">
+		<xs:annotation>
+			<xs:documentation>2.e1. Период обновления ИР</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="PeriodOfUpdatingVocab">
+					<xs:attribute name="uniqueElementName" fixed="periodOfUpdating"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="lastUpdating">
+		<xs:annotation>
+			<xs:documentation>2.e2. Дата последнего обновления ИР</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="lom:DateTime">
+					<xs:attribute name="uniqueElementName" fixed="lastUpdating"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:unique name="lastUpdatingUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="placeOfPublication">
+		<xs:annotation>
+			<xs:documentation>2.e3. Место издания (+).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="lom:LanguageString"/>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="sourceOfPublication">
+		<xs:annotation>
+			<xs:documentation>2.e4. Источник публикации</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="lom:LanguageString">
+					<xs:attribute name="uniqueElementName" fixed="sourceOfPublication"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="volume">
+		<xs:annotation>
+			<xs:documentation>2.e5. Том.Номер тома сериального или многотомного издания, соответствующего ИР.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="lom:LanguageString">
+					<xs:attributeGroup ref="lom:customAttributes"/>
+					<xs:attribute name="uniqueElementName" fixed="volume"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="number">
+		<xs:annotation>
+			<xs:documentation>2.e6. Номер (выпуск).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="lom:LanguageString">
+					<xs:attributeGroup ref="lom:customAttributes"/>
+					<xs:attribute name="uniqueElementName" fixed="number"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="demo">
+		<xs:annotation>
+			<xs:documentation>2.e7. Демо-версия (иллюстрация основных возможностей) ИР.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="lom:LanguageString">
+					<xs:attributeGroup ref="lom:customAttributes"/>
+					<xs:attribute name="uniqueElementName" fixed="demo"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="charset" type="CharsetVocab">
+		<xs:annotation>
+			<xs:documentation>4.e1. Набор символов (+)</xs:documentation>
+		</xs:annotation>
+		<xs:unique name="charserUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="numberOfDocuments">
+		<xs:annotation>
+			<xs:documentation>4.e2. Число документов</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:positiveInteger">
+					<xs:attribute name="uniqueElementName" fixed="numberOfDocuments"/>
+					<xs:attributeGroup ref="customAttributes"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="medium">
+		<xs:annotation>
+			<xs:documentation>4.e3. Данные о носителе информации</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="typeNumberOfMedium">
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="typeOfMedium">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="TypeOfMediumVocab">
+											<xs:attribute name="uniqueElementName" fixed="typeOfMedium"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="numberOfMedium">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:positiveInteger">
+											<xs:attribute name="uniqueElementName" fixed="numberOfMedium"/>
+											<xs:attributeGroup ref="customAttributes"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:group ref="customElements"/>
+						</xs:choice>
+						<xs:attribute name="uniqueElementName" fixed="typeNumberOfMedium"/>
+						<xs:attributeGroup ref="customAttributes"/>
+					</xs:complexType>
+					<xs:unique name="typeNumberOfMediumUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="circulation">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:positiveInteger">
+								<xs:attribute name="uniqueElementName" fixed="circulation"/>
+								<xs:attributeGroup ref="customAttributes"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="numberOfPages">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:positiveInteger">
+								<xs:attribute name="uniqueElementName" fixed="numberOfPages"/>
+								<xs:attributeGroup ref="customAttributes"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="numberOfSheets">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="lom:CharacterString">
+								<xs:attribute name="uniqueElementName" fixed="numberOfSheets"/>
+								<xs:attributeGroup ref="customAttributes"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="printFormat">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="lom:CharacterString">
+								<xs:attribute name="uniqueElementName" fixed="printFormat"/>
+								<xs:attributeGroup ref="customAttributes"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cover">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="BinaryResource">
+								<xs:attribute name="uniqueElementName" fixed="cover"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+					<xs:unique name="coverUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:group ref="customElements"/>
+			</xs:choice>
+			<xs:attribute name="uniqueElementName" fixed="medium"/>
+			<xs:attributeGroup ref="customAttributes"/>
+		</xs:complexType>
+		<xs:unique name="mediumUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueELementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="accessType" type="AccessTypeVocab">
+		<xs:annotation>
+			<xs:documentation>4.e4. Способ удаленного доступа к ИР (+)</xs:documentation>
+		</xs:annotation>
+		<xs:unique name="accessTypeUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="preview">
+		<xs:annotation>
+			<xs:documentation>4.e5.  Представление (снимок) экрана</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="BinaryResource">
+					<xs:attribute name="uniqueElementName" fixed="preview"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:unique name="previewUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="certification">
+		<xs:annotation>
+			<xs:documentation>5.e1. Сведения о грифах и сертификатах, присвоенных ИР (+)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="responsibleOrganization">
+					<xs:annotation>
+						<xs:documentation>Организация, присвоившая гриф или выдавшая сертификат</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="lom:CharacterString">
+								<xs:attribute name="uniqueElementName" fixed="responsibleOrganization"/>
+								<xs:attributeGroup ref="customAttributes"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="resolution">
+					<xs:annotation>
+						<xs:documentation>Резолюция организации, присвоившей гриф или выдавшей сертификат</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="lom:LanguageString">
+								<xs:attribute name="uniqueElementName" fixed="resolution"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="dateOfCertification">
+					<xs:annotation>
+						<xs:documentation>Дата присвоения грифа или выдачи сертификата</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="lom:DateTime">
+								<xs:attribute name="uniqueElementName" fixed="dateOfCertification"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+					<xs:unique name="dateOfCertificationUnique">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@uniqueElementName"/>
+					</xs:unique>
+				</xs:element>
+				<xs:group ref="customElements"/>
+			</xs:choice>
+			<xs:attributeGroup ref="customAttributes"/>
+		</xs:complexType>
+		<xs:unique name="certificationUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="owner">
+		<xs:annotation>
+			<xs:documentation>6.e1. Правообладатель (+)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="lom:VCard">
+					<xs:attributeGroup ref="customAttributes"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="rightsComment">
+		<xs:annotation>
+			<xs:documentation>6.e2. Описание отношений, связанных с правами интеллектуальной собственности на ИР</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="lom:LanguageString">
+					<xs:attribute name="uniqueElementName" fixed="rightsComment"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:unique name="rightsCommentUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="accessRights" type="AccessRightsVocab">
+		<xs:annotation>
+			<xs:documentation>6.e3. Права доступа к ИР (+)</xs:documentation>
+		</xs:annotation>
+		<xs:unique name="accessRightsUnique">
+			<xs:selector xpath="*"/>
+			<xs:field xpath="@uniqueElementName"/>
+		</xs:unique>
+	</xs:element>
+	<xs:group name="customElements">
+		<xs:choice>
+			<xs:any namespace="##other" processContents="lax"/>
+		</xs:choice>
+	</xs:group>
+	<xs:attributeGroup name="customAttributes">
+		<xs:anyAttribute namespace="##other" processContents="lax"/>
+	</xs:attributeGroup>
+</xs:schema>

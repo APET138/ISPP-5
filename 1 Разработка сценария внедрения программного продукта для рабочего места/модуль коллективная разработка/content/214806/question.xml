@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<item>
+	<controls>
+		<group type="multiChoice" id="gr">
+			<elements shuffle="true">
+				<element id="1">Программист может корректировать план своих действий</element>
+				<element id="2">Программист может выбирать себе задачу</element>
+				<element id="3">Программисту меньше приходится общаться с другими программистами</element>
+				<element id="4">Программисту не нужно подстраиваться под работу других программистов</element>
+				<element id="5">Программист выполняет меньше работы, т. к. СКР выполняет частичную кодогенерацию</element>
+				<element id="6">СКР осуществляет контроль ошибок при изменении компонентов ПО</element>
+			</elements>
+			<choices>
+				<choice bonus="100" id="v" value="1+3+4" status="correct"/>
+				<choice bonus="0"/>
+			</choices>
+		</group>
+		<feedbacks>
+			<feedback value="v">
+				<p align="center">
+					<img width="60%" height="60%" src="../../media/img/212346/212346.png" exist="true" id="00219940623811178"/>
+					<font color="forestgreen" size="6">
+						<b>Правильно!</b>
+					</font>
+				</p>
+			</feedback>
+			<feedback>
+				<p align="center">
+					<img width="60%" height="60%" src="../../media/img/212347/212347.png" exist="true" id="00219940624139179"/>
+					<font color="tomato" size="6">
+						<b>Увы, неверно</b>
+					</font>
+				</p>
+			</feedback>
+		</feedbacks>
+	</controls>
+	<body>
+		<br/>
+		<p>
+			<table align="center" border="0">
+				<tr>
+					<td>
+						<img valign="middle" src="../../modelers/214740/214740.swf" exist="true" id="00219942693860631"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							<font size="3">
+							</font>
+						</p>
+					</td>
+				</tr>
+			</table>Что именно улучшает эффективность работы программиста при использования средств коллективной разработки?</p>
+		<br/>
+		<p align="center">
+			<control value="gr"/>
+		</p>
+	</body>
+	<hints>
+		<help>
+			<br/>
+			<p>Выберите правильные ответ(ы) и нажмите кнопку «Подтвердить ответ».</p>
+		</help>
+	</hints>
+</item>

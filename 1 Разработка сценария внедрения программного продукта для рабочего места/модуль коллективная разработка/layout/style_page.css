@@ -1,0 +1,183 @@
+﻿body{
+	background-color: transparent;
+	color: #1a2b00;
+	margin: 2px;
+	cursor: default;
+}
+
+.gradient{
+	background: url("../layout/layout_img/gradient.jpg") repeat-x;
+}
+
+h1{
+	font-size: 20px;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin-bottom: 0px;
+	padding-left: 10px;
+}
+
+h2{
+	
+	font-size:20px;
+	font-weight:bold;	
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 0px;
+	text-align:center;
+	padding-left: 10px;
+	}
+.title{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 45px;
+}
+.p_left, .p_left_current{
+	text-align: left;
+	padding-left: 10px;
+}
+.p_left_current{
+	text-decoration:underline;
+}
+.p_right{
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+}
+.p_pic{
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 14px;
+	font-weight: 100;
+	margin-bottom: 0px;
+	margin-top: 5px;
+	color: #000000;
+	text-align: center;
+}
+.top_file{
+	background-color: transparent;
+	text-align: center;
+	color: #000000;
+	letter-spacing: 0px;
+}
+.left_file{
+	background-color: transparent;
+	width: 20%;
+	height: auto;
+	vertical-align: text-top;
+	}
+.right_file{
+	background-color: transparent;
+	border-left: solid #dadada 1px;
+	border-top: solid #dadada 1px;
+	padding-left: 5px;
+	padding-top: 5px;
+	width: 80%;
+	height: 99%;
+}
+.top_sound_file{
+	text-align: center;
+	width: 40px;
+	border-left:solid #dadada 1px;
+	border-right: solid #dadada 1px;
+	border-top: solid #dadada 1px;
+	background-color: transparent;
+	height: 40px;
+}
+p{
+	text-align:justify;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5em;
+}
+a, a:link, a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+a:active{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	
+}
+a:hover {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	
+	text-decoration:underline;
+}
+.a, .a:link, .a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	
+	text-decoration:none;
+}
+.a:active{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	
+	text-decoration:none;
+}
+.a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	
+	text-decoration:underline;
+}
+
+
+div.pic	{
+	margin: 1px;
+	text-align: center;
+}
+div.opr{
+	background-color: #EEEEEE;
+	border: #DCDCDC 1px solid;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	font-size: 16px;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 10px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+
+ol	{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:left;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 2em;	
+	}
+ul	{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:justify;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 2em;	}
+li	{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 0.5em;	
+	text-align: left;}
+	
+	
+	
+.dragme{
+	position:absolute;
+	border: 1px solid #0000FF;
+
+}
+
+span {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0071BB;
+
+}
+	
+	
+
+

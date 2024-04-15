@@ -1,0 +1,55 @@
+﻿<?xml version="1.0"?>
+<item>
+	<controls>
+		<group id="gr" type="associateArrow" arrowStyle="01" showIcons="true">
+			<elements shuffle="true" style="leftColumn" snapOn="false">
+				<element id="s1030"><p align="right">Системный программист</p></element>
+				<element id="s1033"><p align="right">Оператор ЭВМ</p></element>
+				<element id="s1034"><p align="right">Прикладной программист</p></element>
+				<element id="s1035"><p align="right">Программист-аналитик</p></element>
+				<element id="s1036"><p align="right">Постановщик задачи</p></element>
+			</elements>
+			<elements shuffle="true" style="rightColumn">
+				<element id="s1031">Архитектура</element>
+				<element id="s1032">Разработка</element>
+				<element id="s1037">Тестирование</element>
+			</elements>
+			<choices>
+				<choice status="correct" id="v" bonus="100" value="[s1035_s1031]+[s1036_s1031]+[s1034_s1032]+[s1030_s1032]+[s1033_s1037]"/>
+				<choice bonus="0"/>
+			</choices>
+		</group>
+		<feedbacks>
+			<feedback value="v">
+				<p align="center">
+					<img width="60%" height="60%" src="../../media/img/212346/212346.png" exist="true" id="00219940623811178"/>
+					<font color="forestgreen" size="6">
+						<b>Правильно!</b>
+					</font>
+				</p>
+			</feedback>
+			<feedback>
+				<p align="center">
+					<img width="60%" height="60%" src="../../media/img/212347/212347.png" exist="true" id="00219940624139179"/>
+					<font color="tomato" size="6">
+						<b>Увы, неверно</b>
+					</font>
+				</p>
+			</feedback>
+		</feedbacks>
+	</controls>
+	<body>
+		<br/>
+		<p>Распределите, какие из специалистов, участвующих в разработке ПО, соотносятся с каким ролям (по методологии MSF).</p>
+		<br/>
+		<p align="center">
+			<control value="gr"/>
+		</p>
+	</body>
+	<hints>
+		<help>
+			<br/>
+			<p>Проведите нужные стрелочки и нажмите кнопку «Подтвердить ответ».</p>
+		</help>
+	</hints>
+</item>

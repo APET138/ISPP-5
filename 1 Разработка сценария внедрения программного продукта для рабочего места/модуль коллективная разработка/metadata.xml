@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?><lom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM rus_lom-v1.0.xsd http://spec.edu.ru/xsd/RUS_LOM rus_lom-v1.0.xsd http://fcior.edu.ru/xsd/metadata/1.1 rus_lom-v1.0.xsd" xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:rl="http://spec.edu.ru/xsd/RUS_LOM" xmlns:fcior="http://fcior.edu.ru/xsd/metadata/1.1">
+	<general>
+		<identifier>
+			<catalog>URN:X-RUS-FCIOR</catalog>
+			<entry>F5284678-B57D-10EC-0F91-167430230810</entry>
+		</identifier>
+		<title>
+			<string language="ru">Коллективная разработка программного обеспечения</string>
+		</title>
+		<language>ru</language>
+		<description>
+			<string language="ru">Модуль предназначен для проверки полученных знаний о коллективной разработке программного обеспечения. Задания модуля нацелены на проверку не только запоминания, но и глубокого понимания теоретического материала, изученного учащимся. В модуле предполагается формирование общих компетенций (работать в коллективе и в команде, эффективно общаться с коллегами, руководством, потребителями; ставить цели, мотивировать деятельность подчиненных, организовывать и контролировать их работу с принятием на себя ответственности за результат выполнения заданий) и профессиональных компетенций (осуществлять выбор методов и средств измерения эксплуатационных характеристик объектов профессиональной деятельности). Уровень сложности – средний.</string>
+		</description>
+		<keyword><string language="ru">Коллективная разработка ПО</string></keyword><keyword><string language="ru">среды коллективной разработки</string></keyword><keyword><string language="ru">системы коллективной разработки</string></keyword><keyword><string language="ru">багтрекинг</string></keyword><keyword><string language="ru">контроль версий.</string></keyword></general>
+	<lifeCycle>
+		<version>
+			<string language="none">1.0.12.20</string>
+		</version>
+		<status>
+			<source>LOMv1.0</source>
+			<value>final</value>
+		</status>
+		<contribute>
+			<role>
+				<source>LOMv1.0</source>
+				<value>publisher</value>
+			</role>
+			<entity>BEGIN:VCARD
+VERSION:3.0
+FN;language=ru:ООО "НПЦ "1С"
+N;language=ru:"НПЦ "1С";ООО
+NICKNAME;language=ru:"НПЦ "1С"
+ORG;language=ru:ООО "НПЦ "1С"
+ADR;language=ru:Россия
+URL;value=uri:http://1c.ru
+END:VCARD</entity>
+			<date>
+				<dateTime>2010-12-20</dateTime>
+			</date>
+		</contribute>
+		<contribute><role><source>LOMv1.0</source><value>author</value></role><entity>BEGIN:VCARD&amp;#13;&amp;#10;VERSION:3.0&amp;#13;&amp;#10;FN;language=ru:Е. В. Захожая&amp;#13;&amp;#10;N;language=ru:Захожая;Е.;В.;&amp;#13;&amp;#10;END:VCARD</entity><date><dateTime>2010-12-20</dateTime></date></contribute><rl:lastUpdating>
+			<dateTime>2010-12-20</dateTime>
+		</rl:lastUpdating>
+		<rl:placeOfPublication>
+			<string language="ru">Москва</string>
+		</rl:placeOfPublication>
+	</lifeCycle>
+	<metaMetadata>
+		<contribute>
+			<role>
+				<source>LOMv1.0</source>
+				<value>creator</value>
+			</role>
+			<entity>BEGIN:VCARD
+VERSION:3.0
+FN;language=ru:ООО «Физикон»
+N;language=ru:«Физикон»;ООО
+NICKNAME;language=ru:Физикон
+ORG;language=ru:ООО «Физикон»
+ADR;language=ru:оф. 406, д. 7, ул. Первомайская; г. Долгопрудный, Московской обл.; 141700; Россия
+TEL;type=voice,work:+7-495-408-7772
+TEL;type=voice,work,fax:+7-495-408-7772
+EMAIL:INTERNET:soft@physicon.ru
+URL;value=uri:http://www.physicon.ru
+END:VCARD</entity>
+			<date>
+				<dateTime>2010-12-20</dateTime>
+			</date>
+		</contribute>
+		<metadataSchema>LOMv1.0</metadataSchema>
+		<metadataSchema>RUS_LOMv1.0</metadataSchema>
+		<metadataSchema>FCIORv1.1</metadataSchema>
+	</metaMetadata>
+	<technical>
+		<format>text/html</format>
+		<format>text/xml</format>
+		<format>text/javascript</format>
+		<format>image/jpeg</format>
+		<format>image/png</format>
+		<format>application/x-shockwave-flash</format>
+		<format>audio/mpeg</format>
+		<size>2983068</size>
+		<requirement>
+			<orComposite>
+				<type>
+					<source>LOMv1.0</source>
+					<value>operating system</value>
+				</type>
+				<name>
+					<source>LOMv1.0</source>
+					<value>multi-os</value>
+				</name>
+			</orComposite>
+		</requirement>
+		<requirement>
+			<orComposite>
+				<type>
+					<source>RUS_LOMv1.0</source>
+					<value>player/reader</value>
+				</type>
+				<name>
+					<source>RUS_LOMv1.0</source>
+					<value>Macromedia Flash</value>
+				</name>
+				<minimumVersion>9.0</minimumVersion>
+			</orComposite>
+		</requirement>
+	</technical>
+	<educational>
+		<learningResourceType>
+			<source>http://fcior.edu.ru/xsd/metadata/1.1</source>
+			<value>K-module</value>
+		</learningResourceType>
+		<interactivityLevel>
+			<source>LOMv1.0</source>
+			<value>medium</value>
+		</interactivityLevel>
+		<intendedEndUserRole>
+			<source>LOMv1.0</source>
+			<value>learner</value>
+		</intendedEndUserRole>
+		<context>
+			<source>LOMv1.0</source>
+			<value>training</value>
+		</context>
+		<typicalLearningTime>
+			<duration>PT1H30M</duration>
+		</typicalLearningTime>
+		<language>ru</language>
+		<fcior:modeling>
+			<fcior:modelingType>
+				<source>http://fcior.edu.ru/xsd/metadata/1.1</source>
+				<value>situational model</value>
+			</fcior:modelingType>
+		</fcior:modeling>
+	</educational>
+	<rights>
+		<cost>
+			<source>LOMv1.0</source>
+			<value>no</value>
+		</cost>
+		<copyrightAndOtherRestrictions>
+			<source>LOMv1.0</source>
+			<value>yes</value>
+		</copyrightAndOtherRestrictions>
+		<rl:owner>BEGIN:VCARD
+VERSION:3.0
+FN;language=ru:Федеральный орган исполнительной власти "Министерство образования и науки России"
+N;language=ru:Министерство образования и науки России;Федеральный орган исполнительной власти
+NICKNAME;language=ru:Минобрнауки
+ORG;language=ru:Министерство образования и науки России
+END:VCARD</rl:owner>
+		<rl:accessRights>
+			<source>RUS_LOMv1.0</source>
+			<value>free</value>
+		</rl:accessRights>
+	</rights>
+	<classification>
+		<purpose>
+			<source>LOMv1.0</source>
+			<value>educational level</value>
+		</purpose>
+		<taxonPath>
+			<source>
+				<string language="none">RUS_LOMv1.0</string>
+			</source>
+			<taxon>
+				<id>6</id>
+				<entry>
+					<string language="ru">Среднее профессиональное образование</string>
+				</entry>
+			</taxon>
+		</taxonPath>
+	</classification>
+	<classification>
+		<purpose>
+			<source>RUS_LOMv1.0</source>
+			<value>resource purpose</value>
+		</purpose>
+		<taxonPath>
+			<source>
+				<string language="none">http://fcior.edu.ru/xsd/metadata/1.1</string>
+			</source>
+			<taxon>
+				<id>1</id>
+				<entry>
+					<string language="ru">Учебное</string>
+				</entry>
+			</taxon>
+		</taxonPath>
+	</classification>
+	<classification>
+		<purpose>
+			<source>RUS_LOMv1.0</source>
+			<value>resource type</value>
+		</purpose>
+		<taxonPath>
+			<source>
+				<string language="none">http://fcior.edu.ru/xsd/metadata/1.1</string>
+			</source>
+			<taxon>
+				<id>26</id>
+				<entry>
+					<string language="ru">Образовательный объект</string>
+				</entry>
+			</taxon>
+		</taxonPath>
+	</classification>
+	<classification>
+		<purpose>
+			<source>LOMv1.0</source>
+			<value>discipline</value>
+		</purpose>
+		<taxonPath>
+			<source>
+				<string language="none">http://fcior.edu.ru/xsd/metadata/1.1/cl-subj-x</string>
+			</source>
+			<taxon>
+				<id>6.230115</id>
+				<entry>
+					<string language="ru">Программирование в компьютерных системах</string>
+				</entry>
+			</taxon>
+			<taxon>
+				<id>6.230115.03</id>
+				<entry>
+					<string language="ru">Участие в интеграции программных модулей</string>
+				</entry>
+			</taxon>
+			<taxon>
+				<id>6.230115.03.01</id>
+				<entry>
+					<string language="ru">Технология разработки программного обеспечения</string>
+				</entry>
+			</taxon>
+			<taxon>
+				<id>6.230115.03.01.09</id>
+				<entry>
+					<string language="ru">Коллективная разработка программного обеспечения</string>
+				</entry>
+			</taxon>
+		</taxonPath>
+	</classification>
+	<classification>
+		<purpose>
+			<source>RUS_LOMv1.0</source>
+			<value>educational component</value>
+		</purpose>
+		<taxonPath>
+			<source>
+				<string language="none">RUS_LOMv1.0</string>
+			</source>
+			<taxon>
+				<id>1</id>
+				<entry>
+					<string language="ru">Федеральный</string>
+				</entry>
+			</taxon>
+		</taxonPath>
+	</classification>
+	<classification>
+		<purpose>
+			<source>http://fcior.edu.ru/xsd/metadata/1.1</source>
+			<value>learning year</value>
+		</purpose>
+		<taxonPath>
+			<source>
+				<string language="none">http://fcior.edu.ru/xsd/metadata/1.1</string>
+			</source>
+			<taxon>
+				<id>1</id>
+			</taxon>
+		</taxonPath>
+	</classification>
+</lom>

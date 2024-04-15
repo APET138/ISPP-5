@@ -1,0 +1,201 @@
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by MIC (OSI) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by MIC (OSI) -->
+<xs:schema targetNamespace="http://ltsc.ieee.org/xsd/LOM" xmlns:ag="http://ltsc.ieee.org/xsd/LOM/unique" xmlns:rlv="http://spec.edu.ru/xsd/RUS_LOM/Vocab" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://ltsc.ieee.org/xsd/LOM" elementFormDefault="qualified" attributeFormDefault="unqualified" version="IEEE LTSC LOM XML 1.0">
+	<xs:include schemaLocation="lom-vocabs.xsd"/>
+	<xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="lom-unique.xsd"/>
+	<xs:import namespace="http://spec.edu.ru/xsd/RUS_LOM/Vocab" schemaLocation="rus_lom-vocabs.xsd"/>
+	<!-- LOMv1.0 base schema vocabulary source and value declarations extended with ruslom values-->
+	<xs:simpleType name="SourceCommon">
+		<xs:union memberTypes="SourceValues rlv:SourceValues"/>
+	</xs:simpleType>
+	<xs:simpleType name="RoleValuesCommon">
+		<xs:annotation>
+			<xs:documentation>LOM role values combined with RUS_LOM role values</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="RoleValues rlv:RoleValues"/>
+	</xs:simpleType>
+	<xs:simpleType name="TypeValuesCommon">
+		<xs:annotation>
+			<xs:documentation>LOM type values combined with RUS_LOM type values</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="TypeValues rlv:TypeValues"/>
+	</xs:simpleType>
+	<xs:simpleType name="NameValuesCommon">
+		<xs:annotation>
+			<xs:documentation>LOM name values combined with RUS_LOM name values</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="NameValues rlv:NameValues"/>
+	</xs:simpleType>
+	<xs:simpleType name="IntendedEndUserRoleValuesCommon">
+		<xs:annotation>
+			<xs:documentation>LOM intendedEndUserRole values  combined with RUS_LOM values</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="IntendedEndUserRoleValues rlv:IntendedendUserRoleValues"/>
+	</xs:simpleType>
+	<xs:simpleType name="PurposeValuesCommon">
+		<xs:annotation>
+			<xs:documentation>LOM purpose values combined with RUS_LOM purpose values</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="PurposeValues rlv:PurposeValues"/>
+	</xs:simpleType>
+	<xs:simpleType name="KindValuesCommon">
+		<xs:annotation>
+			<xs:documentation>LOM kind values combined with RUS_LOM kind values</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="KindValues rlv:KindValues"/>
+	</xs:simpleType>
+	<xs:simpleType name="LearningResourceTypeValuesCommon">
+		<xs:annotation>
+			<xs:documentation>LOM learningResourseType values combined with RUS_LOM values</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="LearningResourceTypeValues rlv:LearningResourceTypeValues"/>
+	</xs:simpleType>
+	<xs:complexType name="SourceValueCommon">
+		<xs:simpleContent>
+			<xs:extension base="SourceCommon">
+				<xs:attributeGroup ref="ag:source"/>
+				<xs:anyAttribute namespace="##other"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="RoleVocabCommon">
+		<xs:annotation>
+			<xs:documentation>2.3.1 Role combined vocabulary </xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="SourceValueCommon"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="RoleValuesCommon">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:anyAttribute namespace="##other"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:complexType name="TypeVocabCommon">
+		<xs:annotation>
+			<xs:documentation>4.4.1.1 Type combined vocabulary</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="SourceValueCommon"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TypeValuesCommon">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:anyAttribute namespace="##other"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:complexType name="NameVocabCommon">
+		<xs:annotation>
+			<xs:documentation>4.4.1.2 Name combined vocabulary</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="SourceValueCommon"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="NameValuesCommon">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:anyAttribute namespace="##other"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:complexType name="LearningResourceTypeVocabCommon">
+		<xs:annotation>
+			<xs:documentation>5.2 LearningResourceType combined vocabulary</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="SourceValueCommon"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="LearningResourceTypeValuesCommon">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:anyAttribute namespace="##other"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:complexType name="IntendedEndUserRoleVocabCommon">
+		<xs:annotation>
+			<xs:documentation>5.5 IntendedEndUserRole combined vocabulary</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="SourceValueCommon"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="IntendedEndUserRoleValuesCommon">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:anyAttribute namespace="##other"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:complexType name="KindVocabCommon">
+		<xs:annotation>
+			<xs:documentation> 7.1 Kind combined vocabulary</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="SourceValueCommon"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="KindValuesCommon">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:anyAttribute namespace="##other"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:complexType name="PurposeVocabCommon">
+		<xs:annotation>
+			<xs:documentation> 9.1 Purpose combined vocabulary</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="SourceValueCommon"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="PurposeValuesCommon">
+							<xs:attribute name="uniqueElementName" fixed="value"/>
+							<xs:anyAttribute namespace="##other"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+</xs:schema>

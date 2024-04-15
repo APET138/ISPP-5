@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<item>
+	<controls>
+		<group id="gr" type="crossTable">
+			<elements shuffle="true" style="columns">
+				<element id="c1" width="100"><font size="11pt">Bugzilla</font></element>
+				<element id="c2" width="100"><font size="11pt">Subversion</font></element>
+				<element id="c3" width="100"><font size="11pt">Team Foundation Server</font></element>
+				<element id="c4" width="100"><font size="11pt">Vault </font></element>
+			</elements>
+			<elements shuffle="true" style="rows" width="200">
+				<element id="r1" width="200"><font size="11pt">Разработка базы данных под Windows в маленькой фирме (т. е. желательно использовать бесплатное средство)</font></element>
+				<element id="r2" width="200"><font size="11pt">Создание веб-приложения для сервера, разработка ведется под Unix/Linux</font></element>
+				<element id="r3" width="200"><font size="11pt">Корпоративная информационная система для Windows</font></element>
+			</elements>
+			<choices>
+				<choice bonus="100" id="v" value="[r1+c1+c2]+[r2+c1+c2+c4]+[r3+c1+c2+c3]" status="correct"/>
+				<choice bonus="0"/>
+			</choices>
+		</group>
+		<feedbacks>
+			<feedback value="v">
+				<p align="center">
+					<img width="60%" height="60%" src="../../media/img/212346/212346.png" exist="true" id="00219940623811178"/>
+					<font color="forestgreen" size="6">
+						<b>Правильно!</b>
+					</font>
+				</p>
+			</feedback>
+			<feedback>
+				<p align="center">
+					<img width="60%" height="60%" src="../../media/img/212347/212347.png" exist="true" id="00219940624139179"/>
+					<font color="tomato" size="6">
+						<b>Увы, неверно</b>
+					</font>
+				</p>
+			</feedback>
+		</feedbacks>
+	</controls>
+	<body>
+		<br/>
+		<p>Выберите, какие средства коллективной разработки можно использовать для каждой указанной задачи.</p>
+		<br/>
+		<p align="center">
+			<control value="gr"/>
+		</p>
+	</body>
+	<hints>
+		<help>
+			<br/>
+			<p>Выберите правильные ответ(ы) и нажмите кнопку «Подтвердить ответ».</p>
+		</help>
+	</hints>
+</item>

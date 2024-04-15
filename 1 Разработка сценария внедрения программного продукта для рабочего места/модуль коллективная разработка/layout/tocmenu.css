@@ -1,0 +1,83 @@
+﻿html{color:#000;background:#FFF;}
+
+.toc-links, .toc-link {
+	margin: 0px;
+	padding: 0px;
+}
+
+.toc-sidepane {
+        float: left;
+        /*min-height: 600px;*/
+        width: 96%;
+        margin-left: 10px;
+        margin-right: 20px;
+	overflow-x:hidden;
+      }
+.toc-sidepane a {
+        color: white;
+        text-decoration: none;
+		font-family:Arial;
+      }
+.toc-box-top-left {
+        background: url("layout_img/box.png") no-repeat left top;
+        padding-left: 7px;
+      }
+.toc-box-top-right {
+        background: url("layout_img/box.png") no-repeat right top;
+        height: 7px;
+      }
+.toc-box-main {
+        background: url("layout_img/box.png") no-repeat left bottom;
+        padding-left: 7px;
+      }
+.toc-box-content {
+        background: url("layout_img/box.png") no-repeat right bottom;
+        padding: 10px 7px 10px 0;
+        min-height: 300px;
+      }
+.toc-links {
+	background: url("layout_img/dot2.gif") repeat-x left bottom;
+	margin-bottom: 0.6em;
+	padding-bottom: 2px;
+	list-style: none;
+}
+.toc-link{
+	position: relative;
+	background: url("layout_img/dot2.gif") repeat-x left top;
+	display: block;
+        padding: 2px 0 0;
+}
+.toc-link a {
+	padding: 5px 10px 5px 10px;
+	display: block;
+	background: url("layout_img/arrow1.png") no-repeat left center;
+	padding-left: 10px;
+	
+}
+.toc-link a:hover {
+	text-decoration: underline;
+}
+.toc-linkcurrent a {
+	background: url("layout_img/arrow2.png") no-repeat 10px center;
+	padding-left: 20px;
+	font-size: 100%;
+	text-shadow: 0 0 5px #ccc;
+}
+.toc-visited a {
+	color: #CCCCCC;
+}
+.toc-disabled a {
+
+	color: #999999;
+}
+.toc-disabled a:hover {
+
+	text-decoration: none;
+}
+
+.toc-result a {
+	font-style: normal;
+}
+.toc-wrapper {
+        clear: both;
+}

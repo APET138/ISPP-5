@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title></title>
+</head>
+<body onLoad="javascript:if(window.parent.notifyOnLoad!=null){window.parent.notifyOnLoad()};" style="background-color:transparent;">
+	<table id="results" width="100%" border="1" cellpadding="10" cellspacing="0">
+	<tr>
+		<td bgcolor="#D0D0D0"><i>Дата <tagvar prop="date"/></i></td>
+		<td bgcolor="#D0D0D0">Общее время <tagvar prop="totaltimerun"/></td>
+		<td bgcolor="#D0D0D0">Испробовано заданий: <tagvar prop="countattempted"/></td>
+		<td bgcolor="#D0D0D0">&nbsp;</td>
+		<td bgcolor="#D0D0D0">Выполнено заданий: <tagvar prop="countcompleted"/></td>
+		<td bgcolor="#D0D0D0">&nbsp;</td>		
+	</tr>
+	<tr>
+		<td bgcolor="#D0D0D0"><b>Имя шага</b></td>
+		<td bgcolor="#D0D0D0"><b>Время начала выполнения шага</b></td>
+		<td bgcolor="#D0D0D0"><b>Общая длительность выполнения</b></td>
+		<td bgcolor="#D0D0D0"><b>Попыток</b></td>
+		<td bgcolor="#D0D0D0"><b>Заходов</b></td>
+		<td bgcolor="#D0D0D0"><b>Результат</b></td>		
+		
+	</tr>
+	<tr name="sceneinfo" ifstatus="completed|incomplete|not attempted|unknown">
+		<td><tagvar prop="title"/></td>
+		<td><tagvar prop="timestart"/></td>
+		<td><tagvar prop="timerun"/></td>
+		<td align="center"><tagvar prop="attempts"/></td>
+		<td align="center"><tagvar prop="visits"/></td>
+		<td><tagvar prop="bonus"/></td>
+	</tr>
+	</table>
+</body>
+</html>

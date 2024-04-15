@@ -1,0 +1,688 @@
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by MIC (OSI) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by MIC (OSI) -->
+<xs:schema targetNamespace="http://ltsc.ieee.org/xsd/LOM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:ag="http://ltsc.ieee.org/xsd/LOM/unique" elementFormDefault="qualified" version="IEEE LTSC LOM XML 1.0">
+	<xs:include schemaLocation="lom-types.xsd"/>
+	<xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="lom-unique.xsd"/>
+	<!-- LOMv1.0 base schema vocabulary source and value declarations -->
+	<xs:simpleType name="SourceValues">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="LOMv1.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Source" mixed="true">
+		<xs:simpleContent>
+			<xs:extension base="SourceValues">
+				<xs:attributeGroup ref="ag:source"/>
+				<xs:attributeGroup ref="customAttributes"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- 1.7 Structure -->
+	<xs:simpleType name="StructureValues">
+		<xs:annotation>
+			<xs:documentation> 1.7 Structure </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="atomic"/>
+			<xs:enumeration value="collection"/>
+			<xs:enumeration value="networked"/>
+			<xs:enumeration value="hierarchical"/>
+			<xs:enumeration value="linear"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="StructureWrapper">
+		<xs:union memberTypes="StructureValues"/>
+	</xs:simpleType>-->
+	<!-- 1.8 Aggregation Level -->
+	<xs:simpleType name="AggregationLevelValues">
+		<xs:annotation>
+			<xs:documentation> 1.8 Aggregation Level </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="AggregationLevelWrapper">
+		<xs:union memberTypes="AggregationLevelValues"/>
+	</xs:simpleType> -->
+	<!-- 2.2 Status -->
+	<xs:simpleType name="StatusValues">
+		<xs:annotation>
+			<xs:documentation> 2.2 Status </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="draft"/>
+			<xs:enumeration value="final"/>
+			<xs:enumeration value="revised"/>
+			<xs:enumeration value="unavailable"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="StatusWrapper">
+		<xs:union memberTypes="StatusValues"/>
+	</xs:simpleType> -->
+	<!-- 2.3.1 Role -->
+	<xs:simpleType name="RoleValues">
+		<xs:annotation>
+			<xs:documentation> 2.3.1 Role </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="author"/>
+			<xs:enumeration value="publisher"/>
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="initiator"/>
+			<xs:enumeration value="terminator"/>
+			<xs:enumeration value="validator"/>
+			<xs:enumeration value="editor"/>
+			<xs:enumeration value="graphical designer"/>
+			<xs:enumeration value="technical implementer"/>
+			<xs:enumeration value="content provider"/>
+			<xs:enumeration value="technical validator"/>
+			<xs:enumeration value="educational validator"/>
+			<xs:enumeration value="script writer"/>
+			<xs:enumeration value="instructional designer"/>
+			<xs:enumeration value="subject matter expert"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="RoleWrapper">
+		<xs:union memberTypes="RoleValues"/>
+	</xs:simpleType> -->
+	<!-- 3.2.1 Role -->
+	<xs:simpleType name="RoleMetaValues">
+		<xs:annotation>
+			<xs:documentation> 3.2.1 Role </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="creator"/>
+			<xs:enumeration value="validator"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="RoleMetaWrapper">
+		<xs:union memberTypes="RoleMetaValues"/>
+	</xs:simpleType> -->
+	<!-- 4.4.1.1 Type -->
+	<xs:simpleType name="TypeValues">
+		<xs:annotation>
+			<xs:documentation> 4.4.1.1 Type </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="operating system"/>
+			<xs:enumeration value="browser"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="TypeWrapper">
+		<xs:union memberTypes="TypeValues"/>
+	</xs:simpleType> -->
+	<!-- 4.4.1.2 Name -->
+	<xs:simpleType name="NameValues">
+		<xs:annotation>
+			<xs:documentation> 4.4.1.2 Name </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="pc-dos"/>
+			<xs:enumeration value="ms-windows"/>
+			<xs:enumeration value="macos"/>
+			<xs:enumeration value="unix"/>
+			<xs:enumeration value="multi-os"/>
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="any"/>
+			<xs:enumeration value="netscape communicator"/>
+			<xs:enumeration value="ms-internet explorer"/>
+			<xs:enumeration value="opera"/>
+			<xs:enumeration value="amaya"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="NameWrapper">
+		<xs:union memberTypes="NameValues"/>
+	</xs:simpleType> -->
+	<!-- 5.1 Interactivity Type -->
+	<xs:simpleType name="InteractivityTypeValues">
+		<xs:annotation>
+			<xs:documentation> 5.1 Interactivity Type </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="active"/>
+			<xs:enumeration value="expositive"/>
+			<xs:enumeration value="mixed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="InteractivityTypeWrapper">
+		<xs:union memberTypes="InteractivityTypeValues"/>
+	</xs:simpleType> -->
+	<!-- 5.2 Learning Resource Type -->
+	<xs:simpleType name="LearningResourceTypeValues">
+		<xs:annotation>
+			<xs:documentation> 5.2 Learning Resource Type </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="exercise"/>
+			<xs:enumeration value="simulation"/>
+			<xs:enumeration value="questionnaire"/>
+			<xs:enumeration value="diagram"/>
+			<xs:enumeration value="figure"/>
+			<xs:enumeration value="graph"/>
+			<xs:enumeration value="index"/>
+			<xs:enumeration value="slide"/>
+			<xs:enumeration value="table"/>
+			<xs:enumeration value="narrative text"/>
+			<xs:enumeration value="exam"/>
+			<xs:enumeration value="experiment"/>
+			<xs:enumeration value="problem statement"/>
+			<xs:enumeration value="self assessment"/>
+			<xs:enumeration value="lecture"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="LearningResourceTypeWrapper">
+		<xs:union memberTypes="LearningResourceTypeValues"/>
+	</xs:simpleType> -->
+	<!-- 5.3 Interactivity Level -->
+	<xs:simpleType name="InteractivityLevelValues">
+		<xs:annotation>
+			<xs:documentation> 5.3 Interactivity Level </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="very low"/>
+			<xs:enumeration value="low"/>
+			<xs:enumeration value="medium"/>
+			<xs:enumeration value="high"/>
+			<xs:enumeration value="very high"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="InteractivityLevelWrapper">
+		<xs:union memberTypes="InteractivityLevelValues"/>
+	</xs:simpleType> -->
+	<!-- 5.4 Semantic Density -->
+	<xs:simpleType name="SemanticDensityValues">
+		<xs:annotation>
+			<xs:documentation> 5.4 Semantic Density </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="very low"/>
+			<xs:enumeration value="low"/>
+			<xs:enumeration value="medium"/>
+			<xs:enumeration value="high"/>
+			<xs:enumeration value="very high"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="SemanticDensityWrapper">
+		<xs:union memberTypes="SemanticDensityValues"/>
+	</xs:simpleType> -->
+	<!-- 5.5 Intended End User Role -->
+	<xs:simpleType name="IntendedEndUserRoleValues">
+		<xs:annotation>
+			<xs:documentation> 5.5 Intended End User Role </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="teacher"/>
+			<xs:enumeration value="author"/>
+			<xs:enumeration value="learner"/>
+			<xs:enumeration value="manager"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="IntendedEndUserRoleWrapper">
+		<xs:union memberTypes="IntendedEndUserRoleValues"/>
+	</xs:simpleType> -->
+	<!-- 5.6 Context -->
+	<xs:simpleType name="ContextValues">
+		<xs:annotation>
+			<xs:documentation> 5.6 Context </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="school"/>
+			<xs:enumeration value="higher education"/>
+			<xs:enumeration value="training"/>
+			<xs:enumeration value="other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="ContextWrapper">
+		<xs:union memberTypes="ContextValues"/>
+	</xs:simpleType> -->
+	<!-- 5.8 Difficulty -->
+	<xs:simpleType name="DifficultyValues">
+		<xs:annotation>
+			<xs:documentation> 5.8 Difficulty </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="very easy"/>
+			<xs:enumeration value="easy"/>
+			<xs:enumeration value="medium"/>
+			<xs:enumeration value="difficult"/>
+			<xs:enumeration value="very difficult"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="DifficultyWrapper">
+		<xs:union memberTypes="DifficultyValues"/>
+	</xs:simpleType> -->
+	<!-- 6.1 Cost -->
+	<xs:simpleType name="CostValues">
+		<xs:annotation>
+			<xs:documentation> 6.1 Cost </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="CostWrapper">
+		<xs:union memberTypes="CostValues"/>
+	</xs:simpleType> -->
+	<!-- 6.2 Copyright and Other Restrictions -->
+	<xs:simpleType name="CopyrightAndOtherRestrictionsValues">
+		<xs:annotation>
+			<xs:documentation> 6.2 Copyright and Other Restrictions </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="CopyrightAndOtherRestrictionsWrapper">
+		<xs:union memberTypes="CopyrightAndOtherRestrictionsValues"/>
+	</xs:simpleType> -->
+	<!-- 7.1 Kind -->
+	<xs:simpleType name="KindValues">
+		<xs:annotation>
+			<xs:documentation> 7.1 Kind </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="ispartof"/>
+			<xs:enumeration value="haspart"/>
+			<xs:enumeration value="isversionof"/>
+			<xs:enumeration value="hasversion"/>
+			<xs:enumeration value="isformatof"/>
+			<xs:enumeration value="hasformat"/>
+			<xs:enumeration value="references"/>
+			<xs:enumeration value="isreferencedby"/>
+			<xs:enumeration value="isbasedon"/>
+			<xs:enumeration value="isbasisfor"/>
+			<xs:enumeration value="requires"/>
+			<xs:enumeration value="isrequiredby"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="KindWrapper">
+		<xs:union memberTypes="KindValues"/>
+	</xs:simpleType> -->
+	<!-- 9.1 Purpose -->
+	<xs:simpleType name="PurposeValues">
+		<xs:annotation>
+			<xs:documentation> 9.1 Purpose </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="discipline"/>
+			<xs:enumeration value="idea"/>
+			<xs:enumeration value="prerequisite"/>
+			<xs:enumeration value="educational objective"/>
+			<xs:enumeration value="accessibility restrictions"/>
+			<xs:enumeration value="educational level"/>
+			<xs:enumeration value="skill level"/>
+			<xs:enumeration value="security level"/>
+			<xs:enumeration value="competency"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--	<xs:simpleType name="PurposeWrapper">
+		<xs:union memberTypes="PurposeValues"/>
+	</xs:simpleType> -->
+	<!-- LOMv1.0 base schema vocabulary declarations -->
+	<xs:complexType name="StructureVocab">
+		<xs:annotation>
+			<xs:documentation>1.7 Sctructure</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="StructureValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="AggregationLevelVocab">
+		<xs:annotation>
+			<xs:documentation> 1.8 Aggregation Level </xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="AggregationLevelValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="StatusVocab">
+		<xs:annotation>
+			<xs:documentation> 2.2 Status</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="StatusValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="RoleVocab">
+		<xs:annotation>
+			<xs:documentation> 2.3.1 Role</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="RoleValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="RoleMetaVocab">
+		<xs:annotation>
+			<xs:documentation> 3.2.1 Role</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="RoleMetaValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="TypeVocab">
+		<xs:annotation>
+			<xs:documentation> 4.4.1.1 Type</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TypeValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="NameVocab">
+		<xs:annotation>
+			<xs:documentation> 4.4.1.2 Name</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="NameValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="InteractivityTypeVocab">
+		<xs:annotation>
+			<xs:documentation> 5.1 Interactivity Type</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="InteractivityTypeValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="LearningResourceTypeVocab">
+		<xs:annotation>
+			<xs:documentation> 5.2 Learning Resource Type</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="LearningResourceTypeValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="InteractivityLevelVocab">
+		<xs:annotation>
+			<xs:documentation> 5.3 Interactivity Level</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="InteractivityLevelValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="SemanticDensityVocab">
+		<xs:annotation>
+			<xs:documentation> 5.4 Semantic Density</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="SemanticDensityValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="IntendedEndUserRoleVocab">
+		<xs:annotation>
+			<xs:documentation> 5.5 Intended End User Role</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="IntendedEndUserRoleValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="ContextVocab">
+		<xs:annotation>
+			<xs:documentation> 5.6 Context </xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="ContextValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="DifficultyVocab">
+		<xs:annotation>
+			<xs:documentation> 5.8 Difficulty</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="DifficultyValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="CostVocab">
+		<xs:annotation>
+			<xs:documentation> 6.1 Cost</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="CostValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="CopyrightAndOtherRestrictionsVocab">
+		<xs:annotation>
+			<xs:documentation> 6.2 Copyright and Other Restrictions</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="CopyrightAndOtherRestrictionsValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="KindVocab">
+		<xs:annotation>
+			<xs:documentation> 7.1 Kind</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="KindValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="PurposeVocab">
+		<xs:annotation>
+			<xs:documentation> 9.1 Purpose</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="source" type="Source"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="PurposeValues">
+							<xs:attributeGroup ref="ag:value"/>
+							<xs:attributeGroup ref="customAttributes"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="customElements"/>
+		</xs:choice>
+		<xs:attributeGroup ref="customAttributes"/>
+	</xs:complexType>
+</xs:schema>

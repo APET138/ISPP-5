@@ -1,0 +1,149 @@
+﻿<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="../layout/style.css" type="text/css"/>
+<link rel="stylesheet" href="../layout/tocmenu.css" type="text/css"/>
+<script>
+var APIWrapperPath = "../scripts/";
+</script>
+<script src="../scripts/CommonFunctions.js"></script>
+<script src="../scripts/APIWrapper.js"></script>
+<script src="../scripts/SCORMFunctions.js"></script>
+<script src="../scripts/TocMenu.js"></script>
+<script src="../scripts/PictureInset.js"></script>
+<script src="../scripts/Questions.js"></script>
+<script src="../scripts/ResultsTable.js"></script>
+<script src="../scripts/SoundSwitcher.js"></script>
+<script src="../scripts/VideoElement.js"></script>
+</head>
+<body class="gradient" style="overflow:hidden" onUnload="javascript:updateSCORMValues(aQuestion);terminate();">
+<!-- таблица, в которой вообще всё -->
+
+<table id="theTable" cellspacing="0" cellpadding="0" border="0" style="width:100%; height:100%;">
+	<tr id="titleRow">
+		<td style="width:300px;height:128px;min-width:300px;min-height:128px;">
+			<div id="logo" style="height:128px;background-position:center center;"><img src="../layout/layout_img/spacer.gif" height="128" width="300"/></div>
+		</td>
+		<td>
+			<table cellspacing="0" cellpadding="0" border="0" style="border-style:none; width:100%; height:100%;">
+				<tr>
+					<td>
+						<div id="title" class="title">.</div>
+					</td>
+					<td style="width:170px;vertical-align:bottom;" id="volume">
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:300px; min-width:300px; vertical-align:top;">
+			<iframe id="toc" width="100%" height="100%" frameBorder="0" marginWidth="0" marginHeight="0" allowtransparency="true" style="overflow-x:hidden; background-color:transparent;">Содержание</iframe>
+		</td>
+		<td id="sceneCell">
+			<iframe id="scene" width="100%" height="100%" frameBorder="0" marginWidth="10" marginHeight="10" allowtransparency="true" style="overflow-x:hidden; background-color:transparent;">Сцена</iframe>
+			<div id="divSound" style="width:0px; height:0px;">
+		</td>
+	</tr>
+</table>
+
+
+<script type="text/javascript">
+var isDOM=document.getElementById;
+var isOpera=window.opera && isDOM;
+var isMSIE=document.all && document.all.item && !isOpera;
+var isMSIE5=isDOM && isMSIE;
+
+externalDoc=false;
+/* running locally on IE5.5, IE6, IE7 */                                              
+
+; /*@cc_on
+if(location.protocol=="file:"){
+	if(!externalDoc){
+		try{
+			externalDoc=new ActiveXObject("MSXML2.XMLHTTP");
+		}catch(e){
+			externalDoc=false;
+		}
+	}
+	if(!externalDoc){
+		try{
+			externalDoc=new ActiveXObject("Microsoft.XMLHTTP");
+		}catch(e){
+			externalDoc=false;
+		}
+	}                                                                                
+}
+; @cc_off @*/
+
+/* IE7, Firefox, Safari, Opera...  */
+if(!externalDoc){
+	try{
+		externalDoc=new XMLHttpRequest();
+	}catch(e){
+		externalDoc=false;
+	}
+}
+
+/* IE6 */
+if(typeof ActiveXObject != "undefined"){
+	if(!externalDoc){
+		try{
+			externalDoc=new ActiveXObject("MSXML2.XMLHTTP");
+		}catch(e){
+			externalDoc=false;
+		}
+	}
+	if(!externalDoc){
+		try{
+			externalDoc=new ActiveXObject("Microsoft.XMLHTTP");
+		}catch(e){
+			externalDoc=false;
+		}
+	}
+}
+
+/* IceBrowser */
+if(!externalDoc){
+	try{
+		externalDoc=createRequest();
+	}catch(e){
+		externalDoc=false;
+	}
+}
+
+
+function fReadyStateChange() {
+	if(externalDoc.readyState == 4){
+		initModule();
+	}
+}
+
+function fLoadQuestionsXml(){
+	if(externalDoc){
+		externalDoc.open("GET", "../content/toc.xml",true);
+		externalDoc.onreadystatechange=fReadyStateChange;
+		externalDoc.send(null);
+	}
+}
+
+if(window["loadIntervalId"]!=undefined){
+	clearInterval(loadIntervalId);
+}
+var loadIntervalId;
+function fCheckIframeBody(){
+	var sceneIframe= document.getElementById("scene");
+	if((sceneIframe!=null) && (sceneIframe.contentWindow!=null) && (sceneIframe.contentWindow.document!=null) && (sceneIframe.contentWindow.document.body!=null)){
+		clearInterval(loadIntervalId);
+		loadIntervalId = undefined;
+		testFinished = false;
+		testStarted = false;
+		progress = 0;
+		fLoadQuestionsXml();
+	}
+}
+loadIntervalId = setInterval("fCheckIframeBody()", 10);
+</script>
+
+</body>
+</html>

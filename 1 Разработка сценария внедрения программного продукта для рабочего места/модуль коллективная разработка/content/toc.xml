@@ -1,0 +1,7 @@
+﻿<toc>
+	<module type="k" showresponse="true" showresults="true"/>
+	<logo>logo.png</logo>
+	<sound><moduleinfo>about.mp3</moduleinfo></sound>
+	<title>Коллективная разработка программного обеспечения</title>
+	<a href="01.html" type="info" showinregister="false">Правила прохождения задания</a>
+	<a href="214804/start.html" type="question" showresponse="true" caption="Участники разработки ПО" progressweight="0.25">Участники разработки ПО</a><a href="214805/start.html" type="question" showresponse="true" caption="Повышение эффективности работы" progressweight="0.25">Повышение эффективности работы</a><a href="214806/start.html" type="question" showresponse="true" caption="Преимущества использования СКР" progressweight="0.25">Преимущества использования СКР</a><a href="214807/start.html" type="question" showresponse="true" caption="Выбор СКР для конкретной задачи" progressweight="0.25">Выбор СКР для конкретной задачи</a></toc>
