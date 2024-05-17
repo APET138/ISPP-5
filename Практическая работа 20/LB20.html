@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Поиск символа "a"</title>
+</head>
+<body>
+<p id="text">Это пример текста, в котором нужно найти символ "а" и вывести подстроку.</p>
+<button onclick="findAndDisplay()">Найти и вывести</button>
+<p id="result"></p>
+<script>
+function findAndDisplay() {
+var text = document.getElementById("text").innerText;
+var index = text.indexOf('а');
+if (index !== -1) {
+var result = text.substr(index, 1);
+document.getElementById("result").innerText = "Найдено по позиции " + index + ": " + result;
+} else {
+document.getElementById("result").innerText = "Символ 'а' не найден";
+}
+}
+</script>
+</body>
+</html>

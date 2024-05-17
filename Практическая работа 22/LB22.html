@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Обработка массива</title>
+</head>
+<body>
+<p>Введите элементы массива через запятую:</p>
+<input type="text" id="inputArray">
+<button onclick="processArray()">Обработать</button>
+<div id="results"></div>
+<script>
+function processArray() {
+var input = document.getElementById('inputArray').value;
+var array = input.split(',').map(Number);
+var negativeSum = 0;
+var positiveVector = [];
+var maxElement = array[0];
+for (var i = 0; i < array.length; i++) {
+if (array[i] < 0) {
+negativeSum += array[i];
+}
+if (array[i] > maxElement) {
+maxElement = array[i];
+}
+if (array[i] > 0) {
+positiveVector.push(array[i]);
+}
+}
+var resultDiv = document.getElementById('results');
+resultDiv.innerHTML = "Сумма отрицательных элементов: " + negativeSum + "<br>";
+resultDiv.innerHTML += "Максимальный элемент: " + maxElement + "<br>";
+resultDiv.innerHTML += "Вектор положительных элементов: " + positiveVector;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+<a href="#" onMouseOver ="document.myImage2.src='kotik.gif'" onMouseOut ="document.myImage2.src='kotik.gif'">
+<img src="kotik.gif" name="myImage2" width=560 height=500 border=0></a>
+<br>
+<a href=http://www.gilb.com/st1.html#anc1 target=l1>l1</a><br>
+<a href=http://www.l1.com:8000/cgi-bin/12.cgi?asd target=l2>l2</a><br>
+<a href=ftp://www.l2.com/pub/ target=l3>l3</a><br>
+<a href=gopher://www.l2.com?asdf target=l4>l4</a><br>
+<script type="text/javascript">
+for (i=0;i<document.links.length;i++){
+	document.writeln("<dt><b>",document.links[i].href,"</b>");
+	document.writeln("<dd>Hash: ",document.links[i].hash);
+	document.writeln("<dd>Host: ",document.links[i].host);
+	document.writeln("<dd>Hostname: ",document.links[i].hostname);
+	document.writeln("<dd>Port: ",document.links[i].port);
+	document.writeln("<dd>Protocol: ",document.links[i].protocol);
+	document.writeln("<dd>Target: ",document.links[i].target);
+	document.writeln("<dd>Pathname: ",document.links[i].pathname);
+	document.writeln("<dd>Search: ",document.links[i].search);
+};
+</script>
+</body>
+</html>
+
+

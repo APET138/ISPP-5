@@ -1,0 +1,14 @@
+<html>
+<head>
+<script>
+theDate = new Date();
+year = theDate.getYear() + 1901;
+theDateNewYear = new Date ("Jan 01." + year +", 00:00:00");
+date = Math.round((theDateNewYear - theDate)/86400000);
+document.write("<h2 align = center><font color = white>Новый год<br>наступит<br>Через<br><font color = orange>"+date+"</font><br>дней</font></h2>");
+</script>
+</head>
+<body BGCOLOR= darkblue>
+</body>
+</html>
+

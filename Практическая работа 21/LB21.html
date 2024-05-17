@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Вычисление значения функции</title>
+</head>
+<body>
+<p>Введите начало, конец отрезка и шаг</p>
+<label for="start">Начало отрезка:</label><br>
+<input type="number" id="start" name="start" min="-100" max="100"><br>
+<label for="end">Конец отрезка:</label><br>
+<input type="number" id="end" name="end" min="-100" max="100"><br>
+<label for="step">Шаг:</label><br>
+<input type="number" id="step" name="step" min="0" max="10"><br>
+<button onclick="calculateFunction()">Вычислить</button>
+<p>Результаты:</p>
+<div id="results"></div>
+<script>
+function calculateFunction() {
+var start = parseFloat(document.getElementById("start").value);
+var end = parseFloat(document.getElementById("end").value);
+var step = parseFloat(document.getElementById("step").value);
+var resultsDiv = document.getElementById("results");
+resultsDiv.innerHTML = "";
+if (start < end && step > 0) {
+for (var x = start; x <= end; x += step) {
+var result = Math.sin(x) / x;
+var resultStr = "При x=" + x + " значение функции: " + result + "<br>";
+resultsDiv.innerHTML += resultStr;
+}
+} else {
+resultsDiv.innerHTML = "Ошибка: Проверьте введенные значения";
+}
+}
+</script>
+</body>
+</html>
