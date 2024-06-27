@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор стоимости мобильной связи</title>
+  <style>
+    /* Пример стилей для красивого отображения результатов */
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Калькулятор стоимости мобильной связи</h1>
+  <form id="calculatorForm">
+    <div>
+      <label for="minutes">Количество минут разговора в месяц:</label>
+      <input type="number" id="minutes" name="minutes" required>
+    </div>
+    <div>
+      <label for="sms">Количество SMS в месяц:</label>
+      <input type="number" id="sms" name="sms" required>
+    </div>
+    <div>
+      <label for="data">Объем интернет-трафика в ГБ:</label>
+      <input type="number" id="data" name="data" step="0.1" required>
+    </div>
+    <div>
+      <label for="operator">Выберите оператора связи:</label>
+      <select id="operator" name="operator">
+        <option value="operator1">МТС</option>
+        <option value="operator2">Ростелеком</option>
+        <!-- Добавьте другие операторы по аналогии -->
+      </select>
+    </div>
+    <div id="tariffDiv">
+      <label for="tariff">Выберите тарифный план:</label>
+      <select id="tariff" name="tariff">
+        <!-- Опции для тарифных планов будут добавлены динамически через JavaScript -->
+      </select>
+    </div>
+    <button type="submit">Рассчитать</button>
+  </form>
+
+  <div id="result">
+    <!-- Результаты расчета будут отображены здесь -->
+  </div>
+
+  <script>
+    // Получаем элементы формы
+    const form = document.getElementById('calculatorForm');
+    const tariffDiv = document.getElementById('tariffDiv');
+    const resultDiv = document.getElementById('result');
+
+    // Обработчик отправки формы
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Предотвращаем отправку формы
+
+      // Собираем данные из формы
+      const minutes = parseFloat(document.getElementById('minutes').value);
+      const sms = parseFloat(document.getElementById('sms').value);
+      const data = parseFloat(document.getElementById('data').value);
+      const operator = document.getElementById('operator').value;
+
+      // Здесь можно добавить логику для выбора тарифного плана в зависимости от оператора
+      // Например:
+      let tariffOptions;
+      switch (operator) {
+        case 'operator1':
+          tariffOptions = ['Тарифный план Базовый'];
+          break;
+        case 'operator2':
+          tariffOptions = ['Тарифный план Премиум'];
+          break;
+        default:
+          tariffOptions = ['Не выбран оператор'];
+          break;
+      }
+
+      // Обновляем список тарифных планов
+      const tariffSelect = document.getElementById('tariff');
+      tariffSelect.innerHTML = ''; // Очищаем список
+      tariffOptions.forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option;
+        opt.textContent = option;
+        tariffSelect.appendChild(opt);
+      });
+
+      // Пример расчета стоимости (можно заменить на реальный алгоритм)
+      const totalCost = calculateCost(minutes, sms, data);
+
+      // Выводим результаты на страницу
+      resultDiv.innerHTML = `
+        <h2>Результаты расчета</h2>
+        <p><strong>Оператор связи:</strong> ${operator}</p>
+        <p><strong>Выбранный тариф:</strong> ${tariffSelect.value}</p>
+        <p><strong>Количество минут:</strong> ${minutes}</p>
+        <p><
+
+;strong>Количество SMS:</strong> ${sms}</p>
+        <p><strong>Объем интернет-трафика (ГБ):</strong> ${data}</p>
+        <p><strong>Итоговая стоимость:</strong> ${totalCost} рублей</p>
+      `;
+    });
+
+    // Функция для расчета стоимости (пример)
+    function calculateCost(minutes, sms, data) {
+      // Здесь можно написать реальную логику расчета
+      // Например:
+      const costPerMinute = 0.5; // Стоимость минуты разговора
+      const costPerSMS = 5.0;    // Стоимость SMS
+      const costPerGB = 15.0;   // Стоимость 1 ГБ интернета
+
+      const totalCost = minutes * costPerMinute + sms * costPerSMS + data * costPerGB;
+      return totalCost.toFixed(2); // Округляем до двух знаков после запятой
+    }
+  </script>
+</body>
+</html>
+
+
+

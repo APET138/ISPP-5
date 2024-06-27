@@ -1,0 +1,32 @@
+* body{
+    height: 100;
+}
+
+.container-xl{
+background-color: rgba(18, 185, 129, 0.938);
+height: 125ch;
+position: relative;
+}
+
+form{
+
+background: rgb(236, 165, 9);
+}
+
+.card{
+    display: flex;
+}
+
+.form-select{
+    margin-bottom: 10px;
+}
+.section__form
+{
+    background-image: url(img/bg.jpg);
+}
+.mt-3
+{
+ background-color: rgb(18, 185, 129, 0.938);
+ margin: 0 auto;
+ width: 100%;
+}
